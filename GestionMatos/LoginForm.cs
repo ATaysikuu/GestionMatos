@@ -36,27 +36,30 @@ namespace GestionMatos
         {
             String s_uid = tb_idlogin.Text;
             String s_upass = tb_passlogin.Text;
-            sql_loginconnstring.Open();
-            sqlcmd_login.Parameters.Add("@identifiant", SqlDbType.VarChar).Value = s_uid;
-            sqlcmd_login.Parameters.Add("@password", SqlDbType.VarChar).Value = s_upass;
-            //sqlcmd_login.ExecuteNonQuery();
-            Console.WriteLine(sqlcmd_login.ToString());
-            SqlDataAdapter sqlda_login = new SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE id_User='" + s_uid + "' AND password_User='" + s_upass + "'", sql_loginconnstring);
-            DataTable dt_login = new DataTable();
-            sqlda_login.Fill(dt_login);
-            if (dt_login.Rows[0][0].ToString() == "1")
-            {
-                this.Hide();
-                new MainForm().Show();
-            }
 
             try
             {
-                
+                sql_loginconnstring.Open();
+                sqlcmd_login.Parameters.Add("@identifiant", SqlDbType.VarChar).Value = s_uid;
+                sqlcmd_login.Parameters.Add("@password", SqlDbType.VarChar).Value = s_upass;
+                //sqlcmd_login.ExecuteNonQuery();
+                SqlDataAdapter sqlda_login = new SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE id_User='" + s_uid + "' AND password_User='" + s_upass + "'", sql_loginconnstring);
+                DataTable dt_login = new DataTable();
+                sqlda_login.Fill(dt_login);
+                if (dt_login.Rows[0][0].ToString() == "1")
+                {
+                    this.Hide();
+                    new MainForm().Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid IDs","Failed");
+                }
+                sql_loginconnstring.Close();
             }
-            catch (Exception)
+            catch (Exception er)
             {
-                Console.WriteLine("e");
+                MessageBox.Show(er.ToString());
             }
         }
 

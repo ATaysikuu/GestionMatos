@@ -40,71 +40,78 @@
             // comboBoxNom1
             // 
             this.comboBoxNom1.FormattingEnabled = true;
-            this.comboBoxNom1.Location = new System.Drawing.Point(122, 64);
+            this.comboBoxNom1.Location = new System.Drawing.Point(81, 42);
+            this.comboBoxNom1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxNom1.Name = "comboBoxNom1";
-            this.comboBoxNom1.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxNom1.Size = new System.Drawing.Size(82, 21);
             this.comboBoxNom1.TabIndex = 0;
             this.comboBoxNom1.Text = "Nom";
             // 
             // comboBoxTel
             // 
             this.comboBoxTel.FormattingEnabled = true;
-            this.comboBoxTel.Location = new System.Drawing.Point(122, 166);
+            this.comboBoxTel.Location = new System.Drawing.Point(81, 108);
+            this.comboBoxTel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxTel.Name = "comboBoxTel";
-            this.comboBoxTel.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxTel.Size = new System.Drawing.Size(82, 21);
             this.comboBoxTel.TabIndex = 1;
             this.comboBoxTel.Text = "Tél";
             // 
             // comboBoxEmail
             // 
             this.comboBoxEmail.FormattingEnabled = true;
-            this.comboBoxEmail.Location = new System.Drawing.Point(122, 258);
+            this.comboBoxEmail.Location = new System.Drawing.Point(81, 168);
+            this.comboBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxEmail.Name = "comboBoxEmail";
-            this.comboBoxEmail.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxEmail.Size = new System.Drawing.Size(82, 21);
             this.comboBoxEmail.TabIndex = 2;
             this.comboBoxEmail.Text = "email";
             // 
             // comboBoxAdresse
             // 
             this.comboBoxAdresse.FormattingEnabled = true;
-            this.comboBoxAdresse.Location = new System.Drawing.Point(492, 64);
+            this.comboBoxAdresse.Location = new System.Drawing.Point(328, 42);
+            this.comboBoxAdresse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxAdresse.Name = "comboBoxAdresse";
-            this.comboBoxAdresse.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxAdresse.Size = new System.Drawing.Size(82, 21);
             this.comboBoxAdresse.TabIndex = 3;
             this.comboBoxAdresse.Text = "Adresse";
             // 
             // comboBoxCodePostal
             // 
             this.comboBoxCodePostal.FormattingEnabled = true;
-            this.comboBoxCodePostal.Location = new System.Drawing.Point(492, 166);
+            this.comboBoxCodePostal.Location = new System.Drawing.Point(328, 108);
+            this.comboBoxCodePostal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxCodePostal.Name = "comboBoxCodePostal";
-            this.comboBoxCodePostal.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxCodePostal.Size = new System.Drawing.Size(82, 21);
             this.comboBoxCodePostal.TabIndex = 4;
             this.comboBoxCodePostal.Text = "Code Postal";
             // 
             // comboBoxVille
             // 
             this.comboBoxVille.FormattingEnabled = true;
-            this.comboBoxVille.Location = new System.Drawing.Point(492, 258);
+            this.comboBoxVille.Location = new System.Drawing.Point(328, 168);
+            this.comboBoxVille.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxVille.Name = "comboBoxVille";
-            this.comboBoxVille.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxVille.Size = new System.Drawing.Size(82, 21);
             this.comboBoxVille.TabIndex = 5;
             this.comboBoxVille.Text = "Ville";
             // 
             // buttonOk1
             // 
-            this.buttonOk1.Location = new System.Drawing.Point(679, 369);
+            this.buttonOk1.Location = new System.Drawing.Point(438, 223);
+            this.buttonOk1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonOk1.Name = "buttonOk1";
-            this.buttonOk1.Size = new System.Drawing.Size(52, 42);
+            this.buttonOk1.Size = new System.Drawing.Size(35, 27);
             this.buttonOk1.TabIndex = 6;
             this.buttonOk1.Text = "OK";
             this.buttonOk1.UseVisualStyleBackColor = true;
             // 
             // Clients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(484, 261);
             this.Controls.Add(this.buttonOk1);
             this.Controls.Add(this.comboBoxVille);
             this.Controls.Add(this.comboBoxCodePostal);
@@ -112,7 +119,9 @@
             this.Controls.Add(this.comboBoxEmail);
             this.Controls.Add(this.comboBoxTel);
             this.Controls.Add(this.comboBoxNom1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Clients";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CLIENT";
             this.ResumeLayout(false);
 

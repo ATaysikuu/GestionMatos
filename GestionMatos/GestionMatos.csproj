@@ -59,46 +59,52 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materiel.cs">
+    <Compile Include="F_Materiel.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GestionMatosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionMatosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Intervention.cs" />
     <Compile Include="Materiel.Designer.cs">
-      <DependentUpon>Materiel.cs</DependentUpon>
+      <DependentUpon>F_Materiel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Intervention.cs">
+    <Compile Include="F_Intervention.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Intervention.Designer.cs">
-      <DependentUpon>Intervention.cs</DependentUpon>
+    <Compile Include="F_Intervention.Designer.cs">
+      <DependentUpon>F_Intervention.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="F_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+      <DependentUpon>F_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="F_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+      <DependentUpon>F_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Intervention.resx">
-      <DependentUpon>Intervention.cs</DependentUpon>
+    <EmbeddedResource Include="F_Intervention.resx">
+      <DependentUpon>F_Intervention.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+      <DependentUpon>F_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+      <DependentUpon>F_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Materiel.resx">
-      <DependentUpon>Materiel.cs</DependentUpon>
+      <DependentUpon>F_Materiel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +116,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="GestionMatosDataSet.xsc">
+      <DependentUpon>GestionMatosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionMatosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionMatosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionMatosDataSet.xss">
+      <DependentUpon>GestionMatosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Intervention.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\logo_mfc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cross.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

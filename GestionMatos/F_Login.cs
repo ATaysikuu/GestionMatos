@@ -67,5 +67,10 @@ namespace GestionMatos
         {
 
         }
+
+        private void pb_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

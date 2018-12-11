@@ -21,12 +21,12 @@ namespace GestionMatos
 
 
         private void MainForm_Load(object sender, EventArgs e)
-        {
+        {/*
             if (!isLogged)
             {
                 LoginForm loginform = new LoginForm();
                 loginform.ShowDialog();
-            } 
+            } */
         }
 
 
@@ -38,6 +38,21 @@ namespace GestionMatos
         public void setlogged()
         {
             isLogged = true;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

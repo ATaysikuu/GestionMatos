@@ -22,21 +22,45 @@ namespace GestionMatos
         }
         public void LoginForm_Load(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 sql_loginconnstring.Open();
             }
             catch (Exception)
             {
                 Console.WriteLine("e");
-            }
+            }*/
         }
 
         private void btn_connectlogin_Click(object sender, EventArgs e)
         {
             String s_uid = tb_idlogin.Text;
             String s_upass = tb_passlogin.Text;
-            //sqlcmd_login.Parameters.Add("@")
+
+            try
+            {
+                sql_loginconnstring.Open();
+                sqlcmd_login.Parameters.Add("@identifiant", SqlDbType.VarChar).Value = s_uid;
+                sqlcmd_login.Parameters.Add("@password", SqlDbType.VarChar).Value = s_upass;
+                //sqlcmd_login.ExecuteNonQuery();
+                SqlDataAdapter sqlda_login = new SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE id_User='" + s_uid + "' AND password_User='" + s_upass + "'", sql_loginconnstring);
+                DataTable dt_login = new DataTable();
+                sqlda_login.Fill(dt_login);
+                if (dt_login.Rows[0][0].ToString() == "1")
+                {
+                    this.Hide();
+                    new MainForm().Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid IDs","Failed");
+                }
+                sql_loginconnstring.Close();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
         }
 
         private void connect()

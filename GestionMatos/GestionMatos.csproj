@@ -53,6 +53,16 @@
     <Compile Include="Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
+    <Compile Include="dtset_Materiel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtset_Materiel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtset_techos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtset_techos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +76,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionMatosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionMatosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionMatosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionMatosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionMatosDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionMatosDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionMatosDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="Intervention.cs" />
     <Compile Include="Materiel.Designer.cs">
@@ -116,6 +141,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="dtset_Materiel.xsc">
+      <DependentUpon>dtset_Materiel.xsd</DependentUpon>
+    </None>
+    <None Include="dtset_Materiel.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtset_Materiel.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtset_Materiel.xss">
+      <DependentUpon>dtset_Materiel.xsd</DependentUpon>
+    </None>
+    <None Include="dtset_techos.xsc">
+      <DependentUpon>dtset_techos.xsd</DependentUpon>
+    </None>
+    <None Include="dtset_techos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtset_techos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtset_techos.xss">
+      <DependentUpon>dtset_techos.xsd</DependentUpon>
+    </None>
     <None Include="GestionMatosDataSet.xsc">
       <DependentUpon>GestionMatosDataSet.xsd</DependentUpon>
     </None>
@@ -126,6 +173,39 @@
     </None>
     <None Include="GestionMatosDataSet.xss">
       <DependentUpon>GestionMatosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionMatosDataSet1.xsc">
+      <DependentUpon>GestionMatosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GestionMatosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionMatosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionMatosDataSet1.xss">
+      <DependentUpon>GestionMatosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GestionMatosDataSet2.xsc">
+      <DependentUpon>GestionMatosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GestionMatosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionMatosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionMatosDataSet2.xss">
+      <DependentUpon>GestionMatosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GestionMatosDataSet3.xsc">
+      <DependentUpon>GestionMatosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GestionMatosDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionMatosDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionMatosDataSet3.xss">
+      <DependentUpon>GestionMatosDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\Intervention.datasource" />
     <None Include="Properties\Settings.settings">

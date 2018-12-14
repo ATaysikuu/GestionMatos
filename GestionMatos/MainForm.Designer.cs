@@ -32,11 +32,19 @@
             this.btn_Close = new System.Windows.Forms.Button();
             this.lsbListMateriel = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgv_listeinter = new System.Windows.Forms.DataGridView();
+            this.idInterventionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateInterventionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentaireInterventionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMaterielDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTechnicienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.interventionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gestionMatosDataSet = new GestionMatos.GestionMatosDataSet();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBoxSites = new System.Windows.Forms.ComboBox();
             this.comboBoxClients = new System.Windows.Forms.ComboBox();
             this.comboBoxMateriel = new System.Windows.Forms.ComboBox();
-            this.comboBoxMTBF = new System.Windows.Forms.ComboBox();
+            this.cmb_MTBF = new System.Windows.Forms.ComboBox();
             this.btn_editInter = new System.Windows.Forms.Button();
             this.btn_addInter = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -57,26 +65,18 @@
             this.lsbListSites = new System.Windows.Forms.ListBox();
             this.sqls_main = new System.Data.SqlClient.SqlConnection();
             this.sqlcmd_listeinter = new System.Data.SqlClient.SqlCommand();
-            this.dgv_listeinter = new System.Windows.Forms.DataGridView();
-            this.gestionMatosDataSet = new GestionMatos.GestionMatosDataSet();
-            this.interventionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.interventionTableAdapter = new GestionMatos.GestionMatosDataSetTableAdapters.InterventionTableAdapter();
-            this.idInterventionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateInterventionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentaireInterventionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMaterielDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTechnicienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.afficherinterventionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.afficher_interventionsTableAdapter = new GestionMatos.GestionMatosDataSetTableAdapters.afficher_interventionsTableAdapter();
             this.interventionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lsbListMateriel.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeinter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeinter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.afficherinterventionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +111,7 @@
             this.tabPage1.Controls.Add(this.comboBoxSites);
             this.tabPage1.Controls.Add(this.comboBoxClients);
             this.tabPage1.Controls.Add(this.comboBoxMateriel);
-            this.tabPage1.Controls.Add(this.comboBoxMTBF);
+            this.tabPage1.Controls.Add(this.cmb_MTBF);
             this.tabPage1.Controls.Add(this.btn_editInter);
             this.tabPage1.Controls.Add(this.btn_addInter);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -121,6 +121,66 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Liste des interventions";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dgv_listeinter
+            // 
+            this.dgv_listeinter.AllowUserToAddRows = false;
+            this.dgv_listeinter.AllowUserToDeleteRows = false;
+            this.dgv_listeinter.AllowUserToOrderColumns = true;
+            this.dgv_listeinter.AutoGenerateColumns = false;
+            this.dgv_listeinter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listeinter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idInterventionDataGridViewTextBoxColumn,
+            this.dateInterventionDataGridViewTextBoxColumn,
+            this.commentaireInterventionDataGridViewTextBoxColumn,
+            this.idMaterielDataGridViewTextBoxColumn,
+            this.idTechnicienDataGridViewTextBoxColumn});
+            this.dgv_listeinter.DataSource = this.interventionBindingSource1;
+            this.dgv_listeinter.Location = new System.Drawing.Point(11, 28);
+            this.dgv_listeinter.Name = "dgv_listeinter";
+            this.dgv_listeinter.Size = new System.Drawing.Size(778, 359);
+            this.dgv_listeinter.TabIndex = 9;
+            // 
+            // idInterventionDataGridViewTextBoxColumn
+            // 
+            this.idInterventionDataGridViewTextBoxColumn.DataPropertyName = "id_Intervention";
+            this.idInterventionDataGridViewTextBoxColumn.HeaderText = "id_Intervention";
+            this.idInterventionDataGridViewTextBoxColumn.Name = "idInterventionDataGridViewTextBoxColumn";
+            this.idInterventionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateInterventionDataGridViewTextBoxColumn
+            // 
+            this.dateInterventionDataGridViewTextBoxColumn.DataPropertyName = "date_Intervention";
+            this.dateInterventionDataGridViewTextBoxColumn.HeaderText = "date_Intervention";
+            this.dateInterventionDataGridViewTextBoxColumn.Name = "dateInterventionDataGridViewTextBoxColumn";
+            // 
+            // commentaireInterventionDataGridViewTextBoxColumn
+            // 
+            this.commentaireInterventionDataGridViewTextBoxColumn.DataPropertyName = "commentaire_Intervention";
+            this.commentaireInterventionDataGridViewTextBoxColumn.HeaderText = "commentaire_Intervention";
+            this.commentaireInterventionDataGridViewTextBoxColumn.Name = "commentaireInterventionDataGridViewTextBoxColumn";
+            // 
+            // idMaterielDataGridViewTextBoxColumn
+            // 
+            this.idMaterielDataGridViewTextBoxColumn.DataPropertyName = "id_Materiel";
+            this.idMaterielDataGridViewTextBoxColumn.HeaderText = "id_Materiel";
+            this.idMaterielDataGridViewTextBoxColumn.Name = "idMaterielDataGridViewTextBoxColumn";
+            // 
+            // idTechnicienDataGridViewTextBoxColumn
+            // 
+            this.idTechnicienDataGridViewTextBoxColumn.DataPropertyName = "id_Technicien";
+            this.idTechnicienDataGridViewTextBoxColumn.HeaderText = "id_Technicien";
+            this.idTechnicienDataGridViewTextBoxColumn.Name = "idTechnicienDataGridViewTextBoxColumn";
+            // 
+            // interventionBindingSource1
+            // 
+            this.interventionBindingSource1.DataMember = "Intervention";
+            this.interventionBindingSource1.DataSource = this.gestionMatosDataSet;
+            // 
+            // gestionMatosDataSet
+            // 
+            this.gestionMatosDataSet.DataSetName = "GestionMatosDataSet";
+            this.gestionMatosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button2
             // 
@@ -162,15 +222,17 @@
             this.comboBoxMateriel.TabIndex = 4;
             this.comboBoxMateriel.Text = "MATERIEL";
             // 
-            // comboBoxMTBF
+            // cmb_MTBF
             // 
-            this.comboBoxMTBF.FormattingEnabled = true;
-            this.comboBoxMTBF.Location = new System.Drawing.Point(26, 0);
-            this.comboBoxMTBF.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxMTBF.Name = "comboBoxMTBF";
-            this.comboBoxMTBF.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxMTBF.TabIndex = 3;
-            this.comboBoxMTBF.Text = "MTBF";
+            this.cmb_MTBF.DataSource = this.afficherinterventionsBindingSource;
+            this.cmb_MTBF.DisplayMember = "date_Intervention";
+            this.cmb_MTBF.FormattingEnabled = true;
+            this.cmb_MTBF.Location = new System.Drawing.Point(26, 0);
+            this.cmb_MTBF.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_MTBF.Name = "cmb_MTBF";
+            this.cmb_MTBF.Size = new System.Drawing.Size(82, 21);
+            this.cmb_MTBF.TabIndex = 3;
+            this.cmb_MTBF.SelectedIndexChanged += new System.EventHandler(this.cmb_MTBF_SelectedIndexChanged);
             // 
             // btn_editInter
             // 
@@ -373,68 +435,9 @@
             this.sqlcmd_listeinter.CommandType = System.Data.CommandType.StoredProcedure;
             this.sqlcmd_listeinter.Connection = this.sqls_main;
             // 
-            // dgv_listeinter
-            // 
-            this.dgv_listeinter.AllowUserToAddRows = false;
-            this.dgv_listeinter.AllowUserToOrderColumns = true;
-            this.dgv_listeinter.AutoGenerateColumns = false;
-            this.dgv_listeinter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_listeinter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idInterventionDataGridViewTextBoxColumn,
-            this.dateInterventionDataGridViewTextBoxColumn,
-            this.commentaireInterventionDataGridViewTextBoxColumn,
-            this.idMaterielDataGridViewTextBoxColumn,
-            this.idTechnicienDataGridViewTextBoxColumn});
-            this.dgv_listeinter.DataSource = this.interventionBindingSource1;
-            this.dgv_listeinter.Location = new System.Drawing.Point(6, 28);
-            this.dgv_listeinter.Name = "dgv_listeinter";
-            this.dgv_listeinter.Size = new System.Drawing.Size(778, 359);
-            this.dgv_listeinter.TabIndex = 9;
-            // 
-            // gestionMatosDataSet
-            // 
-            this.gestionMatosDataSet.DataSetName = "GestionMatosDataSet";
-            this.gestionMatosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // interventionBindingSource1
-            // 
-            this.interventionBindingSource1.DataMember = "Intervention";
-            this.interventionBindingSource1.DataSource = this.gestionMatosDataSet;
-            // 
             // interventionTableAdapter
             // 
             this.interventionTableAdapter.ClearBeforeFill = true;
-            // 
-            // idInterventionDataGridViewTextBoxColumn
-            // 
-            this.idInterventionDataGridViewTextBoxColumn.DataPropertyName = "id_Intervention";
-            this.idInterventionDataGridViewTextBoxColumn.HeaderText = "id_Intervention";
-            this.idInterventionDataGridViewTextBoxColumn.Name = "idInterventionDataGridViewTextBoxColumn";
-            this.idInterventionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateInterventionDataGridViewTextBoxColumn
-            // 
-            this.dateInterventionDataGridViewTextBoxColumn.DataPropertyName = "date_Intervention";
-            this.dateInterventionDataGridViewTextBoxColumn.HeaderText = "date_Intervention";
-            this.dateInterventionDataGridViewTextBoxColumn.Name = "dateInterventionDataGridViewTextBoxColumn";
-            // 
-            // commentaireInterventionDataGridViewTextBoxColumn
-            // 
-            this.commentaireInterventionDataGridViewTextBoxColumn.DataPropertyName = "commentaire_Intervention";
-            this.commentaireInterventionDataGridViewTextBoxColumn.HeaderText = "commentaire_Intervention";
-            this.commentaireInterventionDataGridViewTextBoxColumn.Name = "commentaireInterventionDataGridViewTextBoxColumn";
-            // 
-            // idMaterielDataGridViewTextBoxColumn
-            // 
-            this.idMaterielDataGridViewTextBoxColumn.DataPropertyName = "id_Materiel";
-            this.idMaterielDataGridViewTextBoxColumn.HeaderText = "id_Materiel";
-            this.idMaterielDataGridViewTextBoxColumn.Name = "idMaterielDataGridViewTextBoxColumn";
-            // 
-            // idTechnicienDataGridViewTextBoxColumn
-            // 
-            this.idTechnicienDataGridViewTextBoxColumn.DataPropertyName = "id_Technicien";
-            this.idTechnicienDataGridViewTextBoxColumn.HeaderText = "id_Technicien";
-            this.idTechnicienDataGridViewTextBoxColumn.Name = "idTechnicienDataGridViewTextBoxColumn";
             // 
             // afficherinterventionsBindingSource
             // 
@@ -461,12 +464,12 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.lsbListMateriel.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeinter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeinter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.afficherinterventionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -491,7 +494,7 @@
         private System.Windows.Forms.ComboBox comboBoxSites;
         private System.Windows.Forms.ComboBox comboBoxClients;
         private System.Windows.Forms.ComboBox comboBoxMateriel;
-        private System.Windows.Forms.ComboBox comboBoxMTBF;
+        private System.Windows.Forms.ComboBox cmb_MTBF;
         private System.Windows.Forms.ComboBox comboBoxNom;
         private System.Windows.Forms.ComboBox comboBoxID_Clients;
         private System.Windows.Forms.ComboBox comboBoxNom2;

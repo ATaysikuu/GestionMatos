@@ -13,7 +13,7 @@ namespace GestionMatos
 {
     public partial class MainForm : Form
     {
-        private static bool isLogged = false;
+        //private static bool isLogged = false;
 
         internal List<Intervention> listeInter = new List<Intervention>();
 
@@ -28,7 +28,7 @@ namespace GestionMatos
             this.afficher_interventionsTableAdapter.Fill(this.gestionMatosDataSet.afficher_interventions);
             // TODO: This line of code loads data into the 'gestionMatosDataSet.Intervention' table. You can move, or remove it, as needed.
             this.interventionTableAdapter.Fill(this.gestionMatosDataSet.Intervention);
-            this.get_ListeInter();
+            //this.get_ListeInter();
             /*
                         if (!isLogged)
                         {
@@ -45,7 +45,7 @@ namespace GestionMatos
         }
         public void setlogged()
         {
-            isLogged = true;
+            //isLogged = true;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,6 +92,12 @@ namespace GestionMatos
             {
                 MessageBox.Show(e.ToString());
             }
+        }
+
+        private void cmb_MTBF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            //(dgv_listeinter.DataSource as DataTable).DefaultView.RowFilter = string.Format("date_Intervention = '{0}'", cmb_MTBF.SelectedText);
         }
     }
     

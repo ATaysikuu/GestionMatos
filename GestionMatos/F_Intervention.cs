@@ -49,11 +49,12 @@ namespace GestionMatos
             s_siteName = cmb_listeSites.SelectedText;
             s_materielName = cmb_listeMateriel.SelectedText;
 
+            //adding parameters to the SQLCommand. 
             sqlcmd_updateIntervention.Parameters.Add("@id_intervention", SqlDbType.Int).Value = i_idInter;
             sqlcmd_updateIntervention.Parameters.Add("@date_inter", SqlDbType.DateTime).Value = dt_dateinter;
             sqlcmd_updateIntervention.Parameters.Add("@id_tech", SqlDbType.Int).Value = i_idtech;
             sqlcmd_updateIntervention.Parameters.Add("@id_materiel", SqlDbType.VarChar).Value = 5;
-            sqlcmd_updateIntervention.Parameters.Add("@comm_inter", SqlDbType.VarChar).Value = rtb_commIntervention.Text;
+            sqlcmd_updateIntervention.Parameters.Add("@comm_inter", SqlDbType.Text).Value = rtb_commIntervention.Text;
 
 
             sqls_intervention.Open();
@@ -74,6 +75,7 @@ namespace GestionMatos
             sqlcmd_insertIntervention.Parameters.Add("@date_intervention",SqlDbType.DateTime).Value = dt_dateinter;
             sqlcmd_insertIntervention.Parameters.Add("@id_technicien",SqlDbType.Int).Value = i_idtech;
             sqlcmd_insertIntervention.Parameters.Add("@id_materiel",SqlDbType.VarChar).Value = 5;
+            sqlcmd_insertIntervention.Parameters.Add("@comm_inter", SqlDbType.Text).Value = rtb_commIntervention.Text;
             
             sqls_intervention.Open();
             sqlcmd_insertIntervention.ExecuteNonQuery();

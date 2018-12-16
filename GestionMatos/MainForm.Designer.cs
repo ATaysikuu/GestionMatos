@@ -66,7 +66,7 @@
             this.sqls_main = new System.Data.SqlClient.SqlConnection();
             this.sqlcmd_listeinter = new System.Data.SqlClient.SqlCommand();
             this.siteTableAdapter = new GestionMatos.dtset_SitesTableAdapters.SiteTableAdapter();
-            this.dtg_ListeInterMain = new System.Windows.Forms.DataGridView();
+            this.dgv_ListeInterMain = new System.Windows.Forms.DataGridView();
             this.dtset_InterventionsMain1 = new GestionMatos.dtset_InterventionsMain();
             this.afficherinterventionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.afficher_interventionsTableAdapter = new GestionMatos.dtset_InterventionsMainTableAdapters.afficher_interventionsTableAdapter();
@@ -87,7 +87,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_ListeInterMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ListeInterMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_InterventionsMain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.afficherinterventionsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -117,7 +117,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dtg_ListeInterMain);
+            this.tabPage1.Controls.Add(this.dgv_ListeInterMain);
             this.tabPage1.Controls.Add(this.lb_MTBF);
             this.tabPage1.Controls.Add(this.lb_materiels);
             this.tabPage1.Controls.Add(this.lb_clients);
@@ -444,13 +444,13 @@
             // 
             this.siteTableAdapter.ClearBeforeFill = true;
             // 
-            // dtg_ListeInterMain
+            // dgv_ListeInterMain
             // 
-            this.dtg_ListeInterMain.AllowUserToAddRows = false;
-            this.dtg_ListeInterMain.AllowUserToDeleteRows = false;
-            this.dtg_ListeInterMain.AutoGenerateColumns = false;
-            this.dtg_ListeInterMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_ListeInterMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_ListeInterMain.AllowUserToAddRows = false;
+            this.dgv_ListeInterMain.AllowUserToDeleteRows = false;
+            this.dgv_ListeInterMain.AutoGenerateColumns = false;
+            this.dgv_ListeInterMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ListeInterMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dateInterventionDataGridViewTextBoxColumn,
             this.commentaireInterventionDataGridViewTextBoxColumn,
@@ -458,12 +458,12 @@
             this.idTechnicienDataGridViewTextBoxColumn,
             this.nameSiteDataGridViewTextBoxColumn,
             this.nameClientDataGridViewTextBoxColumn});
-            this.dtg_ListeInterMain.DataSource = this.afficherinterventionsBindingSource;
-            this.dtg_ListeInterMain.Location = new System.Drawing.Point(8, 53);
-            this.dtg_ListeInterMain.Name = "dtg_ListeInterMain";
-            this.dtg_ListeInterMain.ReadOnly = true;
-            this.dtg_ListeInterMain.Size = new System.Drawing.Size(776, 334);
-            this.dtg_ListeInterMain.TabIndex = 15;
+            this.dgv_ListeInterMain.DataSource = this.afficherinterventionsBindingSource;
+            this.dgv_ListeInterMain.Location = new System.Drawing.Point(8, 53);
+            this.dgv_ListeInterMain.Name = "dgv_ListeInterMain";
+            this.dgv_ListeInterMain.ReadOnly = true;
+            this.dgv_ListeInterMain.Size = new System.Drawing.Size(776, 334);
+            this.dgv_ListeInterMain.TabIndex = 15;
             // 
             // dtset_InterventionsMain1
             // 
@@ -549,7 +549,7 @@
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_ListeInterMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ListeInterMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_InterventionsMain1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.afficherinterventionsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -596,7 +596,7 @@
         private System.Windows.Forms.Label lb_materiels;
         private dtset_InterventionsMain dtset_InterventionsMain;
         private System.Windows.Forms.DataGridViewTextBoxColumn idInterventionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dtg_ListeInterMain;
+        private System.Windows.Forms.DataGridView dgv_ListeInterMain;
         private dtset_InterventionsMain dtset_InterventionsMain1;
         private System.Windows.Forms.BindingSource afficherinterventionsBindingSource;
         private dtset_InterventionsMainTableAdapters.afficher_interventionsTableAdapter afficher_interventionsTableAdapter;

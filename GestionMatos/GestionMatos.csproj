@@ -63,6 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtset_Materiel.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dtset_SiteFromClient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtset_SiteFromClient.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dtset_Sites.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -172,6 +177,17 @@
     </None>
     <None Include="dtset_Materiel.xss">
       <DependentUpon>dtset_Materiel.xsd</DependentUpon>
+    </None>
+    <None Include="dtset_SiteFromClient.xsc">
+      <DependentUpon>dtset_SiteFromClient.xsd</DependentUpon>
+    </None>
+    <None Include="dtset_SiteFromClient.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtset_SiteFromClient.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtset_SiteFromClient.xss">
+      <DependentUpon>dtset_SiteFromClient.xsd</DependentUpon>
     </None>
     <None Include="dtset_Sites.xsc">
       <DependentUpon>dtset_Sites.xsd</DependentUpon>

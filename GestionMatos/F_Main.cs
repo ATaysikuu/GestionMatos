@@ -59,7 +59,7 @@ namespace GestionMatos
 
         private void btn_editInter_Click(object sender, EventArgs e)
         {
-            F_Intervention inter = new F_Intervention((int)dtg_ListeInterMain.SelectedRows[0].Cells[0].Value);
+            F_Intervention inter = new F_Intervention((int)dgv_ListeInterMain.SelectedRows[0].Cells[0].Value);
             inter.ShowDialog();
             this.afficher_interventionsTableAdapter.Fill(this.dtset_InterventionsMain1.afficher_interventions);
         }

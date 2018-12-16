@@ -65,6 +65,9 @@
             this.sqlcmd_getIntervention = new System.Data.SqlClient.SqlCommand();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.sqlcmd_updateIntervention = new System.Data.SqlClient.SqlCommand();
+            this.dtset_SiteFromClient = new GestionMatos.dtset_SiteFromClient();
+            this.sitefromclientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.site_from_clientTableAdapter = new GestionMatos.dtset_SiteFromClientTableAdapters.site_from_clientTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_techos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
@@ -75,6 +78,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_SiteFromClient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sitefromclientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpicker_dateinter
@@ -129,10 +134,10 @@
             // 
             // cmb_listeSites
             // 
-            this.cmb_listeSites.DataSource = this.affichersitesBindingSource1;
+            this.cmb_listeSites.DataSource = this.sitefromclientBindingSource;
             this.cmb_listeSites.DisplayMember = "name_Site";
             this.cmb_listeSites.FormattingEnabled = true;
-            this.cmb_listeSites.Location = new System.Drawing.Point(151, 67);
+            this.cmb_listeSites.Location = new System.Drawing.Point(275, 19);
             this.cmb_listeSites.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_listeSites.Name = "cmb_listeSites";
             this.cmb_listeSites.Size = new System.Drawing.Size(121, 21);
@@ -153,7 +158,7 @@
             this.cmb_listeMateriel.DataSource = this.materielBindingSource;
             this.cmb_listeMateriel.DisplayMember = "name_Materiel";
             this.cmb_listeMateriel.FormattingEnabled = true;
-            this.cmb_listeMateriel.Location = new System.Drawing.Point(276, 67);
+            this.cmb_listeMateriel.Location = new System.Drawing.Point(151, 67);
             this.cmb_listeMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_listeMateriel.Name = "cmb_listeMateriel";
             this.cmb_listeMateriel.Size = new System.Drawing.Size(121, 21);
@@ -267,7 +272,7 @@
             // lb_sites
             // 
             this.lb_sites.AutoSize = true;
-            this.lb_sites.Location = new System.Drawing.Point(148, 52);
+            this.lb_sites.Location = new System.Drawing.Point(272, 4);
             this.lb_sites.Name = "lb_sites";
             this.lb_sites.Size = new System.Drawing.Size(30, 13);
             this.lb_sites.TabIndex = 11;
@@ -285,7 +290,7 @@
             // lb_listemateriel
             // 
             this.lb_listemateriel.AutoSize = true;
-            this.lb_listemateriel.Location = new System.Drawing.Point(273, 52);
+            this.lb_listemateriel.Location = new System.Drawing.Point(148, 52);
             this.lb_listemateriel.Name = "lb_listemateriel";
             this.lb_listemateriel.Size = new System.Drawing.Size(49, 13);
             this.lb_listemateriel.TabIndex = 13;
@@ -324,6 +329,20 @@
             this.sqlcmd_updateIntervention.CommandType = System.Data.CommandType.StoredProcedure;
             this.sqlcmd_updateIntervention.Connection = this.sqls_intervention;
             // 
+            // dtset_SiteFromClient
+            // 
+            this.dtset_SiteFromClient.DataSetName = "dtset_SiteFromClient";
+            this.dtset_SiteFromClient.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sitefromclientBindingSource
+            // 
+            this.sitefromclientBindingSource.DataMember = "site_from_client";
+            this.sitefromclientBindingSource.DataSource = this.dtset_SiteFromClient;
+            // 
+            // site_from_clientTableAdapter
+            // 
+            this.site_from_clientTableAdapter.ClearBeforeFill = true;
+            // 
             // F_Intervention
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,6 +377,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_SiteFromClient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sitefromclientBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,5 +422,8 @@
         private System.Data.SqlClient.SqlCommand sqlcmd_getIntervention;
         private System.Windows.Forms.Button btn_Edit;
         private System.Data.SqlClient.SqlCommand sqlcmd_updateIntervention;
+        private System.Windows.Forms.BindingSource sitefromclientBindingSource;
+        private dtset_SiteFromClient dtset_SiteFromClient;
+        private dtset_SiteFromClientTableAdapters.site_from_clientTableAdapter site_from_clientTableAdapter;
     }
 }

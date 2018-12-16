@@ -25,6 +25,10 @@ namespace GestionMatos
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dtset_Materiels.Materiel' table. You can move, or remove it, as needed.
+            this.materielTableAdapter.Fill(this.dtset_Materiels.Materiel);
+            // TODO: This line of code loads data into the 'dtset_Clients.Clients' table. You can move, or remove it, as needed.
+            this.clientsTableAdapter.Fill(this.dtset_Clients.Clients);
             // TODO: This line of code loads data into the 'dtset_InterventionsMain1.afficher_interventions' table. You can move, or remove it, as needed.
             this.afficher_interventionsTableAdapter.Fill(this.dtset_InterventionsMain1.afficher_interventions);
         }
@@ -49,8 +53,7 @@ namespace GestionMatos
         {
 
         }
-
-        private void btn_addInter_Click(object sender, EventArgs e)
+       private void btn_addInter_Click(object sender, EventArgs e)
         {
             F_Intervention inter = new F_Intervention();
             inter.ShowDialog();

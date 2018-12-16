@@ -16,5 +16,12 @@ namespace GestionMatos
         {
             InitializeComponent();
         }
+
+        private void Materiel_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dtset_Clients.Clients' table. You can move, or remove it, as needed.
+            this.clientsTableAdapter.Fill(this.dtset_Clients.Clients);
+
+        }
     }
 }

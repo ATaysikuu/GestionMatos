@@ -37,6 +37,8 @@
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtset_Clients = new GestionMatos.GestionMatosDataSet1();
             this.cmb_listeSites = new System.Windows.Forms.ComboBox();
+            this.sitefromclientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtset_SiteFromClient = new GestionMatos.dtset_SiteFromClient();
             this.affichersitesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gestionMatosDataSet3 = new GestionMatos.GestionMatosDataSet3();
             this.cmb_listeMateriel = new System.Windows.Forms.ComboBox();
@@ -65,21 +67,19 @@
             this.sqlcmd_getIntervention = new System.Data.SqlClient.SqlCommand();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.sqlcmd_updateIntervention = new System.Data.SqlClient.SqlCommand();
-            this.dtset_SiteFromClient = new GestionMatos.dtset_SiteFromClient();
-            this.sitefromclientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.site_from_clientTableAdapter = new GestionMatos.dtset_SiteFromClientTableAdapters.site_from_clientTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_techos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Clients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sitefromclientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_SiteFromClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_SiteFromClient)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sitefromclientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpicker_dateinter
@@ -143,6 +143,16 @@
             this.cmb_listeSites.Size = new System.Drawing.Size(121, 21);
             this.cmb_listeSites.TabIndex = 4;
             // 
+            // sitefromclientBindingSource
+            // 
+            this.sitefromclientBindingSource.DataMember = "site_from_client";
+            this.sitefromclientBindingSource.DataSource = this.dtset_SiteFromClient;
+            // 
+            // dtset_SiteFromClient
+            // 
+            this.dtset_SiteFromClient.DataSetName = "dtset_SiteFromClient";
+            this.dtset_SiteFromClient.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // affichersitesBindingSource1
             // 
             this.affichersitesBindingSource1.DataMember = "afficher_sites";
@@ -163,6 +173,7 @@
             this.cmb_listeMateriel.Name = "cmb_listeMateriel";
             this.cmb_listeMateriel.Size = new System.Drawing.Size(121, 21);
             this.cmb_listeMateriel.TabIndex = 5;
+            this.cmb_listeMateriel.ValueMember = "id_Materiel";
             // 
             // materielBindingSource
             // 
@@ -329,16 +340,6 @@
             this.sqlcmd_updateIntervention.CommandType = System.Data.CommandType.StoredProcedure;
             this.sqlcmd_updateIntervention.Connection = this.sqls_intervention;
             // 
-            // dtset_SiteFromClient
-            // 
-            this.dtset_SiteFromClient.DataSetName = "dtset_SiteFromClient";
-            this.dtset_SiteFromClient.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sitefromclientBindingSource
-            // 
-            this.sitefromclientBindingSource.DataMember = "site_from_client";
-            this.sitefromclientBindingSource.DataSource = this.dtset_SiteFromClient;
-            // 
             // site_from_clientTableAdapter
             // 
             this.site_from_clientTableAdapter.ClearBeforeFill = true;
@@ -371,14 +372,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtset_techos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Clients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sitefromclientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_SiteFromClient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_SiteFromClient)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sitefromclientBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

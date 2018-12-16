@@ -64,6 +64,7 @@
             this.sqlcmd_insertIntervention = new System.Data.SqlClient.SqlCommand();
             this.sqlcmd_getIntervention = new System.Data.SqlClient.SqlCommand();
             this.btn_Edit = new System.Windows.Forms.Button();
+            this.sqlcmd_updateIntervention = new System.Data.SqlClient.SqlCommand();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_techos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
@@ -315,6 +316,13 @@
             this.btn_Edit.TabIndex = 14;
             this.btn_Edit.Text = "Edit";
             this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
+            // 
+            // sqlcmd_updateIntervention
+            // 
+            this.sqlcmd_updateIntervention.CommandText = "modify_intervention";
+            this.sqlcmd_updateIntervention.CommandType = System.Data.CommandType.StoredProcedure;
+            this.sqlcmd_updateIntervention.Connection = this.sqls_intervention;
             // 
             // F_Intervention
             // 
@@ -392,5 +400,6 @@
         private System.Data.SqlClient.SqlCommand sqlcmd_insertIntervention;
         private System.Data.SqlClient.SqlCommand sqlcmd_getIntervention;
         private System.Windows.Forms.Button btn_Edit;
+        private System.Data.SqlClient.SqlCommand sqlcmd_updateIntervention;
     }
 }

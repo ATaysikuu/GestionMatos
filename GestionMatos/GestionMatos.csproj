@@ -53,10 +53,20 @@
     <Compile Include="Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
+    <Compile Include="dtset_InterventionsMain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtset_InterventionsMain.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dtset_Materiel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dtset_Materiel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtset_Sites.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtset_Sites.xsd</DependentUpon>
     </Compile>
     <Compile Include="dtset_techos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -122,11 +132,11 @@
     <EmbeddedResource Include="F_Intervention.resx">
       <DependentUpon>F_Intervention.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_Main.resx">
+      <DependentUpon>F_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>F_Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>F_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Materiel.resx">
       <DependentUpon>F_Materiel.cs</DependentUpon>
@@ -141,6 +151,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="dtset_InterventionsMain.xsc">
+      <DependentUpon>dtset_InterventionsMain.xsd</DependentUpon>
+    </None>
+    <None Include="dtset_InterventionsMain.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtset_InterventionsMain.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtset_InterventionsMain.xss">
+      <DependentUpon>dtset_InterventionsMain.xsd</DependentUpon>
+    </None>
     <None Include="dtset_Materiel.xsc">
       <DependentUpon>dtset_Materiel.xsd</DependentUpon>
     </None>
@@ -151,6 +172,17 @@
     </None>
     <None Include="dtset_Materiel.xss">
       <DependentUpon>dtset_Materiel.xsd</DependentUpon>
+    </None>
+    <None Include="dtset_Sites.xsc">
+      <DependentUpon>dtset_Sites.xsd</DependentUpon>
+    </None>
+    <None Include="dtset_Sites.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtset_Sites.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtset_Sites.xss">
+      <DependentUpon>dtset_Sites.xsd</DependentUpon>
     </None>
     <None Include="dtset_techos.xsc">
       <DependentUpon>dtset_techos.xsd</DependentUpon>

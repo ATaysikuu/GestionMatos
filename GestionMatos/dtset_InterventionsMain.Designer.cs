@@ -20,17 +20,17 @@ namespace GestionMatos {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("GestionMatosDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dtset_InterventionsMain")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class GestionMatosDataSet1 : global::System.Data.DataSet {
+    public partial class dtset_InterventionsMain : global::System.Data.DataSet {
         
-        private ClientsDataTable tableClients;
+        private afficher_interventionsDataTable tableafficher_interventions;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public GestionMatosDataSet1() {
+        public dtset_InterventionsMain() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GestionMatos {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected GestionMatosDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dtset_InterventionsMain(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace GestionMatos {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Clients"] != null)) {
-                    base.Tables.Add(new ClientsDataTable(ds.Tables["Clients"]));
+                if ((ds.Tables["afficher_interventions"] != null)) {
+                    base.Tables.Add(new afficher_interventionsDataTable(ds.Tables["afficher_interventions"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace GestionMatos {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ClientsDataTable Clients {
+        public afficher_interventionsDataTable afficher_interventions {
             get {
-                return this.tableClients;
+                return this.tableafficher_interventions;
             }
         }
         
@@ -127,7 +127,7 @@ namespace GestionMatos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            GestionMatosDataSet1 cln = ((GestionMatosDataSet1)(base.Clone()));
+            dtset_InterventionsMain cln = ((dtset_InterventionsMain)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace GestionMatos {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Clients"] != null)) {
-                    base.Tables.Add(new ClientsDataTable(ds.Tables["Clients"]));
+                if ((ds.Tables["afficher_interventions"] != null)) {
+                    base.Tables.Add(new afficher_interventionsDataTable(ds.Tables["afficher_interventions"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace GestionMatos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableClients = ((ClientsDataTable)(base.Tables["Clients"]));
+            this.tableafficher_interventions = ((afficher_interventionsDataTable)(base.Tables["afficher_interventions"]));
             if ((initTable == true)) {
-                if ((this.tableClients != null)) {
-                    this.tableClients.InitVars();
+                if ((this.tableafficher_interventions != null)) {
+                    this.tableafficher_interventions.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace GestionMatos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "GestionMatosDataSet1";
+            this.DataSetName = "dtset_InterventionsMain";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/GestionMatosDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/dtset_InterventionsMain.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableClients = new ClientsDataTable();
-            base.Tables.Add(this.tableClients);
+            this.tableafficher_interventions = new afficher_interventionsDataTable();
+            base.Tables.Add(this.tableafficher_interventions);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeClients() {
+        private bool ShouldSerializeafficher_interventions() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace GestionMatos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            GestionMatosDataSet1 ds = new GestionMatosDataSet1();
+            dtset_InterventionsMain ds = new dtset_InterventionsMain();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,35 +270,33 @@ namespace GestionMatos {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ClientsRowChangeEventHandler(object sender, ClientsRowChangeEvent e);
+        public delegate void afficher_interventionsRowChangeEventHandler(object sender, afficher_interventionsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ClientsDataTable : global::System.Data.TypedTableBase<ClientsRow> {
+        public partial class afficher_interventionsDataTable : global::System.Data.TypedTableBase<afficher_interventionsRow> {
+            
+            private global::System.Data.DataColumn columnid_Intervention;
+            
+            private global::System.Data.DataColumn columndate_Intervention;
+            
+            private global::System.Data.DataColumn columncommentaire_Intervention;
+            
+            private global::System.Data.DataColumn columnname_Materiel;
+            
+            private global::System.Data.DataColumn columnid_Technicien;
+            
+            private global::System.Data.DataColumn columnname_Site;
             
             private global::System.Data.DataColumn columnname_Client;
             
-            private global::System.Data.DataColumn columnid_Client;
-            
-            private global::System.Data.DataColumn columnaddress_Client;
-            
-            private global::System.Data.DataColumn columnzip_Client;
-            
-            private global::System.Data.DataColumn columncity_Client;
-            
-            private global::System.Data.DataColumn columntel_Client;
-            
-            private global::System.Data.DataColumn columnemail_Client;
-            
-            private global::System.Data.DataColumn columnid_Site;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsDataTable() {
-                this.TableName = "Clients";
+            public afficher_interventionsDataTable() {
+                this.TableName = "afficher_interventions";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +304,7 @@ namespace GestionMatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ClientsDataTable(global::System.Data.DataTable table) {
+            internal afficher_interventionsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,9 +321,57 @@ namespace GestionMatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ClientsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected afficher_interventionsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn id_InterventionColumn {
+                get {
+                    return this.columnid_Intervention;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn date_InterventionColumn {
+                get {
+                    return this.columndate_Intervention;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn commentaire_InterventionColumn {
+                get {
+                    return this.columncommentaire_Intervention;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn name_MaterielColumn {
+                get {
+                    return this.columnname_Materiel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn id_TechnicienColumn {
+                get {
+                    return this.columnid_Technicien;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn name_SiteColumn {
+                get {
+                    return this.columnname_Site;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -333,62 +379,6 @@ namespace GestionMatos {
             public global::System.Data.DataColumn name_ClientColumn {
                 get {
                     return this.columnname_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn id_ClientColumn {
-                get {
-                    return this.columnid_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn address_ClientColumn {
-                get {
-                    return this.columnaddress_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn zip_ClientColumn {
-                get {
-                    return this.columnzip_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn city_ClientColumn {
-                get {
-                    return this.columncity_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn tel_ClientColumn {
-                get {
-                    return this.columntel_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn email_ClientColumn {
-                get {
-                    return this.columnemail_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn id_SiteColumn {
-                get {
-                    return this.columnid_Site;
                 }
             }
             
@@ -403,59 +393,58 @@ namespace GestionMatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow this[int index] {
+            public afficher_interventionsRow this[int index] {
                 get {
-                    return ((ClientsRow)(this.Rows[index]));
+                    return ((afficher_interventionsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowChanging;
+            public event afficher_interventionsRowChangeEventHandler afficher_interventionsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowChanged;
+            public event afficher_interventionsRowChangeEventHandler afficher_interventionsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowDeleting;
+            public event afficher_interventionsRowChangeEventHandler afficher_interventionsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowDeleted;
+            public event afficher_interventionsRowChangeEventHandler afficher_interventionsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddClientsRow(ClientsRow row) {
+            public void Addafficher_interventionsRow(afficher_interventionsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow AddClientsRow(string name_Client, string address_Client, string zip_Client, string city_Client, string tel_Client, string email_Client, int id_Site) {
-                ClientsRow rowClientsRow = ((ClientsRow)(this.NewRow()));
+            public afficher_interventionsRow Addafficher_interventionsRow(System.DateTime date_Intervention, string commentaire_Intervention, string name_Materiel, int id_Technicien, string name_Site, string name_Client) {
+                afficher_interventionsRow rowafficher_interventionsRow = ((afficher_interventionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        name_Client,
                         null,
-                        address_Client,
-                        zip_Client,
-                        city_Client,
-                        tel_Client,
-                        email_Client,
-                        id_Site};
-                rowClientsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowClientsRow);
-                return rowClientsRow;
+                        date_Intervention,
+                        commentaire_Intervention,
+                        name_Materiel,
+                        id_Technicien,
+                        name_Site,
+                        name_Client};
+                rowafficher_interventionsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowafficher_interventionsRow);
+                return rowafficher_interventionsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow FindByid_Client(int id_Client) {
-                return ((ClientsRow)(this.Rows.Find(new object[] {
-                            id_Client})));
+            public afficher_interventionsRow FindByid_Intervention(int id_Intervention) {
+                return ((afficher_interventionsRow)(this.Rows.Find(new object[] {
+                            id_Intervention})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ClientsDataTable cln = ((ClientsDataTable)(base.Clone()));
+                afficher_interventionsDataTable cln = ((afficher_interventionsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,87 +452,79 @@ namespace GestionMatos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ClientsDataTable();
+                return new afficher_interventionsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
+                this.columnid_Intervention = base.Columns["id_Intervention"];
+                this.columndate_Intervention = base.Columns["date_Intervention"];
+                this.columncommentaire_Intervention = base.Columns["commentaire_Intervention"];
+                this.columnname_Materiel = base.Columns["name_Materiel"];
+                this.columnid_Technicien = base.Columns["id_Technicien"];
+                this.columnname_Site = base.Columns["name_Site"];
                 this.columnname_Client = base.Columns["name_Client"];
-                this.columnid_Client = base.Columns["id_Client"];
-                this.columnaddress_Client = base.Columns["address_Client"];
-                this.columnzip_Client = base.Columns["zip_Client"];
-                this.columncity_Client = base.Columns["city_Client"];
-                this.columntel_Client = base.Columns["tel_Client"];
-                this.columnemail_Client = base.Columns["email_Client"];
-                this.columnid_Site = base.Columns["id_Site"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
+                this.columnid_Intervention = new global::System.Data.DataColumn("id_Intervention", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_Intervention);
+                this.columndate_Intervention = new global::System.Data.DataColumn("date_Intervention", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_Intervention);
+                this.columncommentaire_Intervention = new global::System.Data.DataColumn("commentaire_Intervention", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncommentaire_Intervention);
+                this.columnname_Materiel = new global::System.Data.DataColumn("name_Materiel", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname_Materiel);
+                this.columnid_Technicien = new global::System.Data.DataColumn("id_Technicien", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_Technicien);
+                this.columnname_Site = new global::System.Data.DataColumn("name_Site", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname_Site);
                 this.columnname_Client = new global::System.Data.DataColumn("name_Client", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname_Client);
-                this.columnid_Client = new global::System.Data.DataColumn("id_Client", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_Client);
-                this.columnaddress_Client = new global::System.Data.DataColumn("address_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaddress_Client);
-                this.columnzip_Client = new global::System.Data.DataColumn("zip_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnzip_Client);
-                this.columncity_Client = new global::System.Data.DataColumn("city_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncity_Client);
-                this.columntel_Client = new global::System.Data.DataColumn("tel_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntel_Client);
-                this.columnemail_Client = new global::System.Data.DataColumn("email_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemail_Client);
-                this.columnid_Site = new global::System.Data.DataColumn("id_Site", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_Site);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_Client}, true));
+                                this.columnid_Intervention}, true));
+                this.columnid_Intervention.AutoIncrement = true;
+                this.columnid_Intervention.AllowDBNull = false;
+                this.columnid_Intervention.ReadOnly = true;
+                this.columnid_Intervention.Unique = true;
+                this.columndate_Intervention.AllowDBNull = false;
+                this.columncommentaire_Intervention.MaxLength = 2147483647;
+                this.columnname_Materiel.AllowDBNull = false;
+                this.columnname_Materiel.MaxLength = 50;
+                this.columnid_Technicien.AllowDBNull = false;
+                this.columnname_Site.AllowDBNull = false;
+                this.columnname_Site.MaxLength = 50;
                 this.columnname_Client.AllowDBNull = false;
                 this.columnname_Client.MaxLength = 100;
-                this.columnid_Client.AutoIncrement = true;
-                this.columnid_Client.AutoIncrementSeed = -1;
-                this.columnid_Client.AutoIncrementStep = -1;
-                this.columnid_Client.AllowDBNull = false;
-                this.columnid_Client.ReadOnly = true;
-                this.columnid_Client.Unique = true;
-                this.columnaddress_Client.AllowDBNull = false;
-                this.columnaddress_Client.MaxLength = 150;
-                this.columnzip_Client.AllowDBNull = false;
-                this.columnzip_Client.MaxLength = 25;
-                this.columncity_Client.AllowDBNull = false;
-                this.columncity_Client.MaxLength = 25;
-                this.columntel_Client.AllowDBNull = false;
-                this.columntel_Client.MaxLength = 25;
-                this.columnemail_Client.AllowDBNull = false;
-                this.columnemail_Client.MaxLength = 75;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow NewClientsRow() {
-                return ((ClientsRow)(this.NewRow()));
+            public afficher_interventionsRow Newafficher_interventionsRow() {
+                return ((afficher_interventionsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ClientsRow(builder);
+                return new afficher_interventionsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ClientsRow);
+                return typeof(afficher_interventionsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ClientsRowChanged != null)) {
-                    this.ClientsRowChanged(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.afficher_interventionsRowChanged != null)) {
+                    this.afficher_interventionsRowChanged(this, new afficher_interventionsRowChangeEvent(((afficher_interventionsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -551,8 +532,8 @@ namespace GestionMatos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ClientsRowChanging != null)) {
-                    this.ClientsRowChanging(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.afficher_interventionsRowChanging != null)) {
+                    this.afficher_interventionsRowChanging(this, new afficher_interventionsRowChangeEvent(((afficher_interventionsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -560,8 +541,8 @@ namespace GestionMatos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ClientsRowDeleted != null)) {
-                    this.ClientsRowDeleted(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.afficher_interventionsRowDeleted != null)) {
+                    this.afficher_interventionsRowDeleted(this, new afficher_interventionsRowChangeEvent(((afficher_interventionsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -569,14 +550,14 @@ namespace GestionMatos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ClientsRowDeleting != null)) {
-                    this.ClientsRowDeleting(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.afficher_interventionsRowDeleting != null)) {
+                    this.afficher_interventionsRowDeleting(this, new afficher_interventionsRowChangeEvent(((afficher_interventionsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveClientsRow(ClientsRow row) {
+            public void Removeafficher_interventionsRow(afficher_interventionsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -585,7 +566,7 @@ namespace GestionMatos {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GestionMatosDataSet1 ds = new GestionMatosDataSet1();
+                dtset_InterventionsMain ds = new dtset_InterventionsMain();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -603,7 +584,7 @@ namespace GestionMatos {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ClientsDataTable";
+                attribute2.FixedValue = "afficher_interventionsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -647,120 +628,110 @@ namespace GestionMatos {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ClientsRow : global::System.Data.DataRow {
+        public partial class afficher_interventionsRow : global::System.Data.DataRow {
             
-            private ClientsDataTable tableClients;
+            private afficher_interventionsDataTable tableafficher_interventions;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ClientsRow(global::System.Data.DataRowBuilder rb) : 
+            internal afficher_interventionsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableClients = ((ClientsDataTable)(this.Table));
+                this.tableafficher_interventions = ((afficher_interventionsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int id_Intervention {
+                get {
+                    return ((int)(this[this.tableafficher_interventions.id_InterventionColumn]));
+                }
+                set {
+                    this[this.tableafficher_interventions.id_InterventionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime date_Intervention {
+                get {
+                    return ((global::System.DateTime)(this[this.tableafficher_interventions.date_InterventionColumn]));
+                }
+                set {
+                    this[this.tableafficher_interventions.date_InterventionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string commentaire_Intervention {
+                get {
+                    try {
+                        return ((string)(this[this.tableafficher_interventions.commentaire_InterventionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'commentaire_Intervention\' in table \'afficher_interventions\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableafficher_interventions.commentaire_InterventionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string name_Materiel {
+                get {
+                    return ((string)(this[this.tableafficher_interventions.name_MaterielColumn]));
+                }
+                set {
+                    this[this.tableafficher_interventions.name_MaterielColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int id_Technicien {
+                get {
+                    return ((int)(this[this.tableafficher_interventions.id_TechnicienColumn]));
+                }
+                set {
+                    this[this.tableafficher_interventions.id_TechnicienColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string name_Site {
+                get {
+                    return ((string)(this[this.tableafficher_interventions.name_SiteColumn]));
+                }
+                set {
+                    this[this.tableafficher_interventions.name_SiteColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string name_Client {
                 get {
-                    return ((string)(this[this.tableClients.name_ClientColumn]));
+                    return ((string)(this[this.tableafficher_interventions.name_ClientColumn]));
                 }
                 set {
-                    this[this.tableClients.name_ClientColumn] = value;
+                    this[this.tableafficher_interventions.name_ClientColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int id_Client {
-                get {
-                    return ((int)(this[this.tableClients.id_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.id_ClientColumn] = value;
-                }
+            public bool Iscommentaire_InterventionNull() {
+                return this.IsNull(this.tableafficher_interventions.commentaire_InterventionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string address_Client {
-                get {
-                    return ((string)(this[this.tableClients.address_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.address_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string zip_Client {
-                get {
-                    return ((string)(this[this.tableClients.zip_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.zip_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string city_Client {
-                get {
-                    return ((string)(this[this.tableClients.city_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.city_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string tel_Client {
-                get {
-                    return ((string)(this[this.tableClients.tel_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.tel_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string email_Client {
-                get {
-                    return ((string)(this[this.tableClients.email_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.email_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int id_Site {
-                get {
-                    try {
-                        return ((int)(this[this.tableClients.id_SiteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'id_Site\' in table \'Clients\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableClients.id_SiteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isid_SiteNull() {
-                return this.IsNull(this.tableClients.id_SiteColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setid_SiteNull() {
-                this[this.tableClients.id_SiteColumn] = global::System.Convert.DBNull;
+            public void Setcommentaire_InterventionNull() {
+                this[this.tableafficher_interventions.commentaire_InterventionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -768,22 +739,22 @@ namespace GestionMatos {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ClientsRowChangeEvent : global::System.EventArgs {
+        public class afficher_interventionsRowChangeEvent : global::System.EventArgs {
             
-            private ClientsRow eventRow;
+            private afficher_interventionsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRowChangeEvent(ClientsRow row, global::System.Data.DataRowAction action) {
+            public afficher_interventionsRowChangeEvent(afficher_interventionsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow Row {
+            public afficher_interventionsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -799,7 +770,7 @@ namespace GestionMatos {
         }
     }
 }
-namespace GestionMatos.GestionMatosDataSet1TableAdapters {
+namespace GestionMatos.dtset_InterventionsMainTableAdapters {
     
     
     /// <summary>
@@ -811,7 +782,7 @@ namespace GestionMatos.GestionMatosDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ClientsTableAdapter : global::System.ComponentModel.Component {
+    public partial class afficher_interventionsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -825,7 +796,7 @@ namespace GestionMatos.GestionMatosDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ClientsTableAdapter() {
+        public afficher_interventionsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -922,63 +893,15 @@ namespace GestionMatos.GestionMatosDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Clients";
+            tableMapping.DataSetTable = "afficher_interventions";
+            tableMapping.ColumnMappings.Add("id_Intervention", "id_Intervention");
+            tableMapping.ColumnMappings.Add("date_Intervention", "date_Intervention");
+            tableMapping.ColumnMappings.Add("commentaire_Intervention", "commentaire_Intervention");
+            tableMapping.ColumnMappings.Add("name_Materiel", "name_Materiel");
+            tableMapping.ColumnMappings.Add("id_Technicien", "id_Technicien");
+            tableMapping.ColumnMappings.Add("name_Site", "name_Site");
             tableMapping.ColumnMappings.Add("name_Client", "name_Client");
-            tableMapping.ColumnMappings.Add("id_Client", "id_Client");
-            tableMapping.ColumnMappings.Add("address_Client", "address_Client");
-            tableMapping.ColumnMappings.Add("zip_Client", "zip_Client");
-            tableMapping.ColumnMappings.Add("city_Client", "city_Client");
-            tableMapping.ColumnMappings.Add("tel_Client", "tel_Client");
-            tableMapping.ColumnMappings.Add("email_Client", "email_Client");
-            tableMapping.ColumnMappings.Add("id_Site", "id_Site");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Clients] WHERE (([name_Client] = @Original_name_Client) AND ([address_Client] = @Original_address_Client) AND ([city_Client] = @Original_city_Client) AND ([email_Client] = @Original_email_Client) AND ([id_Client] = @Original_id_Client) AND ((@IsNull_id_Site = 1 AND [id_Site] IS NULL) OR ([id_Site] = @Original_id_Site)) AND ([tel_Client] = @Original_tel_Client) AND ([zip_Client] = @Original_zip_Client))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zip_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zip_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Clients] ([name_Client], [address_Client], [city_Client], [email_Client], [id_Site], [tel_Client], [zip_Client]) VALUES (@name_Client, @address_Client, @city_Client, @email_Client, @id_Site, @tel_Client, @zip_Client);
-SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Site, tel_Client, zip_Client FROM Clients WHERE (id_Client = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zip_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zip_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Clients] SET [name_Client] = @name_Client, [address_Client] = @address_Client, [city_Client] = @city_Client, [email_Client] = @email_Client, [id_Site] = @id_Site, [tel_Client] = @tel_Client, [zip_Client] = @zip_Client WHERE (([name_Client] = @Original_name_Client) AND ([address_Client] = @Original_address_Client) AND ([city_Client] = @Original_city_Client) AND ([email_Client] = @Original_email_Client) AND ([id_Client] = @Original_id_Client) AND ((@IsNull_id_Site = 1 AND [id_Site] IS NULL) OR ([id_Site] = @Original_id_Site)) AND ([tel_Client] = @Original_tel_Client) AND ([zip_Client] = @Original_zip_Client));
-SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Site, tel_Client, zip_Client FROM Clients WHERE (id_Client = @id_Client)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zip_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zip_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zip_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zip_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Client", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -994,16 +917,16 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Site" +
-                ", tel_Client, zip_Client FROM Clients";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.afficher_interventions";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GestionMatosDataSet1.ClientsDataTable dataTable) {
+        public virtual int Fill(dtset_InterventionsMain.afficher_interventionsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1016,40 +939,11 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GestionMatosDataSet1.ClientsDataTable GetData() {
+        public virtual dtset_InterventionsMain.afficher_interventionsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GestionMatosDataSet1.ClientsDataTable dataTable = new GestionMatosDataSet1.ClientsDataTable();
+            dtset_InterventionsMain.afficher_interventionsDataTable dataTable = new dtset_InterventionsMain.afficher_interventionsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionMatosDataSet1.ClientsDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionMatosDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Clients");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
         }
     }
     
@@ -1065,8 +959,6 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         
         private UpdateOrderOption _updateOrder;
         
-        private ClientsTableAdapter _clientsTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1079,20 +971,6 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public ClientsTableAdapter ClientsTableAdapter {
-            get {
-                return this._clientsTableAdapter;
-            }
-            set {
-                this._clientsTableAdapter = value;
             }
         }
         
@@ -1115,10 +993,6 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._clientsTableAdapter != null) 
-                            && (this._clientsTableAdapter.Connection != null))) {
-                    return this._clientsTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1132,9 +1006,6 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._clientsTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1144,17 +1015,8 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(GestionMatosDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dtset_InterventionsMain dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clientsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._clientsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1163,16 +1025,8 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(GestionMatosDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dtset_InterventionsMain dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clientsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._clientsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1181,16 +1035,8 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(GestionMatosDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dtset_InterventionsMain dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._clientsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._clientsTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1223,17 +1069,12 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(GestionMatosDataSet1 dataSet) {
+        public virtual int UpdateAll(dtset_InterventionsMain dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._clientsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._clientsTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1267,15 +1108,6 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._clientsTableAdapter != null)) {
-                    revertConnections.Add(this._clientsTableAdapter, this._clientsTableAdapter.Connection);
-                    this._clientsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._clientsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._clientsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._clientsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._clientsTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1333,10 +1165,6 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._clientsTableAdapter != null)) {
-                    this._clientsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._clientsTableAdapter]));
-                    this._clientsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -20,17 +20,17 @@ namespace GestionMatos {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("GestionMatosDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dtset_Sites")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class GestionMatosDataSet1 : global::System.Data.DataSet {
+    public partial class dtset_Sites : global::System.Data.DataSet {
         
-        private ClientsDataTable tableClients;
+        private SiteDataTable tableSite;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public GestionMatosDataSet1() {
+        public dtset_Sites() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GestionMatos {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected GestionMatosDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dtset_Sites(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace GestionMatos {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Clients"] != null)) {
-                    base.Tables.Add(new ClientsDataTable(ds.Tables["Clients"]));
+                if ((ds.Tables["Site"] != null)) {
+                    base.Tables.Add(new SiteDataTable(ds.Tables["Site"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace GestionMatos {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ClientsDataTable Clients {
+        public SiteDataTable Site {
             get {
-                return this.tableClients;
+                return this.tableSite;
             }
         }
         
@@ -127,7 +127,7 @@ namespace GestionMatos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            GestionMatosDataSet1 cln = ((GestionMatosDataSet1)(base.Clone()));
+            dtset_Sites cln = ((dtset_Sites)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace GestionMatos {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Clients"] != null)) {
-                    base.Tables.Add(new ClientsDataTable(ds.Tables["Clients"]));
+                if ((ds.Tables["Site"] != null)) {
+                    base.Tables.Add(new SiteDataTable(ds.Tables["Site"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace GestionMatos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableClients = ((ClientsDataTable)(base.Tables["Clients"]));
+            this.tableSite = ((SiteDataTable)(base.Tables["Site"]));
             if ((initTable == true)) {
-                if ((this.tableClients != null)) {
-                    this.tableClients.InitVars();
+                if ((this.tableSite != null)) {
+                    this.tableSite.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace GestionMatos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "GestionMatosDataSet1";
+            this.DataSetName = "dtset_Sites";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/GestionMatosDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/dtset_Sites.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableClients = new ClientsDataTable();
-            base.Tables.Add(this.tableClients);
+            this.tableSite = new SiteDataTable();
+            base.Tables.Add(this.tableSite);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeClients() {
+        private bool ShouldSerializeSite() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace GestionMatos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            GestionMatosDataSet1 ds = new GestionMatosDataSet1();
+            dtset_Sites ds = new dtset_Sites();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,35 +270,31 @@ namespace GestionMatos {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ClientsRowChangeEventHandler(object sender, ClientsRowChangeEvent e);
+        public delegate void SiteRowChangeEventHandler(object sender, SiteRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ClientsDataTable : global::System.Data.TypedTableBase<ClientsRow> {
-            
-            private global::System.Data.DataColumn columnname_Client;
-            
-            private global::System.Data.DataColumn columnid_Client;
-            
-            private global::System.Data.DataColumn columnaddress_Client;
-            
-            private global::System.Data.DataColumn columnzip_Client;
-            
-            private global::System.Data.DataColumn columncity_Client;
-            
-            private global::System.Data.DataColumn columntel_Client;
-            
-            private global::System.Data.DataColumn columnemail_Client;
+        public partial class SiteDataTable : global::System.Data.TypedTableBase<SiteRow> {
             
             private global::System.Data.DataColumn columnid_Site;
             
+            private global::System.Data.DataColumn columnname_Site;
+            
+            private global::System.Data.DataColumn columnaddress_Site;
+            
+            private global::System.Data.DataColumn columnzipcode_Site;
+            
+            private global::System.Data.DataColumn columncity_Site;
+            
+            private global::System.Data.DataColumn columnid_Client;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsDataTable() {
-                this.TableName = "Clients";
+            public SiteDataTable() {
+                this.TableName = "Site";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +302,7 @@ namespace GestionMatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ClientsDataTable(global::System.Data.DataTable table) {
+            internal SiteDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,16 +319,48 @@ namespace GestionMatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ClientsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected SiteDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn name_ClientColumn {
+            public global::System.Data.DataColumn id_SiteColumn {
                 get {
-                    return this.columnname_Client;
+                    return this.columnid_Site;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn name_SiteColumn {
+                get {
+                    return this.columnname_Site;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn address_SiteColumn {
+                get {
+                    return this.columnaddress_Site;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn zipcode_SiteColumn {
+                get {
+                    return this.columnzipcode_Site;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn city_SiteColumn {
+                get {
+                    return this.columncity_Site;
                 }
             }
             
@@ -341,54 +369,6 @@ namespace GestionMatos {
             public global::System.Data.DataColumn id_ClientColumn {
                 get {
                     return this.columnid_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn address_ClientColumn {
-                get {
-                    return this.columnaddress_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn zip_ClientColumn {
-                get {
-                    return this.columnzip_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn city_ClientColumn {
-                get {
-                    return this.columncity_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn tel_ClientColumn {
-                get {
-                    return this.columntel_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn email_ClientColumn {
-                get {
-                    return this.columnemail_Client;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn id_SiteColumn {
-                get {
-                    return this.columnid_Site;
                 }
             }
             
@@ -403,59 +383,57 @@ namespace GestionMatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow this[int index] {
+            public SiteRow this[int index] {
                 get {
-                    return ((ClientsRow)(this.Rows[index]));
+                    return ((SiteRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowChanging;
+            public event SiteRowChangeEventHandler SiteRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowChanged;
+            public event SiteRowChangeEventHandler SiteRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowDeleting;
+            public event SiteRowChangeEventHandler SiteRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowDeleted;
+            public event SiteRowChangeEventHandler SiteRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddClientsRow(ClientsRow row) {
+            public void AddSiteRow(SiteRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow AddClientsRow(string name_Client, string address_Client, string zip_Client, string city_Client, string tel_Client, string email_Client, int id_Site) {
-                ClientsRow rowClientsRow = ((ClientsRow)(this.NewRow()));
+            public SiteRow AddSiteRow(string name_Site, string address_Site, string zipcode_Site, string city_Site, int id_Client) {
+                SiteRow rowSiteRow = ((SiteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        name_Client,
                         null,
-                        address_Client,
-                        zip_Client,
-                        city_Client,
-                        tel_Client,
-                        email_Client,
-                        id_Site};
-                rowClientsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowClientsRow);
-                return rowClientsRow;
+                        name_Site,
+                        address_Site,
+                        zipcode_Site,
+                        city_Site,
+                        id_Client};
+                rowSiteRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSiteRow);
+                return rowSiteRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow FindByid_Client(int id_Client) {
-                return ((ClientsRow)(this.Rows.Find(new object[] {
-                            id_Client})));
+            public SiteRow FindByid_Site(int id_Site) {
+                return ((SiteRow)(this.Rows.Find(new object[] {
+                            id_Site})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ClientsDataTable cln = ((ClientsDataTable)(base.Clone()));
+                SiteDataTable cln = ((SiteDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,87 +441,77 @@ namespace GestionMatos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ClientsDataTable();
+                return new SiteDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnname_Client = base.Columns["name_Client"];
-                this.columnid_Client = base.Columns["id_Client"];
-                this.columnaddress_Client = base.Columns["address_Client"];
-                this.columnzip_Client = base.Columns["zip_Client"];
-                this.columncity_Client = base.Columns["city_Client"];
-                this.columntel_Client = base.Columns["tel_Client"];
-                this.columnemail_Client = base.Columns["email_Client"];
                 this.columnid_Site = base.Columns["id_Site"];
+                this.columnname_Site = base.Columns["name_Site"];
+                this.columnaddress_Site = base.Columns["address_Site"];
+                this.columnzipcode_Site = base.Columns["zipcode_Site"];
+                this.columncity_Site = base.Columns["city_Site"];
+                this.columnid_Client = base.Columns["id_Client"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnname_Client = new global::System.Data.DataColumn("name_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname_Client);
-                this.columnid_Client = new global::System.Data.DataColumn("id_Client", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_Client);
-                this.columnaddress_Client = new global::System.Data.DataColumn("address_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaddress_Client);
-                this.columnzip_Client = new global::System.Data.DataColumn("zip_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnzip_Client);
-                this.columncity_Client = new global::System.Data.DataColumn("city_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncity_Client);
-                this.columntel_Client = new global::System.Data.DataColumn("tel_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntel_Client);
-                this.columnemail_Client = new global::System.Data.DataColumn("email_Client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemail_Client);
                 this.columnid_Site = new global::System.Data.DataColumn("id_Site", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_Site);
+                this.columnname_Site = new global::System.Data.DataColumn("name_Site", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname_Site);
+                this.columnaddress_Site = new global::System.Data.DataColumn("address_Site", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaddress_Site);
+                this.columnzipcode_Site = new global::System.Data.DataColumn("zipcode_Site", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnzipcode_Site);
+                this.columncity_Site = new global::System.Data.DataColumn("city_Site", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncity_Site);
+                this.columnid_Client = new global::System.Data.DataColumn("id_Client", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_Client);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_Client}, true));
-                this.columnname_Client.AllowDBNull = false;
-                this.columnname_Client.MaxLength = 100;
-                this.columnid_Client.AutoIncrement = true;
-                this.columnid_Client.AutoIncrementSeed = -1;
-                this.columnid_Client.AutoIncrementStep = -1;
-                this.columnid_Client.AllowDBNull = false;
-                this.columnid_Client.ReadOnly = true;
-                this.columnid_Client.Unique = true;
-                this.columnaddress_Client.AllowDBNull = false;
-                this.columnaddress_Client.MaxLength = 150;
-                this.columnzip_Client.AllowDBNull = false;
-                this.columnzip_Client.MaxLength = 25;
-                this.columncity_Client.AllowDBNull = false;
-                this.columncity_Client.MaxLength = 25;
-                this.columntel_Client.AllowDBNull = false;
-                this.columntel_Client.MaxLength = 25;
-                this.columnemail_Client.AllowDBNull = false;
-                this.columnemail_Client.MaxLength = 75;
+                                this.columnid_Site}, true));
+                this.columnid_Site.AutoIncrement = true;
+                this.columnid_Site.AutoIncrementSeed = -1;
+                this.columnid_Site.AutoIncrementStep = -1;
+                this.columnid_Site.AllowDBNull = false;
+                this.columnid_Site.ReadOnly = true;
+                this.columnid_Site.Unique = true;
+                this.columnname_Site.AllowDBNull = false;
+                this.columnname_Site.MaxLength = 50;
+                this.columnaddress_Site.AllowDBNull = false;
+                this.columnaddress_Site.MaxLength = 75;
+                this.columnzipcode_Site.AllowDBNull = false;
+                this.columnzipcode_Site.MaxLength = 25;
+                this.columncity_Site.AllowDBNull = false;
+                this.columncity_Site.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow NewClientsRow() {
-                return ((ClientsRow)(this.NewRow()));
+            public SiteRow NewSiteRow() {
+                return ((SiteRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ClientsRow(builder);
+                return new SiteRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ClientsRow);
+                return typeof(SiteRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ClientsRowChanged != null)) {
-                    this.ClientsRowChanged(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.SiteRowChanged != null)) {
+                    this.SiteRowChanged(this, new SiteRowChangeEvent(((SiteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -551,8 +519,8 @@ namespace GestionMatos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ClientsRowChanging != null)) {
-                    this.ClientsRowChanging(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.SiteRowChanging != null)) {
+                    this.SiteRowChanging(this, new SiteRowChangeEvent(((SiteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -560,8 +528,8 @@ namespace GestionMatos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ClientsRowDeleted != null)) {
-                    this.ClientsRowDeleted(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.SiteRowDeleted != null)) {
+                    this.SiteRowDeleted(this, new SiteRowChangeEvent(((SiteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -569,14 +537,14 @@ namespace GestionMatos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ClientsRowDeleting != null)) {
-                    this.ClientsRowDeleting(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.SiteRowDeleting != null)) {
+                    this.SiteRowDeleting(this, new SiteRowChangeEvent(((SiteRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveClientsRow(ClientsRow row) {
+            public void RemoveSiteRow(SiteRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -585,7 +553,7 @@ namespace GestionMatos {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GestionMatosDataSet1 ds = new GestionMatosDataSet1();
+                dtset_Sites ds = new dtset_Sites();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -603,7 +571,7 @@ namespace GestionMatos {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ClientsDataTable";
+                attribute2.FixedValue = "SiteDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -647,25 +615,69 @@ namespace GestionMatos {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ClientsRow : global::System.Data.DataRow {
+        public partial class SiteRow : global::System.Data.DataRow {
             
-            private ClientsDataTable tableClients;
+            private SiteDataTable tableSite;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ClientsRow(global::System.Data.DataRowBuilder rb) : 
+            internal SiteRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableClients = ((ClientsDataTable)(this.Table));
+                this.tableSite = ((SiteDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string name_Client {
+            public int id_Site {
                 get {
-                    return ((string)(this[this.tableClients.name_ClientColumn]));
+                    return ((int)(this[this.tableSite.id_SiteColumn]));
                 }
                 set {
-                    this[this.tableClients.name_ClientColumn] = value;
+                    this[this.tableSite.id_SiteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string name_Site {
+                get {
+                    return ((string)(this[this.tableSite.name_SiteColumn]));
+                }
+                set {
+                    this[this.tableSite.name_SiteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string address_Site {
+                get {
+                    return ((string)(this[this.tableSite.address_SiteColumn]));
+                }
+                set {
+                    this[this.tableSite.address_SiteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string zipcode_Site {
+                get {
+                    return ((string)(this[this.tableSite.zipcode_SiteColumn]));
+                }
+                set {
+                    this[this.tableSite.zipcode_SiteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string city_Site {
+                get {
+                    return ((string)(this[this.tableSite.city_SiteColumn]));
+                }
+                set {
+                    this[this.tableSite.city_SiteColumn] = value;
                 }
             }
             
@@ -673,94 +685,28 @@ namespace GestionMatos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int id_Client {
                 get {
-                    return ((int)(this[this.tableClients.id_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.id_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string address_Client {
-                get {
-                    return ((string)(this[this.tableClients.address_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.address_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string zip_Client {
-                get {
-                    return ((string)(this[this.tableClients.zip_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.zip_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string city_Client {
-                get {
-                    return ((string)(this[this.tableClients.city_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.city_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string tel_Client {
-                get {
-                    return ((string)(this[this.tableClients.tel_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.tel_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string email_Client {
-                get {
-                    return ((string)(this[this.tableClients.email_ClientColumn]));
-                }
-                set {
-                    this[this.tableClients.email_ClientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int id_Site {
-                get {
                     try {
-                        return ((int)(this[this.tableClients.id_SiteColumn]));
+                        return ((int)(this[this.tableSite.id_ClientColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'id_Site\' in table \'Clients\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_Client\' in table \'Site\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableClients.id_SiteColumn] = value;
+                    this[this.tableSite.id_ClientColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isid_SiteNull() {
-                return this.IsNull(this.tableClients.id_SiteColumn);
+            public bool Isid_ClientNull() {
+                return this.IsNull(this.tableSite.id_ClientColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setid_SiteNull() {
-                this[this.tableClients.id_SiteColumn] = global::System.Convert.DBNull;
+            public void Setid_ClientNull() {
+                this[this.tableSite.id_ClientColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -768,22 +714,22 @@ namespace GestionMatos {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ClientsRowChangeEvent : global::System.EventArgs {
+        public class SiteRowChangeEvent : global::System.EventArgs {
             
-            private ClientsRow eventRow;
+            private SiteRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRowChangeEvent(ClientsRow row, global::System.Data.DataRowAction action) {
+            public SiteRowChangeEvent(SiteRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ClientsRow Row {
+            public SiteRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -799,7 +745,7 @@ namespace GestionMatos {
         }
     }
 }
-namespace GestionMatos.GestionMatosDataSet1TableAdapters {
+namespace GestionMatos.dtset_SitesTableAdapters {
     
     
     /// <summary>
@@ -811,7 +757,7 @@ namespace GestionMatos.GestionMatosDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ClientsTableAdapter : global::System.ComponentModel.Component {
+    public partial class SiteTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -825,7 +771,7 @@ namespace GestionMatos.GestionMatosDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ClientsTableAdapter() {
+        public SiteTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -922,63 +868,53 @@ namespace GestionMatos.GestionMatosDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Clients";
-            tableMapping.ColumnMappings.Add("name_Client", "name_Client");
-            tableMapping.ColumnMappings.Add("id_Client", "id_Client");
-            tableMapping.ColumnMappings.Add("address_Client", "address_Client");
-            tableMapping.ColumnMappings.Add("zip_Client", "zip_Client");
-            tableMapping.ColumnMappings.Add("city_Client", "city_Client");
-            tableMapping.ColumnMappings.Add("tel_Client", "tel_Client");
-            tableMapping.ColumnMappings.Add("email_Client", "email_Client");
+            tableMapping.DataSetTable = "Site";
             tableMapping.ColumnMappings.Add("id_Site", "id_Site");
+            tableMapping.ColumnMappings.Add("name_Site", "name_Site");
+            tableMapping.ColumnMappings.Add("address_Site", "address_Site");
+            tableMapping.ColumnMappings.Add("zipcode_Site", "zipcode_Site");
+            tableMapping.ColumnMappings.Add("city_Site", "city_Site");
+            tableMapping.ColumnMappings.Add("id_Client", "id_Client");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Clients] WHERE (([name_Client] = @Original_name_Client) AND ([address_Client] = @Original_address_Client) AND ([city_Client] = @Original_city_Client) AND ([email_Client] = @Original_email_Client) AND ([id_Client] = @Original_id_Client) AND ((@IsNull_id_Site = 1 AND [id_Site] IS NULL) OR ([id_Site] = @Original_id_Site)) AND ([tel_Client] = @Original_tel_Client) AND ([zip_Client] = @Original_zip_Client))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Site] WHERE (([id_Site] = @Original_id_Site) AND ([name_Site] = @Original_name_Site) AND ([address_Site] = @Original_address_Site) AND ([zipcode_Site] = @Original_zipcode_Site) AND ([city_Site] = @Original_city_Site) AND ((@IsNull_id_Client = 1 AND [id_Client] IS NULL) OR ([id_Client] = @Original_id_Client)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zip_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zip_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zipcode_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zipcode_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Clients] ([name_Client], [address_Client], [city_Client], [email_Client], [id_Site], [tel_Client], [zip_Client]) VALUES (@name_Client, @address_Client, @city_Client, @email_Client, @id_Site, @tel_Client, @zip_Client);
-SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Site, tel_Client, zip_Client FROM Clients WHERE (id_Client = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Site] ([name_Site], [address_Site], [zipcode_Site], [city_Site], [id_Client]) VALUES (@name_Site, @address_Site, @zipcode_Site, @city_Site, @id_Client);
+SELECT id_Site, name_Site, address_Site, zipcode_Site, city_Site, id_Client FROM Site WHERE (id_Site = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zip_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zip_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zipcode_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zipcode_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Clients] SET [name_Client] = @name_Client, [address_Client] = @address_Client, [city_Client] = @city_Client, [email_Client] = @email_Client, [id_Site] = @id_Site, [tel_Client] = @tel_Client, [zip_Client] = @zip_Client WHERE (([name_Client] = @Original_name_Client) AND ([address_Client] = @Original_address_Client) AND ([city_Client] = @Original_city_Client) AND ([email_Client] = @Original_email_Client) AND ([id_Client] = @Original_id_Client) AND ((@IsNull_id_Site = 1 AND [id_Site] IS NULL) OR ([id_Site] = @Original_id_Site)) AND ([tel_Client] = @Original_tel_Client) AND ([zip_Client] = @Original_zip_Client));
-SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Site, tel_Client, zip_Client FROM Clients WHERE (id_Client = @id_Client)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Site] SET [name_Site] = @name_Site, [address_Site] = @address_Site, [zipcode_Site] = @zipcode_Site, [city_Site] = @city_Site, [id_Client] = @id_Client WHERE (([id_Site] = @Original_id_Site) AND ([name_Site] = @Original_name_Site) AND ([address_Site] = @Original_address_Site) AND ([zipcode_Site] = @Original_zipcode_Site) AND ([city_Site] = @Original_city_Site) AND ((@IsNull_id_Client = 1 AND [id_Client] IS NULL) OR ([id_Client] = @Original_id_Client)));
+SELECT id_Site, name_Site, address_Site, zipcode_Site, city_Site, id_Client FROM Site WHERE (id_Site = @id_Site)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zip_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zip_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zipcode_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zipcode_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Site", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zip_Client", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zip_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Client", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zipcode_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zipcode_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city_Site", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city_Site", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Client", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Client", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Site", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_Site", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -994,8 +930,8 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Site" +
-                ", tel_Client, zip_Client FROM Clients";
+            this._commandCollection[0].CommandText = "SELECT id_Site, name_Site, address_Site, zipcode_Site, city_Site, id_Client FROM " +
+                "dbo.Site";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1003,7 +939,7 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GestionMatosDataSet1.ClientsDataTable dataTable) {
+        public virtual int Fill(dtset_Sites.SiteDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1016,9 +952,9 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GestionMatosDataSet1.ClientsDataTable GetData() {
+        public virtual dtset_Sites.SiteDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GestionMatosDataSet1.ClientsDataTable dataTable = new GestionMatosDataSet1.ClientsDataTable();
+            dtset_Sites.SiteDataTable dataTable = new dtset_Sites.SiteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1026,15 +962,15 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionMatosDataSet1.ClientsDataTable dataTable) {
+        public virtual int Update(dtset_Sites.SiteDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionMatosDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Clients");
+        public virtual int Update(dtset_Sites dataSet) {
+            return this.Adapter.Update(dataSet, "Site");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1051,6 +987,204 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_id_Site, string Original_name_Site, string Original_address_Site, string Original_zipcode_Site, string Original_city_Site, global::System.Nullable<int> Original_id_Client) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_Site));
+            if ((Original_name_Site == null)) {
+                throw new global::System.ArgumentNullException("Original_name_Site");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_name_Site));
+            }
+            if ((Original_address_Site == null)) {
+                throw new global::System.ArgumentNullException("Original_address_Site");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_address_Site));
+            }
+            if ((Original_zipcode_Site == null)) {
+                throw new global::System.ArgumentNullException("Original_zipcode_Site");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_zipcode_Site));
+            }
+            if ((Original_city_Site == null)) {
+                throw new global::System.ArgumentNullException("Original_city_Site");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_city_Site));
+            }
+            if ((Original_id_Client.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_id_Client.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string name_Site, string address_Site, string zipcode_Site, string city_Site, global::System.Nullable<int> id_Client) {
+            if ((name_Site == null)) {
+                throw new global::System.ArgumentNullException("name_Site");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(name_Site));
+            }
+            if ((address_Site == null)) {
+                throw new global::System.ArgumentNullException("address_Site");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(address_Site));
+            }
+            if ((zipcode_Site == null)) {
+                throw new global::System.ArgumentNullException("zipcode_Site");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(zipcode_Site));
+            }
+            if ((city_Site == null)) {
+                throw new global::System.ArgumentNullException("city_Site");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(city_Site));
+            }
+            if ((id_Client.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(id_Client.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string name_Site, string address_Site, string zipcode_Site, string city_Site, global::System.Nullable<int> id_Client, int Original_id_Site, string Original_name_Site, string Original_address_Site, string Original_zipcode_Site, string Original_city_Site, global::System.Nullable<int> Original_id_Client, int id_Site) {
+            if ((name_Site == null)) {
+                throw new global::System.ArgumentNullException("name_Site");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(name_Site));
+            }
+            if ((address_Site == null)) {
+                throw new global::System.ArgumentNullException("address_Site");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(address_Site));
+            }
+            if ((zipcode_Site == null)) {
+                throw new global::System.ArgumentNullException("zipcode_Site");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(zipcode_Site));
+            }
+            if ((city_Site == null)) {
+                throw new global::System.ArgumentNullException("city_Site");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(city_Site));
+            }
+            if ((id_Client.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(id_Client.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_Site));
+            if ((Original_name_Site == null)) {
+                throw new global::System.ArgumentNullException("Original_name_Site");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_name_Site));
+            }
+            if ((Original_address_Site == null)) {
+                throw new global::System.ArgumentNullException("Original_address_Site");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_address_Site));
+            }
+            if ((Original_zipcode_Site == null)) {
+                throw new global::System.ArgumentNullException("Original_zipcode_Site");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_zipcode_Site));
+            }
+            if ((Original_city_Site == null)) {
+                throw new global::System.ArgumentNullException("Original_city_Site");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_city_Site));
+            }
+            if ((Original_id_Client.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_id_Client.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(id_Site));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string name_Site, string address_Site, string zipcode_Site, string city_Site, global::System.Nullable<int> id_Client, int Original_id_Site, string Original_name_Site, string Original_address_Site, string Original_zipcode_Site, string Original_city_Site, global::System.Nullable<int> Original_id_Client) {
+            return this.Update(name_Site, address_Site, zipcode_Site, city_Site, id_Client, Original_id_Site, Original_name_Site, Original_address_Site, Original_zipcode_Site, Original_city_Site, Original_id_Client, Original_id_Site);
+        }
     }
     
     /// <summary>
@@ -1065,7 +1199,7 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         
         private UpdateOrderOption _updateOrder;
         
-        private ClientsTableAdapter _clientsTableAdapter;
+        private SiteTableAdapter _siteTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1087,12 +1221,12 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ClientsTableAdapter ClientsTableAdapter {
+        public SiteTableAdapter SiteTableAdapter {
             get {
-                return this._clientsTableAdapter;
+                return this._siteTableAdapter;
             }
             set {
-                this._clientsTableAdapter = value;
+                this._siteTableAdapter = value;
             }
         }
         
@@ -1115,9 +1249,9 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._clientsTableAdapter != null) 
-                            && (this._clientsTableAdapter.Connection != null))) {
-                    return this._clientsTableAdapter.Connection;
+                if (((this._siteTableAdapter != null) 
+                            && (this._siteTableAdapter.Connection != null))) {
+                    return this._siteTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1132,7 +1266,7 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._clientsTableAdapter != null)) {
+                if ((this._siteTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1144,14 +1278,14 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(GestionMatosDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dtset_Sites dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clientsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._siteTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Site.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._clientsTableAdapter.Update(updatedRows));
+                    result = (result + this._siteTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1163,13 +1297,13 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(GestionMatosDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dtset_Sites dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clientsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._siteTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Site.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._clientsTableAdapter.Update(addedRows));
+                    result = (result + this._siteTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1181,13 +1315,13 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(GestionMatosDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dtset_Sites dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._clientsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._siteTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Site.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._clientsTableAdapter.Update(deletedRows));
+                    result = (result + this._siteTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1223,15 +1357,15 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(GestionMatosDataSet1 dataSet) {
+        public virtual int UpdateAll(dtset_Sites dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._clientsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._clientsTableAdapter.Connection) == false))) {
+            if (((this._siteTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._siteTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1267,13 +1401,13 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._clientsTableAdapter != null)) {
-                    revertConnections.Add(this._clientsTableAdapter, this._clientsTableAdapter.Connection);
-                    this._clientsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._clientsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._clientsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._clientsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._clientsTableAdapter.Adapter);
+                if ((this._siteTableAdapter != null)) {
+                    revertConnections.Add(this._siteTableAdapter, this._siteTableAdapter.Connection);
+                    this._siteTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._siteTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._siteTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._siteTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._siteTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1334,9 +1468,9 @@ SELECT name_Client, address_Client, city_Client, email_Client, id_Client, id_Sit
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._clientsTableAdapter != null)) {
-                    this._clientsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._clientsTableAdapter]));
-                    this._clientsTableAdapter.Transaction = null;
+                if ((this._siteTableAdapter != null)) {
+                    this._siteTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._siteTableAdapter]));
+                    this._siteTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

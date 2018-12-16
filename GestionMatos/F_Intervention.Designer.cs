@@ -29,15 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxID_Technicien = new System.Windows.Forms.ComboBox();
+            this.dtpicker_dateinter = new System.Windows.Forms.DateTimePicker();
+            this.cmb_IDTechnicien = new System.Windows.Forms.ComboBox();
+            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtset_techos = new GestionMatos.dtset_techos();
             this.cmb_listeClients = new System.Windows.Forms.ComboBox();
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gestionMatosDataSet1 = new GestionMatos.GestionMatosDataSet1();
-            this.comboBoxListeSites = new System.Windows.Forms.ComboBox();
+            this.dtset_Clients = new GestionMatos.GestionMatosDataSet1();
+            this.cmb_listeSites = new System.Windows.Forms.ComboBox();
             this.affichersitesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gestionMatosDataSet3 = new GestionMatos.GestionMatosDataSet3();
-            this.comboBoxMateriels = new System.Windows.Forms.ComboBox();
+            this.cmb_listeMateriel = new System.Windows.Forms.ComboBox();
+            this.materielBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtset_Materiel = new GestionMatos.dtset_Materiel();
             this.buttonOk = new System.Windows.Forms.Button();
             this.lb_dateIntervention = new System.Windows.Forms.Label();
             this.lb_technicien = new System.Windows.Forms.Label();
@@ -52,51 +56,59 @@
             this.affichersitesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.afficher_sitesTableAdapter = new GestionMatos.GestionMatosDataSet2TableAdapters.afficher_sitesTableAdapter();
             this.afficher_sitesTableAdapter1 = new GestionMatos.GestionMatosDataSet3TableAdapters.afficher_sitesTableAdapter();
-            this.dtset_Materiel = new GestionMatos.dtset_Materiel();
-            this.materielBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.materielTableAdapter = new GestionMatos.dtset_MaterielTableAdapters.MaterielTableAdapter();
             this.lb_sites = new System.Windows.Forms.Label();
             this.lb_listeclients = new System.Windows.Forms.Label();
             this.lb_listemateriel = new System.Windows.Forms.Label();
-            this.dtset_techos = new GestionMatos.dtset_techos();
-            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.technicianTableAdapter = new GestionMatos.dtset_techosTableAdapters.TechnicianTableAdapter();
             this.sqlcmd_insertIntervention = new System.Data.SqlClient.SqlCommand();
+            this.sqlcmd_getIntervention = new System.Data.SqlClient.SqlCommand();
+            this.btn_Edit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_techos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_Clients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_techos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtpicker_dateinter
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(11, 20);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(135, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtpicker_dateinter.Location = new System.Drawing.Point(11, 20);
+            this.dtpicker_dateinter.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpicker_dateinter.Name = "dtpicker_dateinter";
+            this.dtpicker_dateinter.Size = new System.Drawing.Size(135, 20);
+            this.dtpicker_dateinter.TabIndex = 0;
             // 
-            // comboBoxID_Technicien
+            // cmb_IDTechnicien
             // 
-            this.comboBoxID_Technicien.DataSource = this.technicianBindingSource;
-            this.comboBoxID_Technicien.DisplayMember = "name_Technicien";
-            this.comboBoxID_Technicien.FormattingEnabled = true;
-            this.comboBoxID_Technicien.Location = new System.Drawing.Point(12, 67);
-            this.comboBoxID_Technicien.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxID_Technicien.Name = "comboBoxID_Technicien";
-            this.comboBoxID_Technicien.Size = new System.Drawing.Size(135, 21);
-            this.comboBoxID_Technicien.TabIndex = 2;
+            this.cmb_IDTechnicien.DataSource = this.technicianBindingSource;
+            this.cmb_IDTechnicien.DisplayMember = "name_Technicien";
+            this.cmb_IDTechnicien.FormattingEnabled = true;
+            this.cmb_IDTechnicien.Location = new System.Drawing.Point(12, 67);
+            this.cmb_IDTechnicien.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_IDTechnicien.Name = "cmb_IDTechnicien";
+            this.cmb_IDTechnicien.Size = new System.Drawing.Size(135, 21);
+            this.cmb_IDTechnicien.TabIndex = 2;
+            // 
+            // technicianBindingSource
+            // 
+            this.technicianBindingSource.DataMember = "Technician";
+            this.technicianBindingSource.DataSource = this.dtset_techos;
+            // 
+            // dtset_techos
+            // 
+            this.dtset_techos.DataSetName = "dtset_techos";
+            this.dtset_techos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmb_listeClients
             // 
             this.cmb_listeClients.DataSource = this.clientsBindingSource;
-            this.cmb_listeClients.DisplayMember = "name_Client";
+            this.cmb_listeClients.DisplayMember = "id_Client";
             this.cmb_listeClients.FormattingEnabled = true;
             this.cmb_listeClients.Location = new System.Drawing.Point(150, 19);
             this.cmb_listeClients.Margin = new System.Windows.Forms.Padding(2);
@@ -107,23 +119,23 @@
             // clientsBindingSource
             // 
             this.clientsBindingSource.DataMember = "Clients";
-            this.clientsBindingSource.DataSource = this.gestionMatosDataSet1;
+            this.clientsBindingSource.DataSource = this.dtset_Clients;
             // 
-            // gestionMatosDataSet1
+            // dtset_Clients
             // 
-            this.gestionMatosDataSet1.DataSetName = "GestionMatosDataSet1";
-            this.gestionMatosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dtset_Clients.DataSetName = "dtset_Clients";
+            this.dtset_Clients.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // comboBoxListeSites
+            // cmb_listeSites
             // 
-            this.comboBoxListeSites.DataSource = this.affichersitesBindingSource1;
-            this.comboBoxListeSites.DisplayMember = "name_Site";
-            this.comboBoxListeSites.FormattingEnabled = true;
-            this.comboBoxListeSites.Location = new System.Drawing.Point(151, 67);
-            this.comboBoxListeSites.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxListeSites.Name = "comboBoxListeSites";
-            this.comboBoxListeSites.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxListeSites.TabIndex = 4;
+            this.cmb_listeSites.DataSource = this.affichersitesBindingSource1;
+            this.cmb_listeSites.DisplayMember = "name_Site";
+            this.cmb_listeSites.FormattingEnabled = true;
+            this.cmb_listeSites.Location = new System.Drawing.Point(151, 67);
+            this.cmb_listeSites.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_listeSites.Name = "cmb_listeSites";
+            this.cmb_listeSites.Size = new System.Drawing.Size(121, 21);
+            this.cmb_listeSites.TabIndex = 4;
             // 
             // affichersitesBindingSource1
             // 
@@ -135,25 +147,35 @@
             this.gestionMatosDataSet3.DataSetName = "GestionMatosDataSet3";
             this.gestionMatosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // comboBoxMateriels
+            // cmb_listeMateriel
             // 
-            this.comboBoxMateriels.DataSource = this.materielBindingSource;
-            this.comboBoxMateriels.DisplayMember = "name_Materiel";
-            this.comboBoxMateriels.FormattingEnabled = true;
-            this.comboBoxMateriels.Location = new System.Drawing.Point(276, 67);
-            this.comboBoxMateriels.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxMateriels.Name = "comboBoxMateriels";
-            this.comboBoxMateriels.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxMateriels.TabIndex = 5;
+            this.cmb_listeMateriel.DataSource = this.materielBindingSource;
+            this.cmb_listeMateriel.DisplayMember = "name_Materiel";
+            this.cmb_listeMateriel.FormattingEnabled = true;
+            this.cmb_listeMateriel.Location = new System.Drawing.Point(276, 67);
+            this.cmb_listeMateriel.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_listeMateriel.Name = "cmb_listeMateriel";
+            this.cmb_listeMateriel.Size = new System.Drawing.Size(121, 21);
+            this.cmb_listeMateriel.TabIndex = 5;
+            // 
+            // materielBindingSource
+            // 
+            this.materielBindingSource.DataMember = "Materiel";
+            this.materielBindingSource.DataSource = this.dtset_Materiel;
+            // 
+            // dtset_Materiel
+            // 
+            this.dtset_Materiel.DataSetName = "dtset_Materiel";
+            this.dtset_Materiel.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(398, 220);
+            this.buttonOk.Location = new System.Drawing.Point(322, 220);
             this.buttonOk.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 30);
             this.buttonOk.TabIndex = 6;
-            this.buttonOk.Text = "OK";
+            this.buttonOk.Text = "Add";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
@@ -237,16 +259,6 @@
             // 
             this.afficher_sitesTableAdapter1.ClearBeforeFill = true;
             // 
-            // dtset_Materiel
-            // 
-            this.dtset_Materiel.DataSetName = "dtset_Materiel";
-            this.dtset_Materiel.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // materielBindingSource
-            // 
-            this.materielBindingSource.DataMember = "Materiel";
-            this.materielBindingSource.DataSource = this.dtset_Materiel;
-            // 
             // materielTableAdapter
             // 
             this.materielTableAdapter.ClearBeforeFill = true;
@@ -278,16 +290,6 @@
             this.lb_listemateriel.TabIndex = 13;
             this.lb_listemateriel.Text = "Matériels";
             // 
-            // dtset_techos
-            // 
-            this.dtset_techos.DataSetName = "dtset_techos";
-            this.dtset_techos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // technicianBindingSource
-            // 
-            this.technicianBindingSource.DataMember = "Technician";
-            this.technicianBindingSource.DataSource = this.dtset_techos;
-            // 
             // technicianTableAdapter
             // 
             this.technicianTableAdapter.ClearBeforeFill = true;
@@ -298,11 +300,28 @@
             this.sqlcmd_insertIntervention.CommandType = System.Data.CommandType.StoredProcedure;
             this.sqlcmd_insertIntervention.Connection = this.sqls_intervention;
             // 
+            // sqlcmd_getIntervention
+            // 
+            this.sqlcmd_getIntervention.CommandText = "get_intervention";
+            this.sqlcmd_getIntervention.CommandType = System.Data.CommandType.StoredProcedure;
+            this.sqlcmd_getIntervention.Connection = this.sqls_intervention;
+            // 
+            // btn_Edit
+            // 
+            this.btn_Edit.Location = new System.Drawing.Point(401, 220);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(75, 30);
+            this.btn_Edit.TabIndex = 14;
+            this.btn_Edit.Text = "Edit";
+            this.btn_Edit.UseVisualStyleBackColor = true;
+            // 
             // F_Intervention
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 261);
+            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.lb_listemateriel);
             this.Controls.Add(this.lb_listeclients);
             this.Controls.Add(this.lb_sites);
@@ -311,26 +330,26 @@
             this.Controls.Add(this.lb_technicien);
             this.Controls.Add(this.lb_dateIntervention);
             this.Controls.Add(this.buttonOk);
-            this.Controls.Add(this.comboBoxMateriels);
-            this.Controls.Add(this.comboBoxListeSites);
+            this.Controls.Add(this.cmb_listeMateriel);
+            this.Controls.Add(this.cmb_listeSites);
             this.Controls.Add(this.cmb_listeClients);
-            this.Controls.Add(this.comboBoxID_Technicien);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cmb_IDTechnicien);
+            this.Controls.Add(this.dtpicker_dateinter);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Intervention";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Intervention";
             this.Load += new System.EventHandler(this.F_Intervention_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_techos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_Clients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.affichersitesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_techos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,11 +357,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBoxID_Technicien;
+        private System.Windows.Forms.DateTimePicker dtpicker_dateinter;
+        private System.Windows.Forms.ComboBox cmb_IDTechnicien;
         private System.Windows.Forms.ComboBox cmb_listeClients;
-        private System.Windows.Forms.ComboBox comboBoxListeSites;
-        private System.Windows.Forms.ComboBox comboBoxMateriels;
+        private System.Windows.Forms.ComboBox cmb_listeSites;
+        private System.Windows.Forms.ComboBox cmb_listeMateriel;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Label lb_dateIntervention;
         private System.Windows.Forms.Label lb_technicien;
@@ -351,7 +370,7 @@
         private System.Windows.Forms.RichTextBox rtb_commIntervention;
         private System.Windows.Forms.Label lb_commIntervention;
         private System.Data.SqlClient.SqlCommand sqlcmd_listeclients;
-        private GestionMatosDataSet1 gestionMatosDataSet1;
+        private GestionMatosDataSet1 dtset_Clients;
         private System.Windows.Forms.BindingSource clientsBindingSource;
         private GestionMatosDataSet1TableAdapters.ClientsTableAdapter clientsTableAdapter;
         private System.Data.SqlClient.SqlCommand sqlcmd_listetechniciens;
@@ -371,5 +390,7 @@
         private System.Windows.Forms.BindingSource technicianBindingSource;
         private dtset_techosTableAdapters.TechnicianTableAdapter technicianTableAdapter;
         private System.Data.SqlClient.SqlCommand sqlcmd_insertIntervention;
+        private System.Data.SqlClient.SqlCommand sqlcmd_getIntervention;
+        private System.Windows.Forms.Button btn_Edit;
     }
 }

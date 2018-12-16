@@ -24,17 +24,16 @@ namespace GestionMatos
 
 
         private void MainForm_Load(object sender, EventArgs e)
-        {// TODO: This line of code loads data into the 'gestionMatosDataSet.afficher_interventions' table. You can move, or remove it, as needed.
-            this.afficher_interventionsTableAdapter.Fill(this.gestionMatosDataSet.afficher_interventions);
+        {// TODO: This line of code loads data into the 'dtset_InterventionsMain1.afficher_interventions' table. You can move, or remove it, as needed.
+            this.afficher_interventionsTableAdapter.Fill(this.dtset_InterventionsMain1.afficher_interventions);
+            // TODO: This line of code loads data into the 'dtset_InterventionsMatosSites.afficher_interventions' table. You can move, or remove it, as needed.
+            //this.afficher_interventionsTableAdapter1.Fill(this.dtset_InterventionsMatosSites.afficher_interventions);
+            // TODO: This line of code loads data into the 'dtset_Sites.Site' table. You can move, or remove it, as needed.
+            //this.siteTableAdapter.Fill(this.dtset_Sites.Site);
+            // TODO: This line of code loads data into the 'gestionMatosDataSet.afficher_interventions' table. You can move, or remove it, as needed.
+            //this.afficher_interventionsTableAdapter.Fill(this.gestionMatosDataSet.afficher_interventions);
             // TODO: This line of code loads data into the 'gestionMatosDataSet.Intervention' table. You can move, or remove it, as needed.
-            this.interventionTableAdapter.Fill(this.gestionMatosDataSet.Intervention);
-            //this.get_ListeInter();
-            /*
-                        if (!isLogged)
-                        {
-                            LoginForm loginform = new LoginForm();
-                            loginform.ShowDialog();
-                        } */
+            //this.interventionTableAdapter.Fill(this.gestionMatosDataSet.Intervention);
         }
 
 
@@ -62,11 +61,14 @@ namespace GestionMatos
         {
             F_Intervention inter = new F_Intervention();
             inter.ShowDialog();
+            this.afficher_interventionsTableAdapter.Fill(this.dtset_InterventionsMain1.afficher_interventions);
+
         }
 
         private void btn_editInter_Click(object sender, EventArgs e)
         {
-
+            F_Intervention inter = new F_Intervention((int)dtg_ListeInterMain.SelectedRows[0].Cells[0].Value);
+            inter.ShowDialog();
         }
 
         private void get_ListeInter()
@@ -98,6 +100,11 @@ namespace GestionMatos
         {
 
             //(dgv_listeinter.DataSource as DataTable).DefaultView.RowFilter = string.Format("date_Intervention = '{0}'", cmb_MTBF.SelectedText);
+        }
+
+        private void cmb_sites_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //(dgv_listeinter.DataSource as DataTable).DefaultView.RowFilter = string.Format("Site = '{0}'", cmb_sites.Text);
         }
     }
     

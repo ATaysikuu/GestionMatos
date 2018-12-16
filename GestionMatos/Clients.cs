@@ -16,5 +16,10 @@ namespace GestionMatos
         {
             InitializeComponent();
         }
+
+        private void Clients_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

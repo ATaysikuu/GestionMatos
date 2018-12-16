@@ -28,113 +28,185 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxNom1 = new System.Windows.Forms.ComboBox();
-            this.comboBoxTel = new System.Windows.Forms.ComboBox();
-            this.comboBoxEmail = new System.Windows.Forms.ComboBox();
-            this.comboBoxAdresse = new System.Windows.Forms.ComboBox();
-            this.comboBoxCodePostal = new System.Windows.Forms.ComboBox();
-            this.comboBoxVille = new System.Windows.Forms.ComboBox();
-            this.buttonOk1 = new System.Windows.Forms.Button();
+            this.tb_ville = new System.Windows.Forms.TextBox();
+            this.tb_code_postal = new System.Windows.Forms.TextBox();
+            this.tb_adresse = new System.Windows.Forms.TextBox();
+            this.tb_email = new System.Windows.Forms.TextBox();
+            this.tb_tel = new System.Windows.Forms.TextBox();
+            this.tb_nom = new System.Windows.Forms.TextBox();
+            this.lb_nom = new System.Windows.Forms.Label();
+            this.lb_tel = new System.Windows.Forms.Label();
+            this.lb_email = new System.Windows.Forms.Label();
+            this.lb_adresse = new System.Windows.Forms.Label();
+            this.lb_code_postal = new System.Windows.Forms.Label();
+            this.lb_ville = new System.Windows.Forms.Label();
+            this.btn_Edit = new System.Windows.Forms.Button();
+            this.btn_Ok = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBoxNom1
+            // tb_ville
             // 
-            this.comboBoxNom1.FormattingEnabled = true;
-            this.comboBoxNom1.Location = new System.Drawing.Point(81, 42);
-            this.comboBoxNom1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxNom1.Name = "comboBoxNom1";
-            this.comboBoxNom1.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxNom1.TabIndex = 0;
-            this.comboBoxNom1.Text = "Nom";
+            this.tb_ville.Location = new System.Drawing.Point(492, 260);
+            this.tb_ville.Name = "tb_ville";
+            this.tb_ville.Size = new System.Drawing.Size(100, 26);
+            this.tb_ville.TabIndex = 7;
+            this.tb_ville.Text = "Ville";
             // 
-            // comboBoxTel
+            // tb_code_postal
             // 
-            this.comboBoxTel.FormattingEnabled = true;
-            this.comboBoxTel.Location = new System.Drawing.Point(81, 108);
-            this.comboBoxTel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxTel.Name = "comboBoxTel";
-            this.comboBoxTel.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxTel.TabIndex = 1;
-            this.comboBoxTel.Text = "Tél";
+            this.tb_code_postal.Location = new System.Drawing.Point(492, 168);
+            this.tb_code_postal.Name = "tb_code_postal";
+            this.tb_code_postal.Size = new System.Drawing.Size(100, 26);
+            this.tb_code_postal.TabIndex = 8;
+            this.tb_code_postal.Text = "Code Postal";
             // 
-            // comboBoxEmail
+            // tb_adresse
             // 
-            this.comboBoxEmail.FormattingEnabled = true;
-            this.comboBoxEmail.Location = new System.Drawing.Point(81, 168);
-            this.comboBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxEmail.Name = "comboBoxEmail";
-            this.comboBoxEmail.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxEmail.TabIndex = 2;
-            this.comboBoxEmail.Text = "email";
+            this.tb_adresse.Location = new System.Drawing.Point(492, 67);
+            this.tb_adresse.Name = "tb_adresse";
+            this.tb_adresse.Size = new System.Drawing.Size(100, 26);
+            this.tb_adresse.TabIndex = 9;
+            this.tb_adresse.Text = "Adresse";
             // 
-            // comboBoxAdresse
+            // tb_email
             // 
-            this.comboBoxAdresse.FormattingEnabled = true;
-            this.comboBoxAdresse.Location = new System.Drawing.Point(328, 42);
-            this.comboBoxAdresse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxAdresse.Name = "comboBoxAdresse";
-            this.comboBoxAdresse.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxAdresse.TabIndex = 3;
-            this.comboBoxAdresse.Text = "Adresse";
+            this.tb_email.Location = new System.Drawing.Point(122, 260);
+            this.tb_email.Name = "tb_email";
+            this.tb_email.Size = new System.Drawing.Size(100, 26);
+            this.tb_email.TabIndex = 10;
+            this.tb_email.Text = "email";
             // 
-            // comboBoxCodePostal
+            // tb_tel
             // 
-            this.comboBoxCodePostal.FormattingEnabled = true;
-            this.comboBoxCodePostal.Location = new System.Drawing.Point(328, 108);
-            this.comboBoxCodePostal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxCodePostal.Name = "comboBoxCodePostal";
-            this.comboBoxCodePostal.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxCodePostal.TabIndex = 4;
-            this.comboBoxCodePostal.Text = "Code Postal";
+            this.tb_tel.Location = new System.Drawing.Point(122, 168);
+            this.tb_tel.Name = "tb_tel";
+            this.tb_tel.Size = new System.Drawing.Size(100, 26);
+            this.tb_tel.TabIndex = 11;
+            this.tb_tel.Text = "Tél";
             // 
-            // comboBoxVille
+            // tb_nom
             // 
-            this.comboBoxVille.FormattingEnabled = true;
-            this.comboBoxVille.Location = new System.Drawing.Point(328, 168);
-            this.comboBoxVille.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxVille.Name = "comboBoxVille";
-            this.comboBoxVille.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxVille.TabIndex = 5;
-            this.comboBoxVille.Text = "Ville";
+            this.tb_nom.Location = new System.Drawing.Point(122, 67);
+            this.tb_nom.Name = "tb_nom";
+            this.tb_nom.Size = new System.Drawing.Size(100, 26);
+            this.tb_nom.TabIndex = 12;
+            this.tb_nom.Text = "Nom";
             // 
-            // buttonOk1
+            // lb_nom
             // 
-            this.buttonOk1.Location = new System.Drawing.Point(438, 223);
-            this.buttonOk1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonOk1.Name = "buttonOk1";
-            this.buttonOk1.Size = new System.Drawing.Size(35, 27);
-            this.buttonOk1.TabIndex = 6;
-            this.buttonOk1.Text = "OK";
-            this.buttonOk1.UseVisualStyleBackColor = true;
+            this.lb_nom.AutoSize = true;
+            this.lb_nom.Location = new System.Drawing.Point(118, 44);
+            this.lb_nom.Name = "lb_nom";
+            this.lb_nom.Size = new System.Drawing.Size(42, 20);
+            this.lb_nom.TabIndex = 13;
+            this.lb_nom.Text = "Nom";
+            // 
+            // lb_tel
+            // 
+            this.lb_tel.AutoSize = true;
+            this.lb_tel.Location = new System.Drawing.Point(118, 145);
+            this.lb_tel.Name = "lb_tel";
+            this.lb_tel.Size = new System.Drawing.Size(84, 20);
+            this.lb_tel.TabIndex = 14;
+            this.lb_tel.Text = "Téléphone";
+            // 
+            // lb_email
+            // 
+            this.lb_email.AutoSize = true;
+            this.lb_email.Location = new System.Drawing.Point(118, 237);
+            this.lb_email.Name = "lb_email";
+            this.lb_email.Size = new System.Drawing.Size(48, 20);
+            this.lb_email.TabIndex = 15;
+            this.lb_email.Text = "Email";
+            // 
+            // lb_adresse
+            // 
+            this.lb_adresse.AutoSize = true;
+            this.lb_adresse.Location = new System.Drawing.Point(488, 44);
+            this.lb_adresse.Name = "lb_adresse";
+            this.lb_adresse.Size = new System.Drawing.Size(68, 20);
+            this.lb_adresse.TabIndex = 16;
+            this.lb_adresse.Text = "Adresse";
+            // 
+            // lb_code_postal
+            // 
+            this.lb_code_postal.AutoSize = true;
+            this.lb_code_postal.Location = new System.Drawing.Point(488, 145);
+            this.lb_code_postal.Name = "lb_code_postal";
+            this.lb_code_postal.Size = new System.Drawing.Size(95, 20);
+            this.lb_code_postal.TabIndex = 17;
+            this.lb_code_postal.Text = "Code Postal";
+            // 
+            // lb_ville
+            // 
+            this.lb_ville.AutoSize = true;
+            this.lb_ville.Location = new System.Drawing.Point(488, 237);
+            this.lb_ville.Name = "lb_ville";
+            this.lb_ville.Size = new System.Drawing.Size(38, 20);
+            this.lb_ville.TabIndex = 18;
+            this.lb_ville.Text = "Ville";
+            // 
+            // btn_Edit
+            // 
+            this.btn_Edit.Location = new System.Drawing.Point(611, 335);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(112, 46);
+            this.btn_Edit.TabIndex = 20;
+            this.btn_Edit.Text = "Edit";
+            this.btn_Edit.UseVisualStyleBackColor = true;
+            // 
+            // btn_Ok
+            // 
+            this.btn_Ok.Location = new System.Drawing.Point(492, 335);
+            this.btn_Ok.Name = "btn_Ok";
+            this.btn_Ok.Size = new System.Drawing.Size(112, 46);
+            this.btn_Ok.TabIndex = 19;
+            this.btn_Ok.Text = "Add";
+            this.btn_Ok.UseVisualStyleBackColor = true;
             // 
             // Clients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 261);
-            this.Controls.Add(this.buttonOk1);
-            this.Controls.Add(this.comboBoxVille);
-            this.Controls.Add(this.comboBoxCodePostal);
-            this.Controls.Add(this.comboBoxAdresse);
-            this.Controls.Add(this.comboBoxEmail);
-            this.Controls.Add(this.comboBoxTel);
-            this.Controls.Add(this.comboBoxNom1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(726, 402);
+            this.Controls.Add(this.btn_Edit);
+            this.Controls.Add(this.btn_Ok);
+            this.Controls.Add(this.lb_ville);
+            this.Controls.Add(this.lb_code_postal);
+            this.Controls.Add(this.lb_adresse);
+            this.Controls.Add(this.lb_email);
+            this.Controls.Add(this.lb_tel);
+            this.Controls.Add(this.lb_nom);
+            this.Controls.Add(this.tb_nom);
+            this.Controls.Add(this.tb_tel);
+            this.Controls.Add(this.tb_email);
+            this.Controls.Add(this.tb_adresse);
+            this.Controls.Add(this.tb_code_postal);
+            this.Controls.Add(this.tb_ville);
             this.Name = "Clients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CLIENT";
+            this.Load += new System.EventHandler(this.Clients_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBoxNom1;
-        private System.Windows.Forms.ComboBox comboBoxTel;
-        private System.Windows.Forms.ComboBox comboBoxEmail;
-        private System.Windows.Forms.ComboBox comboBoxAdresse;
-        private System.Windows.Forms.ComboBox comboBoxCodePostal;
-        private System.Windows.Forms.ComboBox comboBoxVille;
-        private System.Windows.Forms.Button buttonOk1;
+        private System.Windows.Forms.TextBox tb_ville;
+        private System.Windows.Forms.TextBox tb_code_postal;
+        private System.Windows.Forms.TextBox tb_adresse;
+        private System.Windows.Forms.TextBox tb_email;
+        private System.Windows.Forms.TextBox tb_tel;
+        private System.Windows.Forms.TextBox tb_nom;
+        private System.Windows.Forms.Label lb_nom;
+        private System.Windows.Forms.Label lb_tel;
+        private System.Windows.Forms.Label lb_email;
+        private System.Windows.Forms.Label lb_adresse;
+        private System.Windows.Forms.Label lb_code_postal;
+        private System.Windows.Forms.Label lb_ville;
+        private System.Windows.Forms.Button btn_Edit;
+        private System.Windows.Forms.Button btn_Ok;
     }
 }

@@ -28,126 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxNom2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.comboBoxMarque = new System.Windows.Forms.ComboBox();
-            this.comboBoxNumSerie2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxMTBF = new System.Windows.Forms.ComboBox();
-            this.comboBoxClient = new System.Windows.Forms.ComboBox();
-            this.buttonOk2 = new System.Windows.Forms.Button();
-            this.Supp1 = new System.Windows.Forms.Button();
+            this.btn_Edit = new System.Windows.Forms.Button();
+            this.btn_Ok = new System.Windows.Forms.Button();
+            this.lb_client = new System.Windows.Forms.Label();
+            this.lb_MTBF = new System.Windows.Forms.Label();
+            this.lb_numero_serie = new System.Windows.Forms.Label();
+            this.lb_marque = new System.Windows.Forms.Label();
+            this.lb_type = new System.Windows.Forms.Label();
+            this.lb_nom = new System.Windows.Forms.Label();
+            this.tb_nom = new System.Windows.Forms.TextBox();
+            this.tb_type = new System.Windows.Forms.TextBox();
+            this.tb_marque = new System.Windows.Forms.TextBox();
+            this.tb_numero_serie = new System.Windows.Forms.TextBox();
+            this.tb_MTBF = new System.Windows.Forms.TextBox();
+            this.tb_client = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // comboBoxNom2
+            // btn_Edit
             // 
-            this.comboBoxNom2.FormattingEnabled = true;
-            this.comboBoxNom2.Location = new System.Drawing.Point(56, 56);
-            this.comboBoxNom2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxNom2.Name = "comboBoxNom2";
-            this.comboBoxNom2.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxNom2.TabIndex = 0;
-            this.comboBoxNom2.Text = "Nom";
+            this.btn_Edit.Location = new System.Drawing.Point(589, 335);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(112, 46);
+            this.btn_Edit.TabIndex = 34;
+            this.btn_Edit.Text = "Edit";
+            this.btn_Edit.UseVisualStyleBackColor = true;
             // 
-            // comboBoxType
+            // btn_Ok
             // 
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(56, 122);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxType.TabIndex = 1;
-            this.comboBoxType.Text = "Type";
+            this.btn_Ok.Location = new System.Drawing.Point(470, 335);
+            this.btn_Ok.Name = "btn_Ok";
+            this.btn_Ok.Size = new System.Drawing.Size(112, 46);
+            this.btn_Ok.TabIndex = 33;
+            this.btn_Ok.Text = "Add";
+            this.btn_Ok.UseVisualStyleBackColor = true;
             // 
-            // comboBoxMarque
+            // lb_client
             // 
-            this.comboBoxMarque.FormattingEnabled = true;
-            this.comboBoxMarque.Location = new System.Drawing.Point(56, 179);
-            this.comboBoxMarque.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxMarque.Name = "comboBoxMarque";
-            this.comboBoxMarque.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxMarque.TabIndex = 2;
-            this.comboBoxMarque.Text = "Marque";
+            this.lb_client.AutoSize = true;
+            this.lb_client.Location = new System.Drawing.Point(466, 237);
+            this.lb_client.Name = "lb_client";
+            this.lb_client.Size = new System.Drawing.Size(49, 20);
+            this.lb_client.TabIndex = 32;
+            this.lb_client.Text = "Client";
             // 
-            // comboBoxNumSerie2
+            // lb_MTBF
             // 
-            this.comboBoxNumSerie2.FormattingEnabled = true;
-            this.comboBoxNumSerie2.Location = new System.Drawing.Point(275, 45);
-            this.comboBoxNumSerie2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxNumSerie2.Name = "comboBoxNumSerie2";
-            this.comboBoxNumSerie2.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxNumSerie2.TabIndex = 3;
-            this.comboBoxNumSerie2.Text = "Numéro de série";
+            this.lb_MTBF.AutoSize = true;
+            this.lb_MTBF.Location = new System.Drawing.Point(466, 145);
+            this.lb_MTBF.Name = "lb_MTBF";
+            this.lb_MTBF.Size = new System.Drawing.Size(52, 20);
+            this.lb_MTBF.TabIndex = 31;
+            this.lb_MTBF.Text = "MTBF";
             // 
-            // comboBoxMTBF
+            // lb_numero_serie
             // 
-            this.comboBoxMTBF.FormattingEnabled = true;
-            this.comboBoxMTBF.Location = new System.Drawing.Point(275, 111);
-            this.comboBoxMTBF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxMTBF.Name = "comboBoxMTBF";
-            this.comboBoxMTBF.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxMTBF.TabIndex = 4;
-            this.comboBoxMTBF.Text = "MTBF";
+            this.lb_numero_serie.AutoSize = true;
+            this.lb_numero_serie.Location = new System.Drawing.Point(466, 44);
+            this.lb_numero_serie.Name = "lb_numero_serie";
+            this.lb_numero_serie.Size = new System.Drawing.Size(125, 20);
+            this.lb_numero_serie.TabIndex = 30;
+            this.lb_numero_serie.Text = "Numéro de série";
             // 
-            // comboBoxClient
+            // lb_marque
             // 
-            this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(275, 168);
-            this.comboBoxClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxClient.TabIndex = 5;
-            this.comboBoxClient.Text = "Client";
+            this.lb_marque.AutoSize = true;
+            this.lb_marque.Location = new System.Drawing.Point(96, 237);
+            this.lb_marque.Name = "lb_marque";
+            this.lb_marque.Size = new System.Drawing.Size(63, 20);
+            this.lb_marque.TabIndex = 29;
+            this.lb_marque.Text = "Marque";
             // 
-            // buttonOk2
+            // lb_type
             // 
-            this.buttonOk2.Location = new System.Drawing.Point(351, 227);
-            this.buttonOk2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonOk2.Name = "buttonOk2";
-            this.buttonOk2.Size = new System.Drawing.Size(50, 23);
-            this.buttonOk2.TabIndex = 6;
-            this.buttonOk2.Text = "OK";
-            this.buttonOk2.UseVisualStyleBackColor = true;
+            this.lb_type.AutoSize = true;
+            this.lb_type.Location = new System.Drawing.Point(96, 145);
+            this.lb_type.Name = "lb_type";
+            this.lb_type.Size = new System.Drawing.Size(43, 20);
+            this.lb_type.TabIndex = 28;
+            this.lb_type.Text = "Type";
             // 
-            // Supp1
+            // lb_nom
             // 
-            this.Supp1.Location = new System.Drawing.Point(411, 227);
-            this.Supp1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Supp1.Name = "Supp1";
-            this.Supp1.Size = new System.Drawing.Size(62, 23);
-            this.Supp1.TabIndex = 7;
-            this.Supp1.Text = "Supprimer";
-            this.Supp1.UseVisualStyleBackColor = true;
+            this.lb_nom.AutoSize = true;
+            this.lb_nom.Location = new System.Drawing.Point(96, 44);
+            this.lb_nom.Name = "lb_nom";
+            this.lb_nom.Size = new System.Drawing.Size(42, 20);
+            this.lb_nom.TabIndex = 27;
+            this.lb_nom.Text = "Nom";
+            // 
+            // tb_nom
+            // 
+            this.tb_nom.Location = new System.Drawing.Point(100, 67);
+            this.tb_nom.Name = "tb_nom";
+            this.tb_nom.Size = new System.Drawing.Size(100, 26);
+            this.tb_nom.TabIndex = 26;
+            this.tb_nom.Text = "Nom";
+            // 
+            // tb_type
+            // 
+            this.tb_type.Location = new System.Drawing.Point(100, 168);
+            this.tb_type.Name = "tb_type";
+            this.tb_type.Size = new System.Drawing.Size(100, 26);
+            this.tb_type.TabIndex = 25;
+            this.tb_type.Text = "Type";
+            // 
+            // tb_marque
+            // 
+            this.tb_marque.Location = new System.Drawing.Point(100, 260);
+            this.tb_marque.Name = "tb_marque";
+            this.tb_marque.Size = new System.Drawing.Size(100, 26);
+            this.tb_marque.TabIndex = 24;
+            this.tb_marque.Text = "Marque";
+            // 
+            // tb_numero_serie
+            // 
+            this.tb_numero_serie.Location = new System.Drawing.Point(470, 67);
+            this.tb_numero_serie.Name = "tb_numero_serie";
+            this.tb_numero_serie.Size = new System.Drawing.Size(100, 26);
+            this.tb_numero_serie.TabIndex = 23;
+            this.tb_numero_serie.Text = "Numéro de série";
+            // 
+            // tb_MTBF
+            // 
+            this.tb_MTBF.Location = new System.Drawing.Point(470, 168);
+            this.tb_MTBF.Name = "tb_MTBF";
+            this.tb_MTBF.Size = new System.Drawing.Size(100, 26);
+            this.tb_MTBF.TabIndex = 22;
+            this.tb_MTBF.Text = "MTBF";
+            // 
+            // tb_client
+            // 
+            this.tb_client.Location = new System.Drawing.Point(470, 260);
+            this.tb_client.Name = "tb_client";
+            this.tb_client.Size = new System.Drawing.Size(100, 26);
+            this.tb_client.TabIndex = 21;
+            this.tb_client.Text = "Client";
             // 
             // Materiel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 261);
-            this.Controls.Add(this.Supp1);
-            this.Controls.Add(this.buttonOk2);
-            this.Controls.Add(this.comboBoxClient);
-            this.Controls.Add(this.comboBoxMTBF);
-            this.Controls.Add(this.comboBoxNumSerie2);
-            this.Controls.Add(this.comboBoxMarque);
-            this.Controls.Add(this.comboBoxType);
-            this.Controls.Add(this.comboBoxNom2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(726, 402);
+            this.Controls.Add(this.btn_Edit);
+            this.Controls.Add(this.btn_Ok);
+            this.Controls.Add(this.lb_client);
+            this.Controls.Add(this.lb_MTBF);
+            this.Controls.Add(this.lb_numero_serie);
+            this.Controls.Add(this.lb_marque);
+            this.Controls.Add(this.lb_type);
+            this.Controls.Add(this.lb_nom);
+            this.Controls.Add(this.tb_nom);
+            this.Controls.Add(this.tb_type);
+            this.Controls.Add(this.tb_marque);
+            this.Controls.Add(this.tb_numero_serie);
+            this.Controls.Add(this.tb_MTBF);
+            this.Controls.Add(this.tb_client);
             this.Name = "Materiel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MATERIEL";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBoxNom2;
-        private System.Windows.Forms.ComboBox comboBoxType;
-        private System.Windows.Forms.ComboBox comboBoxMarque;
-        private System.Windows.Forms.ComboBox comboBoxNumSerie2;
-        private System.Windows.Forms.ComboBox comboBoxMTBF;
-        private System.Windows.Forms.ComboBox comboBoxClient;
-        private System.Windows.Forms.Button buttonOk2;
-        private System.Windows.Forms.Button Supp1;
+        private System.Windows.Forms.Button btn_Edit;
+        private System.Windows.Forms.Button btn_Ok;
+        private System.Windows.Forms.Label lb_client;
+        private System.Windows.Forms.Label lb_MTBF;
+        private System.Windows.Forms.Label lb_numero_serie;
+        private System.Windows.Forms.Label lb_marque;
+        private System.Windows.Forms.Label lb_type;
+        private System.Windows.Forms.Label lb_nom;
+        private System.Windows.Forms.TextBox tb_nom;
+        private System.Windows.Forms.TextBox tb_type;
+        private System.Windows.Forms.TextBox tb_marque;
+        private System.Windows.Forms.TextBox tb_numero_serie;
+        private System.Windows.Forms.TextBox tb_MTBF;
+        private System.Windows.Forms.TextBox tb_client;
     }
 }

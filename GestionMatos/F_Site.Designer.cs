@@ -33,7 +33,7 @@
             this.btn_Ok = new System.Windows.Forms.Button();
             this.lb_ville = new System.Windows.Forms.Label();
             this.lb_adresse = new System.Windows.Forms.Label();
-            this.lb_client = new System.Windows.Forms.Label();
+            this.lb_clientList = new System.Windows.Forms.Label();
             this.lb_zip = new System.Windows.Forms.Label();
             this.lb_nom = new System.Windows.Forms.Label();
             this.tb_nom = new System.Windows.Forms.TextBox();
@@ -88,15 +88,15 @@
             this.lb_adresse.TabIndex = 30;
             this.lb_adresse.Text = "Adresse";
             // 
-            // lb_client
+            // lb_clientList
             // 
-            this.lb_client.AutoSize = true;
-            this.lb_client.Location = new System.Drawing.Point(61, 147);
-            this.lb_client.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_client.Name = "lb_client";
-            this.lb_client.Size = new System.Drawing.Size(32, 13);
-            this.lb_client.TabIndex = 29;
-            this.lb_client.Text = "Email";
+            this.lb_clientList.AutoSize = true;
+            this.lb_clientList.Location = new System.Drawing.Point(61, 147);
+            this.lb_clientList.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_clientList.Name = "lb_clientList";
+            this.lb_clientList.Size = new System.Drawing.Size(33, 13);
+            this.lb_clientList.TabIndex = 29;
+            this.lb_clientList.Text = "Client";
             // 
             // lb_zip
             // 
@@ -184,7 +184,7 @@
             this.Controls.Add(this.btn_Ok);
             this.Controls.Add(this.lb_ville);
             this.Controls.Add(this.lb_adresse);
-            this.Controls.Add(this.lb_client);
+            this.Controls.Add(this.lb_clientList);
             this.Controls.Add(this.lb_zip);
             this.Controls.Add(this.lb_nom);
             this.Controls.Add(this.tb_nom);
@@ -207,7 +207,7 @@
         private System.Windows.Forms.Button btn_Ok;
         private System.Windows.Forms.Label lb_ville;
         private System.Windows.Forms.Label lb_adresse;
-        private System.Windows.Forms.Label lb_client;
+        private System.Windows.Forms.Label lb_clientList;
         private System.Windows.Forms.Label lb_zip;
         private System.Windows.Forms.Label lb_nom;
         private System.Windows.Forms.TextBox tb_nom;

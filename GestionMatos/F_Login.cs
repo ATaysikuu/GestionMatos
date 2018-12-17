@@ -48,8 +48,9 @@ namespace GestionMatos
                 sqlda_login.Fill(dt_login);
                 if (dt_login.Rows[0][0].ToString() == "1")
                 {
-                    this.Hide();
-                    new MainForm().Show();
+                    this.Close();
+                    Program.F_mainform.setlogged();
+                    //new MainForm().Show();
                 }
                 else
                 {

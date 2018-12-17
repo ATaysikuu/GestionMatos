@@ -147,6 +147,9 @@
     <EmbeddedResource Include="F_Intervention.resx">
       <DependentUpon>F_Intervention.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_Login.resx">
+      <DependentUpon>F_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Main.resx">
       <DependentUpon>F_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,9 +158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Site.resx">
       <DependentUpon>F_Site.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>F_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

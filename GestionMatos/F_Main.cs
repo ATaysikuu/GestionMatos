@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace GestionMatos
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (File.Exists("logged.txt"))
+            {
+                setlogged();
+            }
+
             if (!isLogged)
             {
                 LoginForm loginForm = new LoginForm();
@@ -121,6 +127,44 @@ namespace GestionMatos
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_deconnexion_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("logged.txt"))
+            {
+                File.Delete("logged.txt");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("logged.txt"))
+            {
+                File.Delete("logged.txt");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("logged.txt"))
+            {
+                File.Delete("logged.txt");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("logged.txt"))
+            {
+                File.Delete("logged.txt");
+            }
+        }
+
+        private void cmb_clients_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string rowFilter = string.Format("[{0}] = '{1}'", "name_Client", cmb_clients.SelectedText);
+            //(dgv_ListeInterMain.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
         }
     }
     

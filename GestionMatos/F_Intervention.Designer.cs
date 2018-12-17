@@ -85,9 +85,10 @@
             // 
             // dtpicker_dateinter
             // 
-            this.dtpicker_dateinter.Location = new System.Drawing.Point(12, 42);
+            this.dtpicker_dateinter.Location = new System.Drawing.Point(8, 27);
+            this.dtpicker_dateinter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpicker_dateinter.Name = "dtpicker_dateinter";
-            this.dtpicker_dateinter.Size = new System.Drawing.Size(327, 26);
+            this.dtpicker_dateinter.Size = new System.Drawing.Size(219, 20);
             this.dtpicker_dateinter.TabIndex = 0;
             // 
             // cmb_IDTechnicien
@@ -96,9 +97,10 @@
             this.cmb_IDTechnicien.DisplayMember = "name_Technicien";
             this.cmb_IDTechnicien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IDTechnicien.FormattingEnabled = true;
-            this.cmb_IDTechnicien.Location = new System.Drawing.Point(12, 114);
+            this.cmb_IDTechnicien.Location = new System.Drawing.Point(8, 74);
+            this.cmb_IDTechnicien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_IDTechnicien.Name = "cmb_IDTechnicien";
-            this.cmb_IDTechnicien.Size = new System.Drawing.Size(327, 28);
+            this.cmb_IDTechnicien.Size = new System.Drawing.Size(219, 21);
             this.cmb_IDTechnicien.TabIndex = 2;
             // 
             // technicianBindingSource
@@ -117,9 +119,10 @@
             this.cmb_listeClients.DisplayMember = "id_Client";
             this.cmb_listeClients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_listeClients.FormattingEnabled = true;
-            this.cmb_listeClients.Location = new System.Drawing.Point(345, 40);
+            this.cmb_listeClients.Location = new System.Drawing.Point(230, 26);
+            this.cmb_listeClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_listeClients.Name = "cmb_listeClients";
-            this.cmb_listeClients.Size = new System.Drawing.Size(180, 28);
+            this.cmb_listeClients.Size = new System.Drawing.Size(121, 21);
             this.cmb_listeClients.TabIndex = 3;
             // 
             // clientsBindingSource
@@ -138,9 +141,10 @@
             this.cmb_listeSites.DisplayMember = "name_Site";
             this.cmb_listeSites.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_listeSites.FormattingEnabled = true;
-            this.cmb_listeSites.Location = new System.Drawing.Point(534, 40);
+            this.cmb_listeSites.Location = new System.Drawing.Point(356, 26);
+            this.cmb_listeSites.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_listeSites.Name = "cmb_listeSites";
-            this.cmb_listeSites.Size = new System.Drawing.Size(180, 28);
+            this.cmb_listeSites.Size = new System.Drawing.Size(121, 21);
             this.cmb_listeSites.TabIndex = 4;
             // 
             // sitefromclientBindingSource
@@ -169,9 +173,10 @@
             this.cmb_listeMateriel.DisplayMember = "name_Materiel";
             this.cmb_listeMateriel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_listeMateriel.FormattingEnabled = true;
-            this.cmb_listeMateriel.Location = new System.Drawing.Point(345, 114);
+            this.cmb_listeMateriel.Location = new System.Drawing.Point(230, 74);
+            this.cmb_listeMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_listeMateriel.Name = "cmb_listeMateriel";
-            this.cmb_listeMateriel.Size = new System.Drawing.Size(366, 28);
+            this.cmb_listeMateriel.Size = new System.Drawing.Size(245, 21);
             this.cmb_listeMateriel.TabIndex = 5;
             this.cmb_listeMateriel.ValueMember = "id_Materiel";
             // 
@@ -187,9 +192,10 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(377, 344);
+            this.buttonOk.Location = new System.Drawing.Point(251, 224);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(112, 46);
+            this.buttonOk.Size = new System.Drawing.Size(75, 30);
             this.buttonOk.TabIndex = 6;
             this.buttonOk.Text = "Add";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -198,20 +204,18 @@
             // lb_dateIntervention
             // 
             this.lb_dateIntervention.AutoSize = true;
-            this.lb_dateIntervention.Location = new System.Drawing.Point(16, 8);
-            this.lb_dateIntervention.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_dateIntervention.Location = new System.Drawing.Point(11, 5);
             this.lb_dateIntervention.Name = "lb_dateIntervention";
-            this.lb_dateIntervention.Size = new System.Drawing.Size(142, 20);
+            this.lb_dateIntervention.Size = new System.Drawing.Size(96, 13);
             this.lb_dateIntervention.TabIndex = 7;
             this.lb_dateIntervention.Text = "Date d\'intervention";
             // 
             // lb_technicien
             // 
             this.lb_technicien.AutoSize = true;
-            this.lb_technicien.Location = new System.Drawing.Point(18, 80);
-            this.lb_technicien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_technicien.Location = new System.Drawing.Point(12, 52);
             this.lb_technicien.Name = "lb_technicien";
-            this.lb_technicien.Size = new System.Drawing.Size(144, 20);
+            this.lb_technicien.Size = new System.Drawing.Size(99, 13);
             this.lb_technicien.TabIndex = 8;
             this.lb_technicien.Text = "Technicien assigné";
             // 
@@ -228,20 +232,18 @@
             // 
             // rtb_commIntervention
             // 
-            this.rtb_commIntervention.Location = new System.Drawing.Point(13, 190);
-            this.rtb_commIntervention.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rtb_commIntervention.Location = new System.Drawing.Point(9, 123);
             this.rtb_commIntervention.Name = "rtb_commIntervention";
-            this.rtb_commIntervention.Size = new System.Drawing.Size(698, 146);
+            this.rtb_commIntervention.Size = new System.Drawing.Size(467, 96);
             this.rtb_commIntervention.TabIndex = 9;
             this.rtb_commIntervention.Text = "";
             // 
             // lb_commIntervention
             // 
             this.lb_commIntervention.AutoSize = true;
-            this.lb_commIntervention.Location = new System.Drawing.Point(22, 154);
-            this.lb_commIntervention.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_commIntervention.Location = new System.Drawing.Point(15, 100);
             this.lb_commIntervention.Name = "lb_commIntervention";
-            this.lb_commIntervention.Size = new System.Drawing.Size(104, 20);
+            this.lb_commIntervention.Size = new System.Drawing.Size(68, 13);
             this.lb_commIntervention.TabIndex = 10;
             this.lb_commIntervention.Text = "Commentaire";
             // 
@@ -286,10 +288,9 @@
             // lb_sites
             // 
             this.lb_sites.AutoSize = true;
-            this.lb_sites.Location = new System.Drawing.Point(530, 8);
-            this.lb_sites.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_sites.Location = new System.Drawing.Point(353, 5);
             this.lb_sites.Name = "lb_sites";
-            this.lb_sites.Size = new System.Drawing.Size(45, 20);
+            this.lb_sites.Size = new System.Drawing.Size(30, 13);
             this.lb_sites.TabIndex = 11;
             this.lb_sites.Text = "Sites";
             this.lb_sites.Click += new System.EventHandler(this.lb_sites_Click);
@@ -297,20 +298,18 @@
             // lb_listeclients
             // 
             this.lb_listeclients.AutoSize = true;
-            this.lb_listeclients.Location = new System.Drawing.Point(341, 8);
-            this.lb_listeclients.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_listeclients.Location = new System.Drawing.Point(227, 5);
             this.lb_listeclients.Name = "lb_listeclients";
-            this.lb_listeclients.Size = new System.Drawing.Size(57, 20);
+            this.lb_listeclients.Size = new System.Drawing.Size(38, 13);
             this.lb_listeclients.TabIndex = 12;
             this.lb_listeclients.Text = "Clients";
             // 
             // lb_listemateriel
             // 
             this.lb_listemateriel.AutoSize = true;
-            this.lb_listemateriel.Location = new System.Drawing.Point(341, 80);
-            this.lb_listemateriel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_listemateriel.Location = new System.Drawing.Point(227, 52);
             this.lb_listemateriel.Name = "lb_listemateriel";
-            this.lb_listemateriel.Size = new System.Drawing.Size(73, 20);
+            this.lb_listemateriel.Size = new System.Drawing.Size(49, 13);
             this.lb_listemateriel.TabIndex = 13;
             this.lb_listemateriel.Text = "Matériels";
             // 
@@ -332,9 +331,10 @@
             // 
             // btn_Edit
             // 
-            this.btn_Edit.Location = new System.Drawing.Point(495, 344);
+            this.btn_Edit.Location = new System.Drawing.Point(330, 224);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(112, 46);
+            this.btn_Edit.Size = new System.Drawing.Size(75, 30);
             this.btn_Edit.TabIndex = 14;
             this.btn_Edit.Text = "Edit";
             this.btn_Edit.UseVisualStyleBackColor = true;
@@ -352,18 +352,20 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(613, 344);
+            this.btn_cancel.Location = new System.Drawing.Point(409, 224);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(98, 46);
+            this.btn_cancel.Size = new System.Drawing.Size(65, 30);
             this.btn_cancel.TabIndex = 22;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // F_Intervention
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 402);
+            this.ClientSize = new System.Drawing.Size(484, 261);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.lb_listemateriel);
@@ -379,6 +381,7 @@
             this.Controls.Add(this.cmb_listeClients);
             this.Controls.Add(this.cmb_IDTechnicien);
             this.Controls.Add(this.dtpicker_dateinter);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "F_Intervention";

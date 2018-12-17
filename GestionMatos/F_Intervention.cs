@@ -22,6 +22,11 @@ namespace GestionMatos
 
         }
 
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         //Edit constructor -> To edit an existing intervention
         public F_Intervention(int id_inter)
         {

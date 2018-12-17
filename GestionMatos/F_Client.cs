@@ -25,6 +25,12 @@ namespace GestionMatos
 
         }
 
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+        }
+
         static int i_zip;
 
         public F_Client()

@@ -35,6 +35,7 @@
             this.btn_connectlogin = new System.Windows.Forms.Button();
             this.sql_loginconnstring = new System.Data.SqlClient.SqlConnection();
             this.sqlcmd_login = new System.Data.SqlClient.SqlCommand();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pb_close = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_close)).BeginInit();
@@ -100,6 +101,17 @@
             this.sqlcmd_login.CommandType = System.Data.CommandType.StoredProcedure;
             this.sqlcmd_login.Connection = this.sql_loginconnstring;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(184, 220);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(82, 17);
+            this.checkBox1.TabIndex = 9;
+            this.checkBox1.Text = "Stay logged";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // pb_close
             // 
             this.pb_close.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -128,6 +140,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 250);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pb_close);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lb_idlogin);
@@ -156,5 +169,6 @@
         private System.Data.SqlClient.SqlCommand sqlcmd_login;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pb_close;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

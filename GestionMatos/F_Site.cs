@@ -23,5 +23,15 @@ namespace GestionMatos
             this.clientsTableAdapter.Fill(this.dtset_Clients.Clients);
 
         }
+
+        private void lb_ville_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_zip_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

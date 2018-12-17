@@ -23,5 +23,20 @@ namespace GestionMatos
             this.clientsTableAdapter.Fill(this.dtset_Clients.Clients);
 
         }
+
+        private void lb_type_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_MTBF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_marque_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

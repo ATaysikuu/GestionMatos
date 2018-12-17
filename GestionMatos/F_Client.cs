@@ -14,6 +14,17 @@ namespace GestionMatos
     public partial class F_Client : Form
     {
         static String s_nameclient, s_adresseclient, s_telephone, s_email, s_ville;
+
+        private void lb_adresse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_code_postal_Click(object sender, EventArgs e)
+        {
+
+        }
+
         static int i_zip;
 
         public F_Client()

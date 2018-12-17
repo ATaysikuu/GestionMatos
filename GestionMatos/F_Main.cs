@@ -107,6 +107,21 @@ namespace GestionMatos
         {
 
         }
+
+        private void comboBoxNom3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_MTBF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

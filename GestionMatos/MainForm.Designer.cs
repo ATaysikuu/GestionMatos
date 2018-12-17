@@ -60,6 +60,13 @@
             this.btn_editClient = new System.Windows.Forms.Button();
             this.btn_addClient = new System.Windows.Forms.Button();
             this.dgv_listeClientsMain = new System.Windows.Forms.DataGridView();
+            this.id_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameClientDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zipClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtset_Clients = new GestionMatos.dtset_Clients();
             this.comboBoxNom = new System.Windows.Forms.ComboBox();
@@ -106,13 +113,10 @@
             this.clientsTableAdapter = new GestionMatos.dtset_ClientsTableAdapters.ClientsTableAdapter();
             this.dtset_Materiel = new GestionMatos.dtset_Materiel();
             this.materielTableAdapter = new GestionMatos.dtset_MaterielsTableAdapters.MaterielTableAdapter();
-            this.id_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameClientDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_deconnexion = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.lsbListMateriel.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListeInterMain)).BeginInit();
@@ -140,9 +144,10 @@
             // 
             // btn_Close
             // 
-            this.btn_Close.Location = new System.Drawing.Point(713, 415);
+            this.btn_Close.Location = new System.Drawing.Point(1070, 638);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(75, 23);
+            this.btn_Close.Size = new System.Drawing.Size(112, 35);
             this.btn_Close.TabIndex = 0;
             this.btn_Close.Text = "CLOSE";
             this.btn_Close.UseVisualStyleBackColor = true;
@@ -156,13 +161,15 @@
             this.lsbListMateriel.Controls.Add(this.tabPage4);
             this.lsbListMateriel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsbListMateriel.Location = new System.Drawing.Point(0, 0);
+            this.lsbListMateriel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lsbListMateriel.Name = "lsbListMateriel";
             this.lsbListMateriel.SelectedIndex = 0;
-            this.lsbListMateriel.Size = new System.Drawing.Size(800, 450);
+            this.lsbListMateriel.Size = new System.Drawing.Size(1200, 692);
             this.lsbListMateriel.TabIndex = 1;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btn_deconnexion);
             this.tabPage1.Controls.Add(this.dgv_ListeInterMain);
             this.tabPage1.Controls.Add(this.lb_MTBF);
             this.tabPage1.Controls.Add(this.lb_materiels);
@@ -174,10 +181,11 @@
             this.tabPage1.Controls.Add(this.cmb_MTBF);
             this.tabPage1.Controls.Add(this.btn_editInter);
             this.tabPage1.Controls.Add(this.btn_addInter);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 424);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Size = new System.Drawing.Size(1192, 659);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Liste des interventions";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -197,10 +205,11 @@
             this.nameSiteDataGridViewTextBoxColumn,
             this.nameClientDataGridViewTextBoxColumn});
             this.dgv_ListeInterMain.DataSource = this.afficherinterventionsBindingSource;
-            this.dgv_ListeInterMain.Location = new System.Drawing.Point(8, 53);
+            this.dgv_ListeInterMain.Location = new System.Drawing.Point(12, 82);
+            this.dgv_ListeInterMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_ListeInterMain.Name = "dgv_ListeInterMain";
             this.dgv_ListeInterMain.ReadOnly = true;
-            this.dgv_ListeInterMain.Size = new System.Drawing.Size(776, 334);
+            this.dgv_ListeInterMain.Size = new System.Drawing.Size(1164, 514);
             this.dgv_ListeInterMain.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn1
@@ -265,36 +274,41 @@
             // lb_MTBF
             // 
             this.lb_MTBF.AutoSize = true;
-            this.lb_MTBF.Location = new System.Drawing.Point(8, 12);
+            this.lb_MTBF.Location = new System.Drawing.Point(9, 5);
+            this.lb_MTBF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_MTBF.Name = "lb_MTBF";
-            this.lb_MTBF.Size = new System.Drawing.Size(36, 13);
+            this.lb_MTBF.Size = new System.Drawing.Size(52, 20);
             this.lb_MTBF.TabIndex = 14;
             this.lb_MTBF.Text = "MTBF";
+            this.lb_MTBF.Click += new System.EventHandler(this.lb_MTBF_Click);
             // 
             // lb_materiels
             // 
             this.lb_materiels.AutoSize = true;
-            this.lb_materiels.Location = new System.Drawing.Point(91, 12);
+            this.lb_materiels.Location = new System.Drawing.Point(355, 5);
+            this.lb_materiels.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_materiels.Name = "lb_materiels";
-            this.lb_materiels.Size = new System.Drawing.Size(49, 13);
+            this.lb_materiels.Size = new System.Drawing.Size(73, 20);
             this.lb_materiels.TabIndex = 13;
             this.lb_materiels.Text = "Materiels";
             // 
             // lb_clients
             // 
             this.lb_clients.AutoSize = true;
-            this.lb_clients.Location = new System.Drawing.Point(177, 12);
+            this.lb_clients.Location = new System.Drawing.Point(671, 5);
+            this.lb_clients.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_clients.Name = "lb_clients";
-            this.lb_clients.Size = new System.Drawing.Size(38, 13);
+            this.lb_clients.Size = new System.Drawing.Size(57, 20);
             this.lb_clients.TabIndex = 12;
             this.lb_clients.Text = "Clients";
             // 
             // lb_mainSites
             // 
             this.lb_mainSites.AutoSize = true;
-            this.lb_mainSites.Location = new System.Drawing.Point(263, 12);
+            this.lb_mainSites.Location = new System.Drawing.Point(938, 5);
+            this.lb_mainSites.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_mainSites.Name = "lb_mainSites";
-            this.lb_mainSites.Size = new System.Drawing.Size(30, 13);
+            this.lb_mainSites.Size = new System.Drawing.Size(45, 20);
             this.lb_mainSites.TabIndex = 10;
             this.lb_mainSites.Text = "Sites";
             // 
@@ -302,11 +316,11 @@
             // 
             this.cmb_sites.DataSource = this.siteBindingSource;
             this.cmb_sites.DisplayMember = "name_Site";
+            this.cmb_sites.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_sites.FormattingEnabled = true;
-            this.cmb_sites.Location = new System.Drawing.Point(266, 27);
-            this.cmb_sites.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_sites.Location = new System.Drawing.Point(935, 42);
             this.cmb_sites.Name = "cmb_sites";
-            this.cmb_sites.Size = new System.Drawing.Size(82, 21);
+            this.cmb_sites.Size = new System.Drawing.Size(241, 28);
             this.cmb_sites.TabIndex = 6;
             this.cmb_sites.SelectedValueChanged += new System.EventHandler(this.cmb_sites_SelectedValueChanged);
             // 
@@ -322,39 +336,38 @@
             // 
             // cmb_clients
             // 
+            this.cmb_clients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_clients.FormattingEnabled = true;
-            this.cmb_clients.Location = new System.Drawing.Point(180, 27);
-            this.cmb_clients.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_clients.Location = new System.Drawing.Point(675, 42);
             this.cmb_clients.Name = "cmb_clients";
-            this.cmb_clients.Size = new System.Drawing.Size(82, 21);
+            this.cmb_clients.Size = new System.Drawing.Size(254, 28);
             this.cmb_clients.TabIndex = 5;
-            this.cmb_clients.Text = "CLIENTS";
             // 
             // cmb_materiels
             // 
+            this.cmb_materiels.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_materiels.FormattingEnabled = true;
-            this.cmb_materiels.Location = new System.Drawing.Point(94, 27);
-            this.cmb_materiels.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_materiels.Location = new System.Drawing.Point(359, 42);
             this.cmb_materiels.Name = "cmb_materiels";
-            this.cmb_materiels.Size = new System.Drawing.Size(82, 21);
+            this.cmb_materiels.Size = new System.Drawing.Size(310, 28);
             this.cmb_materiels.TabIndex = 4;
-            this.cmb_materiels.Text = "MATERIEL";
             // 
             // cmb_MTBF
             // 
+            this.cmb_MTBF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_MTBF.FormattingEnabled = true;
-            this.cmb_MTBF.Location = new System.Drawing.Point(8, 27);
-            this.cmb_MTBF.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_MTBF.Location = new System.Drawing.Point(12, 42);
             this.cmb_MTBF.Name = "cmb_MTBF";
-            this.cmb_MTBF.Size = new System.Drawing.Size(82, 21);
+            this.cmb_MTBF.Size = new System.Drawing.Size(341, 28);
             this.cmb_MTBF.TabIndex = 3;
             this.cmb_MTBF.SelectedIndexChanged += new System.EventHandler(this.cmb_MTBF_SelectedIndexChanged);
             // 
             // btn_editInter
             // 
-            this.btn_editInter.Location = new System.Drawing.Point(709, 393);
+            this.btn_editInter.Location = new System.Drawing.Point(1064, 605);
+            this.btn_editInter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_editInter.Name = "btn_editInter";
-            this.btn_editInter.Size = new System.Drawing.Size(75, 23);
+            this.btn_editInter.Size = new System.Drawing.Size(112, 35);
             this.btn_editInter.TabIndex = 1;
             this.btn_editInter.Text = "Edit";
             this.btn_editInter.UseVisualStyleBackColor = true;
@@ -362,9 +375,10 @@
             // 
             // btn_addInter
             // 
-            this.btn_addInter.Location = new System.Drawing.Point(628, 393);
+            this.btn_addInter.Location = new System.Drawing.Point(942, 605);
+            this.btn_addInter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_addInter.Name = "btn_addInter";
-            this.btn_addInter.Size = new System.Drawing.Size(75, 23);
+            this.btn_addInter.Size = new System.Drawing.Size(112, 35);
             this.btn_addInter.TabIndex = 0;
             this.btn_addInter.Text = "Add";
             this.btn_addInter.UseVisualStyleBackColor = true;
@@ -372,6 +386,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.lb_listeClientsNames);
             this.tabPage2.Controls.Add(this.btn_editClient);
@@ -379,10 +394,11 @@
             this.tabPage2.Controls.Add(this.dgv_listeClientsMain);
             this.tabPage2.Controls.Add(this.comboBoxNom);
             this.tabPage2.Controls.Add(this.comboBoxID_Clients);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 424);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Size = new System.Drawing.Size(1192, 659);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Liste Clients";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -390,26 +406,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(92, 12);
+            this.label2.Location = new System.Drawing.Point(613, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lb_listeClientsNames
             // 
             this.lb_listeClientsNames.AutoSize = true;
-            this.lb_listeClientsNames.Location = new System.Drawing.Point(8, 12);
+            this.lb_listeClientsNames.Location = new System.Drawing.Point(9, 5);
+            this.lb_listeClientsNames.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_listeClientsNames.Name = "lb_listeClientsNames";
-            this.lb_listeClientsNames.Size = new System.Drawing.Size(38, 13);
+            this.lb_listeClientsNames.Size = new System.Drawing.Size(57, 20);
             this.lb_listeClientsNames.TabIndex = 9;
             this.lb_listeClientsNames.Text = "Clients";
             // 
             // btn_editClient
             // 
-            this.btn_editClient.Location = new System.Drawing.Point(709, 393);
+            this.btn_editClient.Location = new System.Drawing.Point(1064, 605);
+            this.btn_editClient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_editClient.Name = "btn_editClient";
-            this.btn_editClient.Size = new System.Drawing.Size(75, 23);
+            this.btn_editClient.Size = new System.Drawing.Size(112, 35);
             this.btn_editClient.TabIndex = 8;
             this.btn_editClient.Text = "Edit";
             this.btn_editClient.UseVisualStyleBackColor = true;
@@ -417,9 +437,10 @@
             // 
             // btn_addClient
             // 
-            this.btn_addClient.Location = new System.Drawing.Point(628, 393);
+            this.btn_addClient.Location = new System.Drawing.Point(942, 605);
+            this.btn_addClient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_addClient.Name = "btn_addClient";
-            this.btn_addClient.Size = new System.Drawing.Size(75, 23);
+            this.btn_addClient.Size = new System.Drawing.Size(112, 35);
             this.btn_addClient.TabIndex = 7;
             this.btn_addClient.Text = "Add";
             this.btn_addClient.UseVisualStyleBackColor = true;
@@ -440,11 +461,61 @@
             this.telClientDataGridViewTextBoxColumn,
             this.emailClientDataGridViewTextBoxColumn});
             this.dgv_listeClientsMain.DataSource = this.clientsBindingSource;
-            this.dgv_listeClientsMain.Location = new System.Drawing.Point(8, 53);
+            this.dgv_listeClientsMain.Location = new System.Drawing.Point(12, 82);
+            this.dgv_listeClientsMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_listeClientsMain.Name = "dgv_listeClientsMain";
             this.dgv_listeClientsMain.ReadOnly = true;
-            this.dgv_listeClientsMain.Size = new System.Drawing.Size(776, 334);
+            this.dgv_listeClientsMain.Size = new System.Drawing.Size(1164, 514);
             this.dgv_listeClientsMain.TabIndex = 6;
+            // 
+            // id_Client
+            // 
+            this.id_Client.DataPropertyName = "id_Client";
+            this.id_Client.HeaderText = "id_Client";
+            this.id_Client.Name = "id_Client";
+            this.id_Client.ReadOnly = true;
+            // 
+            // nameClientDataGridViewTextBoxColumn1
+            // 
+            this.nameClientDataGridViewTextBoxColumn1.DataPropertyName = "name_Client";
+            this.nameClientDataGridViewTextBoxColumn1.HeaderText = "name_Client";
+            this.nameClientDataGridViewTextBoxColumn1.Name = "nameClientDataGridViewTextBoxColumn1";
+            this.nameClientDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // addressClientDataGridViewTextBoxColumn
+            // 
+            this.addressClientDataGridViewTextBoxColumn.DataPropertyName = "address_Client";
+            this.addressClientDataGridViewTextBoxColumn.HeaderText = "address_Client";
+            this.addressClientDataGridViewTextBoxColumn.Name = "addressClientDataGridViewTextBoxColumn";
+            this.addressClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // zipClientDataGridViewTextBoxColumn
+            // 
+            this.zipClientDataGridViewTextBoxColumn.DataPropertyName = "zip_Client";
+            this.zipClientDataGridViewTextBoxColumn.HeaderText = "zip_Client";
+            this.zipClientDataGridViewTextBoxColumn.Name = "zipClientDataGridViewTextBoxColumn";
+            this.zipClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cityClientDataGridViewTextBoxColumn
+            // 
+            this.cityClientDataGridViewTextBoxColumn.DataPropertyName = "city_Client";
+            this.cityClientDataGridViewTextBoxColumn.HeaderText = "city_Client";
+            this.cityClientDataGridViewTextBoxColumn.Name = "cityClientDataGridViewTextBoxColumn";
+            this.cityClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telClientDataGridViewTextBoxColumn
+            // 
+            this.telClientDataGridViewTextBoxColumn.DataPropertyName = "tel_Client";
+            this.telClientDataGridViewTextBoxColumn.HeaderText = "tel_Client";
+            this.telClientDataGridViewTextBoxColumn.Name = "telClientDataGridViewTextBoxColumn";
+            this.telClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailClientDataGridViewTextBoxColumn
+            // 
+            this.emailClientDataGridViewTextBoxColumn.DataPropertyName = "email_Client";
+            this.emailClientDataGridViewTextBoxColumn.HeaderText = "email_Client";
+            this.emailClientDataGridViewTextBoxColumn.Name = "emailClientDataGridViewTextBoxColumn";
+            this.emailClientDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // clientsBindingSource
             // 
@@ -458,26 +529,25 @@
             // 
             // comboBoxNom
             // 
+            this.comboBoxNom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNom.FormattingEnabled = true;
-            this.comboBoxNom.Location = new System.Drawing.Point(95, 27);
-            this.comboBoxNom.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxNom.Location = new System.Drawing.Point(617, 42);
             this.comboBoxNom.Name = "comboBoxNom";
-            this.comboBoxNom.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxNom.Size = new System.Drawing.Size(559, 28);
             this.comboBoxNom.TabIndex = 5;
-            this.comboBoxNom.Text = "Nom";
             // 
             // comboBoxID_Clients
             // 
+            this.comboBoxID_Clients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxID_Clients.FormattingEnabled = true;
-            this.comboBoxID_Clients.Location = new System.Drawing.Point(8, 27);
-            this.comboBoxID_Clients.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxID_Clients.Location = new System.Drawing.Point(12, 42);
             this.comboBoxID_Clients.Name = "comboBoxID_Clients";
-            this.comboBoxID_Clients.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxID_Clients.Size = new System.Drawing.Size(530, 28);
             this.comboBoxID_Clients.TabIndex = 4;
-            this.comboBoxID_Clients.Text = "ID.Client";
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.btn_editMateriel);
             this.tabPage3.Controls.Add(this.btn_addMateriel);
             this.tabPage3.Controls.Add(this.dgv_listeMaterielsMain);
@@ -485,28 +555,31 @@
             this.tabPage3.Controls.Add(this.comboBoxN_Serie);
             this.tabPage3.Controls.Add(this.comboBoxType);
             this.tabPage3.Controls.Add(this.comboBoxID_Materiel);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(792, 424);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage3.Size = new System.Drawing.Size(1192, 659);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Liste Matériel";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // btn_editMateriel
             // 
-            this.btn_editMateriel.Location = new System.Drawing.Point(709, 393);
+            this.btn_editMateriel.Location = new System.Drawing.Point(1064, 605);
+            this.btn_editMateriel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_editMateriel.Name = "btn_editMateriel";
-            this.btn_editMateriel.Size = new System.Drawing.Size(75, 23);
+            this.btn_editMateriel.Size = new System.Drawing.Size(112, 35);
             this.btn_editMateriel.TabIndex = 11;
             this.btn_editMateriel.Text = "Edit";
             this.btn_editMateriel.UseVisualStyleBackColor = true;
             // 
             // btn_addMateriel
             // 
-            this.btn_addMateriel.Location = new System.Drawing.Point(628, 393);
+            this.btn_addMateriel.Location = new System.Drawing.Point(942, 605);
+            this.btn_addMateriel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_addMateriel.Name = "btn_addMateriel";
-            this.btn_addMateriel.Size = new System.Drawing.Size(75, 23);
+            this.btn_addMateriel.Size = new System.Drawing.Size(112, 35);
             this.btn_addMateriel.TabIndex = 10;
             this.btn_addMateriel.Text = "Add";
             this.btn_addMateriel.UseVisualStyleBackColor = true;
@@ -527,10 +600,11 @@
             this.idClientDataGridViewTextBoxColumn1,
             this.idBrandDataGridViewTextBoxColumn});
             this.dgv_listeMaterielsMain.DataSource = this.materielBindingSource;
-            this.dgv_listeMaterielsMain.Location = new System.Drawing.Point(8, 53);
+            this.dgv_listeMaterielsMain.Location = new System.Drawing.Point(12, 82);
+            this.dgv_listeMaterielsMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_listeMaterielsMain.Name = "dgv_listeMaterielsMain";
             this.dgv_listeMaterielsMain.ReadOnly = true;
-            this.dgv_listeMaterielsMain.Size = new System.Drawing.Size(775, 339);
+            this.dgv_listeMaterielsMain.Size = new System.Drawing.Size(1162, 522);
             this.dgv_listeMaterielsMain.TabIndex = 9;
             // 
             // nameMaterielDataGridViewTextBoxColumn1
@@ -594,46 +668,43 @@
             // 
             // comboBoxNom2
             // 
+            this.comboBoxNom2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNom2.FormattingEnabled = true;
-            this.comboBoxNom2.Location = new System.Drawing.Point(265, 27);
-            this.comboBoxNom2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxNom2.Location = new System.Drawing.Point(883, 42);
             this.comboBoxNom2.Name = "comboBoxNom2";
-            this.comboBoxNom2.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxNom2.Size = new System.Drawing.Size(291, 28);
             this.comboBoxNom2.TabIndex = 8;
-            this.comboBoxNom2.Text = "NOM";
             // 
             // comboBoxN_Serie
             // 
+            this.comboBoxN_Serie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxN_Serie.FormattingEnabled = true;
-            this.comboBoxN_Serie.Location = new System.Drawing.Point(179, 27);
-            this.comboBoxN_Serie.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxN_Serie.Location = new System.Drawing.Point(571, 42);
             this.comboBoxN_Serie.Name = "comboBoxN_Serie";
-            this.comboBoxN_Serie.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxN_Serie.Size = new System.Drawing.Size(306, 28);
             this.comboBoxN_Serie.TabIndex = 7;
-            this.comboBoxN_Serie.Text = "NUMERO DE SERIE";
             // 
             // comboBoxType
             // 
+            this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(93, 27);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxType.Location = new System.Drawing.Point(293, 42);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxType.Size = new System.Drawing.Size(272, 28);
             this.comboBoxType.TabIndex = 6;
-            this.comboBoxType.Text = "TYPE";
             // 
             // comboBoxID_Materiel
             // 
+            this.comboBoxID_Materiel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxID_Materiel.FormattingEnabled = true;
-            this.comboBoxID_Materiel.Location = new System.Drawing.Point(7, 27);
-            this.comboBoxID_Materiel.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxID_Materiel.Location = new System.Drawing.Point(10, 42);
             this.comboBoxID_Materiel.Name = "comboBoxID_Materiel";
-            this.comboBoxID_Materiel.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxID_Materiel.Size = new System.Drawing.Size(277, 28);
             this.comboBoxID_Materiel.TabIndex = 5;
-            this.comboBoxID_Materiel.Text = "ID.MATERIEL";
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.btn_editSite);
             this.tabPage4.Controls.Add(this.btn_addSite);
             this.tabPage4.Controls.Add(this.dgv_listeSitesMain);
@@ -641,29 +712,30 @@
             this.tabPage4.Controls.Add(this.comboBoxCodePostale);
             this.tabPage4.Controls.Add(this.comboBoxAdresse);
             this.tabPage4.Controls.Add(this.comboBoxNom3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(792, 424);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Size = new System.Drawing.Size(1192, 659);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Listes Sites";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // btn_editSite
             // 
-            this.btn_editSite.Location = new System.Drawing.Point(708, 393);
+            this.btn_editSite.Location = new System.Drawing.Point(1062, 605);
+            this.btn_editSite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_editSite.Name = "btn_editSite";
-            this.btn_editSite.Size = new System.Drawing.Size(75, 23);
+            this.btn_editSite.Size = new System.Drawing.Size(112, 35);
             this.btn_editSite.TabIndex = 14;
             this.btn_editSite.Text = "Edit";
             this.btn_editSite.UseVisualStyleBackColor = true;
             // 
             // btn_addSite
             // 
-            this.btn_addSite.Location = new System.Drawing.Point(627, 393);
+            this.btn_addSite.Location = new System.Drawing.Point(940, 605);
+            this.btn_addSite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_addSite.Name = "btn_addSite";
-            this.btn_addSite.Size = new System.Drawing.Size(75, 23);
+            this.btn_addSite.Size = new System.Drawing.Size(112, 35);
             this.btn_addSite.TabIndex = 13;
             this.btn_addSite.Text = "Add";
             this.btn_addSite.UseVisualStyleBackColor = true;
@@ -681,10 +753,11 @@
             this.city_Site,
             this.idClientDataGridViewTextBoxColumn2});
             this.dgv_listeSitesMain.DataSource = this.siteBindingSource1;
-            this.dgv_listeSitesMain.Location = new System.Drawing.Point(8, 53);
+            this.dgv_listeSitesMain.Location = new System.Drawing.Point(7, 81);
+            this.dgv_listeSitesMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_listeSitesMain.Name = "dgv_listeSitesMain";
             this.dgv_listeSitesMain.ReadOnly = true;
-            this.dgv_listeSitesMain.Size = new System.Drawing.Size(776, 334);
+            this.dgv_listeSitesMain.Size = new System.Drawing.Size(1164, 514);
             this.dgv_listeSitesMain.TabIndex = 12;
             // 
             // name_Site
@@ -734,43 +807,40 @@
             // 
             // comboBoxVille
             // 
+            this.comboBoxVille.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxVille.FormattingEnabled = true;
-            this.comboBoxVille.Location = new System.Drawing.Point(266, 27);
-            this.comboBoxVille.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxVille.Location = new System.Drawing.Point(909, 42);
             this.comboBoxVille.Name = "comboBoxVille";
-            this.comboBoxVille.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxVille.Size = new System.Drawing.Size(262, 28);
             this.comboBoxVille.TabIndex = 9;
-            this.comboBoxVille.Text = "VILLE";
             // 
             // comboBoxCodePostale
             // 
+            this.comboBoxCodePostale.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCodePostale.FormattingEnabled = true;
-            this.comboBoxCodePostale.Location = new System.Drawing.Point(180, 27);
-            this.comboBoxCodePostale.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxCodePostale.Location = new System.Drawing.Point(621, 42);
             this.comboBoxCodePostale.Name = "comboBoxCodePostale";
-            this.comboBoxCodePostale.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxCodePostale.Size = new System.Drawing.Size(282, 28);
             this.comboBoxCodePostale.TabIndex = 8;
-            this.comboBoxCodePostale.Text = "CODE POSTALE";
             // 
             // comboBoxAdresse
             // 
+            this.comboBoxAdresse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAdresse.FormattingEnabled = true;
-            this.comboBoxAdresse.Location = new System.Drawing.Point(94, 27);
-            this.comboBoxAdresse.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAdresse.Location = new System.Drawing.Point(314, 42);
             this.comboBoxAdresse.Name = "comboBoxAdresse";
-            this.comboBoxAdresse.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxAdresse.Size = new System.Drawing.Size(301, 28);
             this.comboBoxAdresse.TabIndex = 7;
-            this.comboBoxAdresse.Text = "ADRESSE";
             // 
             // comboBoxNom3
             // 
+            this.comboBoxNom3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNom3.FormattingEnabled = true;
-            this.comboBoxNom3.Location = new System.Drawing.Point(8, 27);
-            this.comboBoxNom3.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxNom3.Location = new System.Drawing.Point(12, 42);
             this.comboBoxNom3.Name = "comboBoxNom3";
-            this.comboBoxNom3.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxNom3.Size = new System.Drawing.Size(296, 28);
             this.comboBoxNom3.TabIndex = 6;
-            this.comboBoxNom3.Text = "Nom";
+            this.comboBoxNom3.SelectedIndexChanged += new System.EventHandler(this.comboBoxNom3_SelectedIndexChanged);
             // 
             // dtset_InterventionsMain
             // 
@@ -819,62 +889,52 @@
             // 
             this.materielTableAdapter.ClearBeforeFill = true;
             // 
-            // id_Client
+            // btn_deconnexion
             // 
-            this.id_Client.DataPropertyName = "id_Client";
-            this.id_Client.HeaderText = "id_Client";
-            this.id_Client.Name = "id_Client";
-            this.id_Client.ReadOnly = true;
+            this.btn_deconnexion.Location = new System.Drawing.Point(13, 605);
+            this.btn_deconnexion.Name = "btn_deconnexion";
+            this.btn_deconnexion.Size = new System.Drawing.Size(121, 35);
+            this.btn_deconnexion.TabIndex = 16;
+            this.btn_deconnexion.Text = "Deconection";
+            this.btn_deconnexion.UseVisualStyleBackColor = true;
             // 
-            // nameClientDataGridViewTextBoxColumn1
+            // button1
             // 
-            this.nameClientDataGridViewTextBoxColumn1.DataPropertyName = "name_Client";
-            this.nameClientDataGridViewTextBoxColumn1.HeaderText = "name_Client";
-            this.nameClientDataGridViewTextBoxColumn1.Name = "nameClientDataGridViewTextBoxColumn1";
-            this.nameClientDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.button1.Location = new System.Drawing.Point(13, 609);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 35);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Deconection";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // addressClientDataGridViewTextBoxColumn
+            // button2
             // 
-            this.addressClientDataGridViewTextBoxColumn.DataPropertyName = "address_Client";
-            this.addressClientDataGridViewTextBoxColumn.HeaderText = "address_Client";
-            this.addressClientDataGridViewTextBoxColumn.Name = "addressClientDataGridViewTextBoxColumn";
-            this.addressClientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.button2.Location = new System.Drawing.Point(12, 609);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(121, 35);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Deconection";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // zipClientDataGridViewTextBoxColumn
+            // button3
             // 
-            this.zipClientDataGridViewTextBoxColumn.DataPropertyName = "zip_Client";
-            this.zipClientDataGridViewTextBoxColumn.HeaderText = "zip_Client";
-            this.zipClientDataGridViewTextBoxColumn.Name = "zipClientDataGridViewTextBoxColumn";
-            this.zipClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cityClientDataGridViewTextBoxColumn
-            // 
-            this.cityClientDataGridViewTextBoxColumn.DataPropertyName = "city_Client";
-            this.cityClientDataGridViewTextBoxColumn.HeaderText = "city_Client";
-            this.cityClientDataGridViewTextBoxColumn.Name = "cityClientDataGridViewTextBoxColumn";
-            this.cityClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telClientDataGridViewTextBoxColumn
-            // 
-            this.telClientDataGridViewTextBoxColumn.DataPropertyName = "tel_Client";
-            this.telClientDataGridViewTextBoxColumn.HeaderText = "tel_Client";
-            this.telClientDataGridViewTextBoxColumn.Name = "telClientDataGridViewTextBoxColumn";
-            this.telClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailClientDataGridViewTextBoxColumn
-            // 
-            this.emailClientDataGridViewTextBoxColumn.DataPropertyName = "email_Client";
-            this.emailClientDataGridViewTextBoxColumn.HeaderText = "email_Client";
-            this.emailClientDataGridViewTextBoxColumn.Name = "emailClientDataGridViewTextBoxColumn";
-            this.emailClientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.button3.Location = new System.Drawing.Point(6, 609);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(121, 35);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Deconection";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.lsbListMateriel);
             this.Controls.Add(this.btn_Close);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "GestionMatos";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -994,6 +1054,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cityClientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telClientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailClientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_deconnexion;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

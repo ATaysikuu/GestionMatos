@@ -17,6 +17,11 @@ namespace GestionMatos
             InitializeComponent();
         }
 
+        private void lb_sites_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //Edit constructor -> To edit an existing intervention
         public F_Intervention(int id_inter)
         {

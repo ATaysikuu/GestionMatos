@@ -102,6 +102,30 @@ namespace GestionMatos
         {
             //(dgv_listeinter.DataSource as DataTable).DefaultView.RowFilter = string.Format("Site = '{0}'", cmb_sites.Text);
         }
+
+        private void btn_addClient_Click(object sender, EventArgs e)
+        {
+            F_Client client = new F_Client();
+            client.ShowDialog();
+            this.clientsTableAdapter.Fill(this.dtset_Clients.Clients);
+        }
+
+        private void btn_addMateriel_Click(object sender, EventArgs e)
+        {
+            Materiel matos = new Materiel();
+            matos.ShowDialog();
+            this.materielTableAdapter.Fill(this.dtset_Materiels.Materiel);
+        }
+
+        private void btn_editClient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_delInter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

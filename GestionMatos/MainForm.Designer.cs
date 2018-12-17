@@ -55,14 +55,43 @@
             this.btn_editInter = new System.Windows.Forms.Button();
             this.btn_addInter = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb_listeClientsNames = new System.Windows.Forms.Label();
+            this.btn_editClient = new System.Windows.Forms.Button();
+            this.btn_addClient = new System.Windows.Forms.Button();
+            this.dgv_listeClientsMain = new System.Windows.Forms.DataGridView();
+            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtset_Clients = new GestionMatos.dtset_Clients();
             this.comboBoxNom = new System.Windows.Forms.ComboBox();
             this.comboBoxID_Clients = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_editMateriel = new System.Windows.Forms.Button();
+            this.btn_addMateriel = new System.Windows.Forms.Button();
+            this.dgv_listeMaterielsMain = new System.Windows.Forms.DataGridView();
+            this.nameMaterielDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serialMaterielDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mtbfMaterielDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTypesMaterielDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idSiteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClientDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idBrandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materielBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtset_Materiels = new GestionMatos.dtset_Materiels();
             this.comboBoxNom2 = new System.Windows.Forms.ComboBox();
             this.comboBoxN_Serie = new System.Windows.Forms.ComboBox();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.comboBoxID_Materiel = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btn_editSite = new System.Windows.Forms.Button();
+            this.btn_addSite = new System.Windows.Forms.Button();
+            this.dgv_listeSitesMain = new System.Windows.Forms.DataGridView();
+            this.name_Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address_Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zipcode_Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.city_Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClientDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dtsetSitesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxVille = new System.Windows.Forms.ComboBox();
             this.comboBoxCodePostale = new System.Windows.Forms.ComboBox();
             this.comboBoxAdresse = new System.Windows.Forms.ComboBox();
@@ -74,51 +103,16 @@
             this.sqlcmd_listeinter = new System.Data.SqlClient.SqlCommand();
             this.siteTableAdapter = new GestionMatos.dtset_SitesTableAdapters.SiteTableAdapter();
             this.afficher_interventionsTableAdapter = new GestionMatos.dtset_InterventionsMainTableAdapters.afficher_interventionsTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dtset_Clients = new GestionMatos.dtset_Clients();
-            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter = new GestionMatos.dtset_ClientsTableAdapters.ClientsTableAdapter();
-            this.idClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtset_Materiel = new GestionMatos.dtset_Materiel();
+            this.materielTableAdapter = new GestionMatos.dtset_MaterielsTableAdapters.MaterielTableAdapter();
+            this.id_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameClientDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zipClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idSiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lb_editClient = new System.Windows.Forms.Button();
-            this.lb_addClient = new System.Windows.Forms.Button();
-            this.btn_editMateriel = new System.Windows.Forms.Button();
-            this.btn_addMateriel = new System.Windows.Forms.Button();
-            this.dgv_listeMateriels = new System.Windows.Forms.DataGridView();
-            this.dtset_Materiel = new GestionMatos.dtset_Materiel();
-            this.dtset_Materiels = new GestionMatos.dtset_Materiels();
-            this.materielBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.materielTableAdapter = new GestionMatos.dtset_MaterielsTableAdapters.MaterielTableAdapter();
-            this.idMaterielDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameMaterielDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serialMaterielDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mtbfMaterielDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTypesMaterielDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idSiteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClientDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idBrandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_editSite = new System.Windows.Forms.Button();
-            this.btn_addSite = new System.Windows.Forms.Button();
-            this.dgv_listeSites = new System.Windows.Forms.DataGridView();
-            this.name_Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address_Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipcode_Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.city_Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtsetSitesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.idSiteDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameSiteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressSiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipcodeSiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.citySiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClientDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lsbListMateriel.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListeInterMain)).BeginInit();
@@ -127,21 +121,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.siteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Sites)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeClientsMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_Clients)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeMaterielsMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiels)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeSitesMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.siteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtsetSitesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_InterventionsMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_Clients)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeMateriels)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiels)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeSites)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtsetSitesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siteBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Close
@@ -378,9 +372,11 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.lb_editClient);
-            this.tabPage2.Controls.Add(this.lb_addClient);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.lb_listeClientsNames);
+            this.tabPage2.Controls.Add(this.btn_editClient);
+            this.tabPage2.Controls.Add(this.btn_addClient);
+            this.tabPage2.Controls.Add(this.dgv_listeClientsMain);
             this.tabPage2.Controls.Add(this.comboBoxNom);
             this.tabPage2.Controls.Add(this.comboBoxID_Clients);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -391,10 +387,79 @@
             this.tabPage2.Text = "Liste Clients";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(92, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "label2";
+            // 
+            // lb_listeClientsNames
+            // 
+            this.lb_listeClientsNames.AutoSize = true;
+            this.lb_listeClientsNames.Location = new System.Drawing.Point(8, 12);
+            this.lb_listeClientsNames.Name = "lb_listeClientsNames";
+            this.lb_listeClientsNames.Size = new System.Drawing.Size(38, 13);
+            this.lb_listeClientsNames.TabIndex = 9;
+            this.lb_listeClientsNames.Text = "Clients";
+            // 
+            // btn_editClient
+            // 
+            this.btn_editClient.Location = new System.Drawing.Point(709, 393);
+            this.btn_editClient.Name = "btn_editClient";
+            this.btn_editClient.Size = new System.Drawing.Size(75, 23);
+            this.btn_editClient.TabIndex = 8;
+            this.btn_editClient.Text = "Edit";
+            this.btn_editClient.UseVisualStyleBackColor = true;
+            this.btn_editClient.Click += new System.EventHandler(this.btn_editClient_Click);
+            // 
+            // btn_addClient
+            // 
+            this.btn_addClient.Location = new System.Drawing.Point(628, 393);
+            this.btn_addClient.Name = "btn_addClient";
+            this.btn_addClient.Size = new System.Drawing.Size(75, 23);
+            this.btn_addClient.TabIndex = 7;
+            this.btn_addClient.Text = "Add";
+            this.btn_addClient.UseVisualStyleBackColor = true;
+            this.btn_addClient.Click += new System.EventHandler(this.btn_addClient_Click);
+            // 
+            // dgv_listeClientsMain
+            // 
+            this.dgv_listeClientsMain.AllowUserToAddRows = false;
+            this.dgv_listeClientsMain.AllowUserToDeleteRows = false;
+            this.dgv_listeClientsMain.AutoGenerateColumns = false;
+            this.dgv_listeClientsMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listeClientsMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_Client,
+            this.nameClientDataGridViewTextBoxColumn1,
+            this.addressClientDataGridViewTextBoxColumn,
+            this.zipClientDataGridViewTextBoxColumn,
+            this.cityClientDataGridViewTextBoxColumn,
+            this.telClientDataGridViewTextBoxColumn,
+            this.emailClientDataGridViewTextBoxColumn});
+            this.dgv_listeClientsMain.DataSource = this.clientsBindingSource;
+            this.dgv_listeClientsMain.Location = new System.Drawing.Point(8, 53);
+            this.dgv_listeClientsMain.Name = "dgv_listeClientsMain";
+            this.dgv_listeClientsMain.ReadOnly = true;
+            this.dgv_listeClientsMain.Size = new System.Drawing.Size(776, 334);
+            this.dgv_listeClientsMain.TabIndex = 6;
+            // 
+            // clientsBindingSource
+            // 
+            this.clientsBindingSource.DataMember = "Clients";
+            this.clientsBindingSource.DataSource = this.dtset_Clients;
+            // 
+            // dtset_Clients
+            // 
+            this.dtset_Clients.DataSetName = "dtset_Clients";
+            this.dtset_Clients.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBoxNom
             // 
             this.comboBoxNom.FormattingEnabled = true;
-            this.comboBoxNom.Location = new System.Drawing.Point(328, 5);
+            this.comboBoxNom.Location = new System.Drawing.Point(95, 27);
             this.comboBoxNom.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxNom.Name = "comboBoxNom";
             this.comboBoxNom.Size = new System.Drawing.Size(82, 21);
@@ -404,7 +469,7 @@
             // comboBoxID_Clients
             // 
             this.comboBoxID_Clients.FormattingEnabled = true;
-            this.comboBoxID_Clients.Location = new System.Drawing.Point(71, 5);
+            this.comboBoxID_Clients.Location = new System.Drawing.Point(8, 27);
             this.comboBoxID_Clients.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxID_Clients.Name = "comboBoxID_Clients";
             this.comboBoxID_Clients.Size = new System.Drawing.Size(82, 21);
@@ -415,7 +480,7 @@
             // 
             this.tabPage3.Controls.Add(this.btn_editMateriel);
             this.tabPage3.Controls.Add(this.btn_addMateriel);
-            this.tabPage3.Controls.Add(this.dgv_listeMateriels);
+            this.tabPage3.Controls.Add(this.dgv_listeMaterielsMain);
             this.tabPage3.Controls.Add(this.comboBoxNom2);
             this.tabPage3.Controls.Add(this.comboBoxN_Serie);
             this.tabPage3.Controls.Add(this.comboBoxType);
@@ -427,248 +492,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Liste Matériel";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxNom2
-            // 
-            this.comboBoxNom2.FormattingEnabled = true;
-            this.comboBoxNom2.Location = new System.Drawing.Point(672, 5);
-            this.comboBoxNom2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxNom2.Name = "comboBoxNom2";
-            this.comboBoxNom2.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxNom2.TabIndex = 8;
-            this.comboBoxNom2.Text = "NOM";
-            // 
-            // comboBoxN_Serie
-            // 
-            this.comboBoxN_Serie.FormattingEnabled = true;
-            this.comboBoxN_Serie.Location = new System.Drawing.Point(481, 5);
-            this.comboBoxN_Serie.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxN_Serie.Name = "comboBoxN_Serie";
-            this.comboBoxN_Serie.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxN_Serie.TabIndex = 7;
-            this.comboBoxN_Serie.Text = "NUMERO DE SERIE";
-            // 
-            // comboBoxType
-            // 
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(261, 5);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxType.TabIndex = 6;
-            this.comboBoxType.Text = "TYPE";
-            // 
-            // comboBoxID_Materiel
-            // 
-            this.comboBoxID_Materiel.FormattingEnabled = true;
-            this.comboBoxID_Materiel.Location = new System.Drawing.Point(39, 5);
-            this.comboBoxID_Materiel.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxID_Materiel.Name = "comboBoxID_Materiel";
-            this.comboBoxID_Materiel.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxID_Materiel.TabIndex = 5;
-            this.comboBoxID_Materiel.Text = "ID.MATERIEL";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.btn_editSite);
-            this.tabPage4.Controls.Add(this.btn_addSite);
-            this.tabPage4.Controls.Add(this.dgv_listeSites);
-            this.tabPage4.Controls.Add(this.comboBoxVille);
-            this.tabPage4.Controls.Add(this.comboBoxCodePostale);
-            this.tabPage4.Controls.Add(this.comboBoxAdresse);
-            this.tabPage4.Controls.Add(this.comboBoxNom3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(792, 424);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Listes Sites";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxVille
-            // 
-            this.comboBoxVille.FormattingEnabled = true;
-            this.comboBoxVille.Location = new System.Drawing.Point(654, 4);
-            this.comboBoxVille.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxVille.Name = "comboBoxVille";
-            this.comboBoxVille.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxVille.TabIndex = 9;
-            this.comboBoxVille.Text = "VILLE";
-            // 
-            // comboBoxCodePostale
-            // 
-            this.comboBoxCodePostale.FormattingEnabled = true;
-            this.comboBoxCodePostale.Location = new System.Drawing.Point(451, 4);
-            this.comboBoxCodePostale.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxCodePostale.Name = "comboBoxCodePostale";
-            this.comboBoxCodePostale.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxCodePostale.TabIndex = 8;
-            this.comboBoxCodePostale.Text = "CODE POSTALE";
-            // 
-            // comboBoxAdresse
-            // 
-            this.comboBoxAdresse.FormattingEnabled = true;
-            this.comboBoxAdresse.Location = new System.Drawing.Point(223, 4);
-            this.comboBoxAdresse.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxAdresse.Name = "comboBoxAdresse";
-            this.comboBoxAdresse.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxAdresse.TabIndex = 7;
-            this.comboBoxAdresse.Text = "ADRESSE";
-            // 
-            // comboBoxNom3
-            // 
-            this.comboBoxNom3.FormattingEnabled = true;
-            this.comboBoxNom3.Location = new System.Drawing.Point(42, 4);
-            this.comboBoxNom3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxNom3.Name = "comboBoxNom3";
-            this.comboBoxNom3.Size = new System.Drawing.Size(82, 21);
-            this.comboBoxNom3.TabIndex = 6;
-            this.comboBoxNom3.Text = "Nom";
-            // 
-            // dtset_InterventionsMain
-            // 
-            this.dtset_InterventionsMain.DataSetName = "dtset_InterventionsMain";
-            this.dtset_InterventionsMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gestionMatosDataSet
-            // 
-            this.gestionMatosDataSet.DataSetName = "GestionMatosDataSet";
-            this.gestionMatosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // interventionBindingSource1
-            // 
-            this.interventionBindingSource1.DataMember = "Intervention";
-            this.interventionBindingSource1.DataSource = this.gestionMatosDataSet;
-            // 
-            // sqls_main
-            // 
-            this.sqls_main.ConnectionString = "Data Source=.;Initial Catalog=GestionMatos;Integrated Security=True";
-            this.sqls_main.FireInfoMessageEventOnUserErrors = false;
-            // 
-            // sqlcmd_listeinter
-            // 
-            this.sqlcmd_listeinter.CommandText = "afficher_interventions";
-            this.sqlcmd_listeinter.CommandType = System.Data.CommandType.StoredProcedure;
-            this.sqlcmd_listeinter.Connection = this.sqls_main;
-            // 
-            // siteTableAdapter
-            // 
-            this.siteTableAdapter.ClearBeforeFill = true;
-            // 
-            // afficher_interventionsTableAdapter
-            // 
-            this.afficher_interventionsTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idClientDataGridViewTextBoxColumn,
-            this.nameClientDataGridViewTextBoxColumn1,
-            this.addressClientDataGridViewTextBoxColumn,
-            this.zipClientDataGridViewTextBoxColumn,
-            this.cityClientDataGridViewTextBoxColumn,
-            this.telClientDataGridViewTextBoxColumn,
-            this.emailClientDataGridViewTextBoxColumn,
-            this.idSiteDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.clientsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(775, 339);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // dtset_Clients
-            // 
-            this.dtset_Clients.DataSetName = "dtset_Clients";
-            this.dtset_Clients.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientsBindingSource
-            // 
-            this.clientsBindingSource.DataMember = "Clients";
-            this.clientsBindingSource.DataSource = this.dtset_Clients;
-            // 
-            // clientsTableAdapter
-            // 
-            this.clientsTableAdapter.ClearBeforeFill = true;
-            // 
-            // idClientDataGridViewTextBoxColumn
-            // 
-            this.idClientDataGridViewTextBoxColumn.DataPropertyName = "id_Client";
-            this.idClientDataGridViewTextBoxColumn.HeaderText = "id_Client";
-            this.idClientDataGridViewTextBoxColumn.Name = "idClientDataGridViewTextBoxColumn";
-            this.idClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameClientDataGridViewTextBoxColumn1
-            // 
-            this.nameClientDataGridViewTextBoxColumn1.DataPropertyName = "name_Client";
-            this.nameClientDataGridViewTextBoxColumn1.HeaderText = "name_Client";
-            this.nameClientDataGridViewTextBoxColumn1.Name = "nameClientDataGridViewTextBoxColumn1";
-            this.nameClientDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // addressClientDataGridViewTextBoxColumn
-            // 
-            this.addressClientDataGridViewTextBoxColumn.DataPropertyName = "address_Client";
-            this.addressClientDataGridViewTextBoxColumn.HeaderText = "address_Client";
-            this.addressClientDataGridViewTextBoxColumn.Name = "addressClientDataGridViewTextBoxColumn";
-            this.addressClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // zipClientDataGridViewTextBoxColumn
-            // 
-            this.zipClientDataGridViewTextBoxColumn.DataPropertyName = "zip_Client";
-            this.zipClientDataGridViewTextBoxColumn.HeaderText = "zip_Client";
-            this.zipClientDataGridViewTextBoxColumn.Name = "zipClientDataGridViewTextBoxColumn";
-            this.zipClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cityClientDataGridViewTextBoxColumn
-            // 
-            this.cityClientDataGridViewTextBoxColumn.DataPropertyName = "city_Client";
-            this.cityClientDataGridViewTextBoxColumn.HeaderText = "city_Client";
-            this.cityClientDataGridViewTextBoxColumn.Name = "cityClientDataGridViewTextBoxColumn";
-            this.cityClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telClientDataGridViewTextBoxColumn
-            // 
-            this.telClientDataGridViewTextBoxColumn.DataPropertyName = "tel_Client";
-            this.telClientDataGridViewTextBoxColumn.HeaderText = "tel_Client";
-            this.telClientDataGridViewTextBoxColumn.Name = "telClientDataGridViewTextBoxColumn";
-            this.telClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailClientDataGridViewTextBoxColumn
-            // 
-            this.emailClientDataGridViewTextBoxColumn.DataPropertyName = "email_Client";
-            this.emailClientDataGridViewTextBoxColumn.HeaderText = "email_Client";
-            this.emailClientDataGridViewTextBoxColumn.Name = "emailClientDataGridViewTextBoxColumn";
-            this.emailClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idSiteDataGridViewTextBoxColumn
-            // 
-            this.idSiteDataGridViewTextBoxColumn.DataPropertyName = "id_Site";
-            this.idSiteDataGridViewTextBoxColumn.HeaderText = "id_Site";
-            this.idSiteDataGridViewTextBoxColumn.Name = "idSiteDataGridViewTextBoxColumn";
-            this.idSiteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lb_editClient
-            // 
-            this.lb_editClient.Location = new System.Drawing.Point(709, 393);
-            this.lb_editClient.Name = "lb_editClient";
-            this.lb_editClient.Size = new System.Drawing.Size(75, 23);
-            this.lb_editClient.TabIndex = 8;
-            this.lb_editClient.Text = "Edit";
-            this.lb_editClient.UseVisualStyleBackColor = true;
-            // 
-            // lb_addClient
-            // 
-            this.lb_addClient.Location = new System.Drawing.Point(628, 393);
-            this.lb_addClient.Name = "lb_addClient";
-            this.lb_addClient.Size = new System.Drawing.Size(75, 23);
-            this.lb_addClient.TabIndex = 7;
-            this.lb_addClient.Text = "Add";
-            this.lb_addClient.UseVisualStyleBackColor = true;
             // 
             // btn_editMateriel
             // 
@@ -687,55 +510,28 @@
             this.btn_addMateriel.TabIndex = 10;
             this.btn_addMateriel.Text = "Add";
             this.btn_addMateriel.UseVisualStyleBackColor = true;
+            this.btn_addMateriel.Click += new System.EventHandler(this.btn_addMateriel_Click);
             // 
-            // dgv_listeMateriels
+            // dgv_listeMaterielsMain
             // 
-            this.dgv_listeMateriels.AllowUserToAddRows = false;
-            this.dgv_listeMateriels.AllowUserToDeleteRows = false;
-            this.dgv_listeMateriels.AutoGenerateColumns = false;
-            this.dgv_listeMateriels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_listeMateriels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idMaterielDataGridViewTextBoxColumn,
+            this.dgv_listeMaterielsMain.AllowUserToAddRows = false;
+            this.dgv_listeMaterielsMain.AllowUserToDeleteRows = false;
+            this.dgv_listeMaterielsMain.AutoGenerateColumns = false;
+            this.dgv_listeMaterielsMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listeMaterielsMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameMaterielDataGridViewTextBoxColumn1,
             this.serialMaterielDataGridViewTextBoxColumn,
             this.mtbfMaterielDataGridViewTextBoxColumn,
             this.idTypesMaterielDataGridViewTextBoxColumn,
             this.idSiteDataGridViewTextBoxColumn1,
             this.idClientDataGridViewTextBoxColumn1,
-            this.idBrandDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn2});
-            this.dgv_listeMateriels.DataSource = this.materielBindingSource;
-            this.dgv_listeMateriels.Location = new System.Drawing.Point(9, 48);
-            this.dgv_listeMateriels.Name = "dgv_listeMateriels";
-            this.dgv_listeMateriels.ReadOnly = true;
-            this.dgv_listeMateriels.Size = new System.Drawing.Size(775, 339);
-            this.dgv_listeMateriels.TabIndex = 9;
-            // 
-            // dtset_Materiel
-            // 
-            this.dtset_Materiel.DataSetName = "dtset_Materiel";
-            this.dtset_Materiel.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dtset_Materiels
-            // 
-            this.dtset_Materiels.DataSetName = "dtset_Materiels";
-            this.dtset_Materiels.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // materielBindingSource
-            // 
-            this.materielBindingSource.DataMember = "Materiel";
-            this.materielBindingSource.DataSource = this.dtset_Materiels;
-            // 
-            // materielTableAdapter
-            // 
-            this.materielTableAdapter.ClearBeforeFill = true;
-            // 
-            // idMaterielDataGridViewTextBoxColumn
-            // 
-            this.idMaterielDataGridViewTextBoxColumn.DataPropertyName = "id_Materiel";
-            this.idMaterielDataGridViewTextBoxColumn.HeaderText = "id_Materiel";
-            this.idMaterielDataGridViewTextBoxColumn.Name = "idMaterielDataGridViewTextBoxColumn";
-            this.idMaterielDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idBrandDataGridViewTextBoxColumn});
+            this.dgv_listeMaterielsMain.DataSource = this.materielBindingSource;
+            this.dgv_listeMaterielsMain.Location = new System.Drawing.Point(8, 53);
+            this.dgv_listeMaterielsMain.Name = "dgv_listeMaterielsMain";
+            this.dgv_listeMaterielsMain.ReadOnly = true;
+            this.dgv_listeMaterielsMain.Size = new System.Drawing.Size(775, 339);
+            this.dgv_listeMaterielsMain.TabIndex = 9;
             // 
             // nameMaterielDataGridViewTextBoxColumn1
             // 
@@ -786,12 +582,73 @@
             this.idBrandDataGridViewTextBoxColumn.Name = "idBrandDataGridViewTextBoxColumn";
             this.idBrandDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // materielBindingSource
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_Intervention";
-            this.dataGridViewTextBoxColumn2.HeaderText = "id_Intervention";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.materielBindingSource.DataMember = "Materiel";
+            this.materielBindingSource.DataSource = this.dtset_Materiels;
+            // 
+            // dtset_Materiels
+            // 
+            this.dtset_Materiels.DataSetName = "dtset_Materiels";
+            this.dtset_Materiels.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBoxNom2
+            // 
+            this.comboBoxNom2.FormattingEnabled = true;
+            this.comboBoxNom2.Location = new System.Drawing.Point(265, 27);
+            this.comboBoxNom2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxNom2.Name = "comboBoxNom2";
+            this.comboBoxNom2.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxNom2.TabIndex = 8;
+            this.comboBoxNom2.Text = "NOM";
+            // 
+            // comboBoxN_Serie
+            // 
+            this.comboBoxN_Serie.FormattingEnabled = true;
+            this.comboBoxN_Serie.Location = new System.Drawing.Point(179, 27);
+            this.comboBoxN_Serie.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxN_Serie.Name = "comboBoxN_Serie";
+            this.comboBoxN_Serie.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxN_Serie.TabIndex = 7;
+            this.comboBoxN_Serie.Text = "NUMERO DE SERIE";
+            // 
+            // comboBoxType
+            // 
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Location = new System.Drawing.Point(93, 27);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxType.TabIndex = 6;
+            this.comboBoxType.Text = "TYPE";
+            // 
+            // comboBoxID_Materiel
+            // 
+            this.comboBoxID_Materiel.FormattingEnabled = true;
+            this.comboBoxID_Materiel.Location = new System.Drawing.Point(7, 27);
+            this.comboBoxID_Materiel.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxID_Materiel.Name = "comboBoxID_Materiel";
+            this.comboBoxID_Materiel.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxID_Materiel.TabIndex = 5;
+            this.comboBoxID_Materiel.Text = "ID.MATERIEL";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btn_editSite);
+            this.tabPage4.Controls.Add(this.btn_addSite);
+            this.tabPage4.Controls.Add(this.dgv_listeSitesMain);
+            this.tabPage4.Controls.Add(this.comboBoxVille);
+            this.tabPage4.Controls.Add(this.comboBoxCodePostale);
+            this.tabPage4.Controls.Add(this.comboBoxAdresse);
+            this.tabPage4.Controls.Add(this.comboBoxNom3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Size = new System.Drawing.Size(792, 424);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Listes Sites";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // btn_editSite
             // 
@@ -811,29 +668,24 @@
             this.btn_addSite.Text = "Add";
             this.btn_addSite.UseVisualStyleBackColor = true;
             // 
-            // dgv_listeSites
+            // dgv_listeSitesMain
             // 
-            this.dgv_listeSites.AllowUserToAddRows = false;
-            this.dgv_listeSites.AllowUserToDeleteRows = false;
-            this.dgv_listeSites.AutoGenerateColumns = false;
-            this.dgv_listeSites.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_listeSites.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_listeSitesMain.AllowUserToAddRows = false;
+            this.dgv_listeSitesMain.AllowUserToDeleteRows = false;
+            this.dgv_listeSitesMain.AutoGenerateColumns = false;
+            this.dgv_listeSitesMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listeSitesMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name_Site,
             this.address_Site,
             this.zipcode_Site,
             this.city_Site,
-            this.idSiteDataGridViewTextBoxColumn2,
-            this.nameSiteDataGridViewTextBoxColumn1,
-            this.addressSiteDataGridViewTextBoxColumn,
-            this.zipcodeSiteDataGridViewTextBoxColumn,
-            this.citySiteDataGridViewTextBoxColumn,
             this.idClientDataGridViewTextBoxColumn2});
-            this.dgv_listeSites.DataSource = this.siteBindingSource1;
-            this.dgv_listeSites.Location = new System.Drawing.Point(8, 48);
-            this.dgv_listeSites.Name = "dgv_listeSites";
-            this.dgv_listeSites.ReadOnly = true;
-            this.dgv_listeSites.Size = new System.Drawing.Size(775, 339);
-            this.dgv_listeSites.TabIndex = 12;
+            this.dgv_listeSitesMain.DataSource = this.siteBindingSource1;
+            this.dgv_listeSitesMain.Location = new System.Drawing.Point(8, 53);
+            this.dgv_listeSitesMain.Name = "dgv_listeSitesMain";
+            this.dgv_listeSitesMain.ReadOnly = true;
+            this.dgv_listeSitesMain.Size = new System.Drawing.Size(776, 334);
+            this.dgv_listeSitesMain.TabIndex = 12;
             // 
             // name_Site
             // 
@@ -863,57 +715,158 @@
             this.city_Site.Name = "city_Site";
             this.city_Site.ReadOnly = true;
             // 
-            // dtsetSitesBindingSource
-            // 
-            this.dtsetSitesBindingSource.DataSource = this.dtset_Sites;
-            this.dtsetSitesBindingSource.Position = 0;
-            // 
-            // siteBindingSource1
-            // 
-            this.siteBindingSource1.DataMember = "Site";
-            this.siteBindingSource1.DataSource = this.dtsetSitesBindingSource;
-            // 
-            // idSiteDataGridViewTextBoxColumn2
-            // 
-            this.idSiteDataGridViewTextBoxColumn2.DataPropertyName = "id_Site";
-            this.idSiteDataGridViewTextBoxColumn2.HeaderText = "id_Site";
-            this.idSiteDataGridViewTextBoxColumn2.Name = "idSiteDataGridViewTextBoxColumn2";
-            this.idSiteDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // nameSiteDataGridViewTextBoxColumn1
-            // 
-            this.nameSiteDataGridViewTextBoxColumn1.DataPropertyName = "name_Site";
-            this.nameSiteDataGridViewTextBoxColumn1.HeaderText = "name_Site";
-            this.nameSiteDataGridViewTextBoxColumn1.Name = "nameSiteDataGridViewTextBoxColumn1";
-            this.nameSiteDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // addressSiteDataGridViewTextBoxColumn
-            // 
-            this.addressSiteDataGridViewTextBoxColumn.DataPropertyName = "address_Site";
-            this.addressSiteDataGridViewTextBoxColumn.HeaderText = "address_Site";
-            this.addressSiteDataGridViewTextBoxColumn.Name = "addressSiteDataGridViewTextBoxColumn";
-            this.addressSiteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // zipcodeSiteDataGridViewTextBoxColumn
-            // 
-            this.zipcodeSiteDataGridViewTextBoxColumn.DataPropertyName = "zipcode_Site";
-            this.zipcodeSiteDataGridViewTextBoxColumn.HeaderText = "zipcode_Site";
-            this.zipcodeSiteDataGridViewTextBoxColumn.Name = "zipcodeSiteDataGridViewTextBoxColumn";
-            this.zipcodeSiteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // citySiteDataGridViewTextBoxColumn
-            // 
-            this.citySiteDataGridViewTextBoxColumn.DataPropertyName = "city_Site";
-            this.citySiteDataGridViewTextBoxColumn.HeaderText = "city_Site";
-            this.citySiteDataGridViewTextBoxColumn.Name = "citySiteDataGridViewTextBoxColumn";
-            this.citySiteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // idClientDataGridViewTextBoxColumn2
             // 
             this.idClientDataGridViewTextBoxColumn2.DataPropertyName = "id_Client";
             this.idClientDataGridViewTextBoxColumn2.HeaderText = "id_Client";
             this.idClientDataGridViewTextBoxColumn2.Name = "idClientDataGridViewTextBoxColumn2";
             this.idClientDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // siteBindingSource1
+            // 
+            this.siteBindingSource1.DataMember = "Site";
+            this.siteBindingSource1.DataSource = this.dtsetSitesBindingSource;
+            // 
+            // dtsetSitesBindingSource
+            // 
+            this.dtsetSitesBindingSource.DataSource = this.dtset_Sites;
+            this.dtsetSitesBindingSource.Position = 0;
+            // 
+            // comboBoxVille
+            // 
+            this.comboBoxVille.FormattingEnabled = true;
+            this.comboBoxVille.Location = new System.Drawing.Point(266, 27);
+            this.comboBoxVille.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxVille.Name = "comboBoxVille";
+            this.comboBoxVille.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxVille.TabIndex = 9;
+            this.comboBoxVille.Text = "VILLE";
+            // 
+            // comboBoxCodePostale
+            // 
+            this.comboBoxCodePostale.FormattingEnabled = true;
+            this.comboBoxCodePostale.Location = new System.Drawing.Point(180, 27);
+            this.comboBoxCodePostale.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxCodePostale.Name = "comboBoxCodePostale";
+            this.comboBoxCodePostale.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxCodePostale.TabIndex = 8;
+            this.comboBoxCodePostale.Text = "CODE POSTALE";
+            // 
+            // comboBoxAdresse
+            // 
+            this.comboBoxAdresse.FormattingEnabled = true;
+            this.comboBoxAdresse.Location = new System.Drawing.Point(94, 27);
+            this.comboBoxAdresse.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAdresse.Name = "comboBoxAdresse";
+            this.comboBoxAdresse.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxAdresse.TabIndex = 7;
+            this.comboBoxAdresse.Text = "ADRESSE";
+            // 
+            // comboBoxNom3
+            // 
+            this.comboBoxNom3.FormattingEnabled = true;
+            this.comboBoxNom3.Location = new System.Drawing.Point(8, 27);
+            this.comboBoxNom3.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxNom3.Name = "comboBoxNom3";
+            this.comboBoxNom3.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxNom3.TabIndex = 6;
+            this.comboBoxNom3.Text = "Nom";
+            // 
+            // dtset_InterventionsMain
+            // 
+            this.dtset_InterventionsMain.DataSetName = "dtset_InterventionsMain";
+            this.dtset_InterventionsMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gestionMatosDataSet
+            // 
+            this.gestionMatosDataSet.DataSetName = "GestionMatosDataSet";
+            this.gestionMatosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // interventionBindingSource1
+            // 
+            this.interventionBindingSource1.DataMember = "Intervention";
+            this.interventionBindingSource1.DataSource = this.gestionMatosDataSet;
+            // 
+            // sqls_main
+            // 
+            this.sqls_main.ConnectionString = "Data Source=.;Initial Catalog=GestionMatos;Integrated Security=True";
+            this.sqls_main.FireInfoMessageEventOnUserErrors = false;
+            // 
+            // sqlcmd_listeinter
+            // 
+            this.sqlcmd_listeinter.CommandText = "afficher_interventions";
+            this.sqlcmd_listeinter.CommandType = System.Data.CommandType.StoredProcedure;
+            this.sqlcmd_listeinter.Connection = this.sqls_main;
+            // 
+            // siteTableAdapter
+            // 
+            this.siteTableAdapter.ClearBeforeFill = true;
+            // 
+            // afficher_interventionsTableAdapter
+            // 
+            this.afficher_interventionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // clientsTableAdapter
+            // 
+            this.clientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dtset_Materiel
+            // 
+            this.dtset_Materiel.DataSetName = "dtset_Materiel";
+            this.dtset_Materiel.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // materielTableAdapter
+            // 
+            this.materielTableAdapter.ClearBeforeFill = true;
+            // 
+            // id_Client
+            // 
+            this.id_Client.DataPropertyName = "id_Client";
+            this.id_Client.HeaderText = "id_Client";
+            this.id_Client.Name = "id_Client";
+            this.id_Client.ReadOnly = true;
+            // 
+            // nameClientDataGridViewTextBoxColumn1
+            // 
+            this.nameClientDataGridViewTextBoxColumn1.DataPropertyName = "name_Client";
+            this.nameClientDataGridViewTextBoxColumn1.HeaderText = "name_Client";
+            this.nameClientDataGridViewTextBoxColumn1.Name = "nameClientDataGridViewTextBoxColumn1";
+            this.nameClientDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // addressClientDataGridViewTextBoxColumn
+            // 
+            this.addressClientDataGridViewTextBoxColumn.DataPropertyName = "address_Client";
+            this.addressClientDataGridViewTextBoxColumn.HeaderText = "address_Client";
+            this.addressClientDataGridViewTextBoxColumn.Name = "addressClientDataGridViewTextBoxColumn";
+            this.addressClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // zipClientDataGridViewTextBoxColumn
+            // 
+            this.zipClientDataGridViewTextBoxColumn.DataPropertyName = "zip_Client";
+            this.zipClientDataGridViewTextBoxColumn.HeaderText = "zip_Client";
+            this.zipClientDataGridViewTextBoxColumn.Name = "zipClientDataGridViewTextBoxColumn";
+            this.zipClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cityClientDataGridViewTextBoxColumn
+            // 
+            this.cityClientDataGridViewTextBoxColumn.DataPropertyName = "city_Client";
+            this.cityClientDataGridViewTextBoxColumn.HeaderText = "city_Client";
+            this.cityClientDataGridViewTextBoxColumn.Name = "cityClientDataGridViewTextBoxColumn";
+            this.cityClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telClientDataGridViewTextBoxColumn
+            // 
+            this.telClientDataGridViewTextBoxColumn.DataPropertyName = "tel_Client";
+            this.telClientDataGridViewTextBoxColumn.HeaderText = "tel_Client";
+            this.telClientDataGridViewTextBoxColumn.Name = "telClientDataGridViewTextBoxColumn";
+            this.telClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailClientDataGridViewTextBoxColumn
+            // 
+            this.emailClientDataGridViewTextBoxColumn.DataPropertyName = "email_Client";
+            this.emailClientDataGridViewTextBoxColumn.HeaderText = "email_Client";
+            this.emailClientDataGridViewTextBoxColumn.Name = "emailClientDataGridViewTextBoxColumn";
+            this.emailClientDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // MainForm
             // 
@@ -923,7 +876,7 @@
             this.Controls.Add(this.lsbListMateriel);
             this.Controls.Add(this.btn_Close);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "GestionMatos";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.lsbListMateriel.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -934,21 +887,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.siteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Sites)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeClientsMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_Clients)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeMaterielsMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiels)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeSitesMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.siteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtsetSitesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_InterventionsMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionMatosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.interventionBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_Clients)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeMateriels)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtset_Materiels)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listeSites)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtsetSitesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siteBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1001,28 +955,26 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idTechnicienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameSiteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameClientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_listeClientsMain;
         private dtset_Clients dtset_Clients;
         private System.Windows.Forms.BindingSource clientsBindingSource;
         private dtset_ClientsTableAdapters.ClientsTableAdapter clientsTableAdapter;
-        private System.Windows.Forms.Button lb_editClient;
-        private System.Windows.Forms.Button lb_addClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameClientDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressClientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zipClientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityClientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telClientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailClientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idSiteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_editClient;
+        private System.Windows.Forms.Button btn_addClient;
         private System.Windows.Forms.Button btn_editMateriel;
         private System.Windows.Forms.Button btn_addMateriel;
-        private System.Windows.Forms.DataGridView dgv_listeMateriels;
+        private System.Windows.Forms.DataGridView dgv_listeMaterielsMain;
         private dtset_Materiel dtset_Materiel;
         private dtset_Materiels dtset_Materiels;
         private System.Windows.Forms.BindingSource materielBindingSource;
         private dtset_MaterielsTableAdapters.MaterielTableAdapter materielTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMaterielDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_editSite;
+        private System.Windows.Forms.Button btn_addSite;
+        private System.Windows.Forms.DataGridView dgv_listeSitesMain;
+        private System.Windows.Forms.BindingSource dtsetSitesBindingSource;
+        private System.Windows.Forms.BindingSource siteBindingSource1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_listeClientsNames;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameMaterielDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn serialMaterielDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mtbfMaterielDataGridViewTextBoxColumn;
@@ -1030,22 +982,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idSiteDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idClientDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBrandDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.Button btn_editSite;
-        private System.Windows.Forms.Button btn_addSite;
-        private System.Windows.Forms.DataGridView dgv_listeSites;
         private System.Windows.Forms.DataGridViewTextBoxColumn name_Site;
         private System.Windows.Forms.DataGridViewTextBoxColumn address_Site;
         private System.Windows.Forms.DataGridViewTextBoxColumn zipcode_Site;
         private System.Windows.Forms.DataGridViewTextBoxColumn city_Site;
-        private System.Windows.Forms.BindingSource dtsetSitesBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idSiteDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameSiteDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressSiteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zipcodeSiteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn citySiteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idClientDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.BindingSource siteBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Client;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameClientDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressClientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zipClientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityClientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telClientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailClientDataGridViewTextBoxColumn;
     }
 }
 

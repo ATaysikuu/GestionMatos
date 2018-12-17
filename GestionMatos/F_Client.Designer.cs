@@ -42,34 +42,33 @@
             this.lb_ville = new System.Windows.Forms.Label();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Ok = new System.Windows.Forms.Button();
+            this.sqls_client = new System.Data.SqlClient.SqlConnection();
+            this.sqlcmd_addClient = new System.Data.SqlClient.SqlCommand();
             this.SuspendLayout();
             // 
             // tb_ville
             // 
-            this.tb_ville.Location = new System.Drawing.Point(328, 169);
+            this.tb_ville.Location = new System.Drawing.Point(282, 169);
             this.tb_ville.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_ville.Name = "tb_ville";
             this.tb_ville.Size = new System.Drawing.Size(121, 20);
             this.tb_ville.TabIndex = 7;
-            this.tb_ville.Text = "Ville";
             // 
             // tb_code_postal
             // 
-            this.tb_code_postal.Location = new System.Drawing.Point(328, 109);
+            this.tb_code_postal.Location = new System.Drawing.Point(282, 109);
             this.tb_code_postal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_code_postal.Name = "tb_code_postal";
             this.tb_code_postal.Size = new System.Drawing.Size(121, 20);
             this.tb_code_postal.TabIndex = 8;
-            this.tb_code_postal.Text = "Code Postal";
             // 
             // tb_adresse
             // 
-            this.tb_adresse.Location = new System.Drawing.Point(328, 44);
+            this.tb_adresse.Location = new System.Drawing.Point(282, 44);
             this.tb_adresse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_adresse.Name = "tb_adresse";
             this.tb_adresse.Size = new System.Drawing.Size(121, 20);
             this.tb_adresse.TabIndex = 9;
-            this.tb_adresse.Text = "Adresse";
             // 
             // tb_email
             // 
@@ -78,7 +77,6 @@
             this.tb_email.Name = "tb_email";
             this.tb_email.Size = new System.Drawing.Size(121, 20);
             this.tb_email.TabIndex = 10;
-            this.tb_email.Text = "email";
             // 
             // tb_tel
             // 
@@ -87,7 +85,6 @@
             this.tb_tel.Name = "tb_tel";
             this.tb_tel.Size = new System.Drawing.Size(121, 20);
             this.tb_tel.TabIndex = 11;
-            this.tb_tel.Text = "Tél";
             // 
             // tb_nom
             // 
@@ -96,7 +93,6 @@
             this.tb_nom.Name = "tb_nom";
             this.tb_nom.Size = new System.Drawing.Size(121, 20);
             this.tb_nom.TabIndex = 12;
-            this.tb_nom.Text = "Nom";
             // 
             // lb_nom
             // 
@@ -131,7 +127,7 @@
             // lb_adresse
             // 
             this.lb_adresse.AutoSize = true;
-            this.lb_adresse.Location = new System.Drawing.Point(325, 29);
+            this.lb_adresse.Location = new System.Drawing.Point(279, 29);
             this.lb_adresse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_adresse.Name = "lb_adresse";
             this.lb_adresse.Size = new System.Drawing.Size(45, 13);
@@ -141,7 +137,7 @@
             // lb_code_postal
             // 
             this.lb_code_postal.AutoSize = true;
-            this.lb_code_postal.Location = new System.Drawing.Point(325, 94);
+            this.lb_code_postal.Location = new System.Drawing.Point(279, 94);
             this.lb_code_postal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_code_postal.Name = "lb_code_postal";
             this.lb_code_postal.Size = new System.Drawing.Size(64, 13);
@@ -151,7 +147,7 @@
             // lb_ville
             // 
             this.lb_ville.AutoSize = true;
-            this.lb_ville.Location = new System.Drawing.Point(325, 154);
+            this.lb_ville.Location = new System.Drawing.Point(279, 154);
             this.lb_ville.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_ville.Name = "lb_ville";
             this.lb_ville.Size = new System.Drawing.Size(26, 13);
@@ -177,6 +173,18 @@
             this.btn_Ok.TabIndex = 19;
             this.btn_Ok.Text = "Add";
             this.btn_Ok.UseVisualStyleBackColor = true;
+            this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
+            // 
+            // sqls_client
+            // 
+            this.sqls_client.ConnectionString = "Data Source=.;Initial Catalog=GestionMatos;Integrated Security=True";
+            this.sqls_client.FireInfoMessageEventOnUserErrors = false;
+            // 
+            // sqlcmd_addClient
+            // 
+            this.sqlcmd_addClient.CommandText = "add_client";
+            this.sqlcmd_addClient.CommandType = System.Data.CommandType.StoredProcedure;
+            this.sqlcmd_addClient.Connection = this.sqls_client;
             // 
             // F_Client
             // 
@@ -201,7 +209,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "F_Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "CLIENT";
+            this.Text = "Client";
             this.Load += new System.EventHandler(this.Clients_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -223,5 +231,7 @@
         private System.Windows.Forms.Label lb_ville;
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Ok;
+        private System.Data.SqlClient.SqlConnection sqls_client;
+        private System.Data.SqlClient.SqlCommand sqlcmd_addClient;
     }
 }

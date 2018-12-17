@@ -137,7 +137,6 @@
             this.tb_nom.Name = "tb_nom";
             this.tb_nom.Size = new System.Drawing.Size(121, 20);
             this.tb_nom.TabIndex = 26;
-            this.tb_nom.Text = "Nom";
             // 
             // tb_type
             // 
@@ -146,7 +145,6 @@
             this.tb_type.Name = "tb_type";
             this.tb_type.Size = new System.Drawing.Size(121, 20);
             this.tb_type.TabIndex = 25;
-            this.tb_type.Text = "Type";
             // 
             // tb_marque
             // 
@@ -155,7 +153,6 @@
             this.tb_marque.Name = "tb_marque";
             this.tb_marque.Size = new System.Drawing.Size(121, 20);
             this.tb_marque.TabIndex = 24;
-            this.tb_marque.Text = "Marque";
             // 
             // tb_numero_serie
             // 
@@ -164,7 +161,6 @@
             this.tb_numero_serie.Name = "tb_numero_serie";
             this.tb_numero_serie.Size = new System.Drawing.Size(121, 20);
             this.tb_numero_serie.TabIndex = 23;
-            this.tb_numero_serie.Text = "Numéro de série";
             // 
             // tb_MTBF
             // 
@@ -173,7 +169,6 @@
             this.tb_MTBF.Name = "tb_MTBF";
             this.tb_MTBF.Size = new System.Drawing.Size(121, 20);
             this.tb_MTBF.TabIndex = 22;
-            this.tb_MTBF.Text = "MTBF";
             // 
             // cmb_clientList
             // 
@@ -221,7 +216,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Materiel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "MATERIEL";
+            this.Text = "Matériel";
             this.Load += new System.EventHandler(this.Materiel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtset_Clients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
